@@ -36,14 +36,38 @@ angular
             controllerAs: 'setupCart'
 
         })
+        .when('/setupCartAdd', {
+            templateUrl: 'views/setupCartAdd.html',
+            controller: 'setupCartCtrl',
+            controllerAs: 'setupCart'
+
+        }).when('/setupCartProduct', {
+            templateUrl: 'views/setupCartProduct.html',
+            controller: 'setupCartCtrl',
+            controllerAs: 'setupCart'
+
+        })
         .when('/blackList', {
             templateUrl: 'views/blackList.html',
             controller: 'blackListCtrl',
             controllerAs: 'blackList'
 
         })
+        .when('/blackListlist', {
+            templateUrl: 'views/blackListlist.html',
+            controller: 'blackListCtrl',
+            controllerAs: 'blackList'
+
+        })
+
         .when('/promotionDiscount', {
             templateUrl: 'views/promotionDiscount.html',
+            controller: 'promotionDiscountCtrl',
+            controllerAs: 'promotionDiscount'
+
+        })
+        .when('/promotionDiscountAdd', {
+            templateUrl: 'views/promotionDiscountAdd.html',
             controller: 'promotionDiscountCtrl',
             controllerAs: 'promotionDiscount'
 
@@ -54,8 +78,21 @@ angular
             controllerAs: 'comboProduct'
 
         })
+        .when('/comboProductAdd', {
+                templateUrl: 'views/comboProductAdd.html',
+                controller: 'comboProductCtrl',
+                controllerAs: 'comboProduct'
+
+            })
         .when('/exchangeMoney', {
             templateUrl: 'views/exchangeMoney.html',
+            controller: 'exchangeMoneyCtrl',
+            controllerAs: 'exchangeMoney'
+
+        })
+
+         .when('/exchangeMoneyAdd', {
+            templateUrl: 'views/exchangeMoneyAdd.html',
             controller: 'exchangeMoneyCtrl',
             controllerAs: 'exchangeMoney'
 
@@ -84,7 +121,12 @@ angular
             controllerAs: 'dailyExcluded'
 
         })
+        .when('/uploadCartAdd', {
+                templateUrl: 'views/uploadCartAdd.html',
+                controller: 'uploadCartCtrl',
+                controllerAs: 'uploadCart'
 
+            })
         .when('/uploadCart', {
                 templateUrl: 'views/uploadCart.html',
                 controller: 'uploadCartCtrl',
