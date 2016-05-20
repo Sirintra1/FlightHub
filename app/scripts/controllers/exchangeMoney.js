@@ -8,10 +8,8 @@
  * Controller of the inflightHubApp
  */
 angular.module('inflightHubApp')
-  .controller('exchangeMoneyCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('exchangeMoneyCtrl', function ($scope) {
+    
+    $scope.exchanges = [{Name:"EUR",change:"40.35"},
+    {Name:"USD",change:"35.65"}];
   });
