@@ -90,7 +90,6 @@ angular
             controllerAs: 'exchangeMoney'
 
         })
-
          .when('/exchangeMoneyAdd', {
             templateUrl: 'views/exchangeMoneyAdd.html',
             controller: 'exchangeMoneyCtrl',

@@ -6757,6 +6757,7 @@ button.close {
     display: none !important;
   }
 }
+
 .imgset{
   width: 75px;
   height: 60px;
@@ -6769,5 +6770,24 @@ button.close {
   border-style: solid;
   border-width: 1px;
   border-color: #ddd;
+}
+
+.xx {
+        border-style: solid;
+    border-width: 2px 0px 2px 0px;
+    border-color:#D8D8D8 #D8D8D8 #D8D8D8 #D8D8D8;
+    margin-left:10px;
+    margin-right:10px;
+    padding-top:10px;   
+}
+.xx1 {
+        border-style: solid;
+    border-width: 0px 0px 0px 2px;
+    border-color:#D8D8D8 #D8D8D8 #D8D8D8 #D8D8D8;
+}
+a {
+  color: #848484;
+  text-decoration: none;
+>>>>>>> baa9721d5485b8ee060353ba172e7f575a565421
 }
 /*# sourceMappingURL=bootstrap.css.map */
