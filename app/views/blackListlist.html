@@ -1,18 +1,18 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-                            Exchange Money
+                            Black List
                             
                         </h1>
         <ol class="breadcrumb">
             <li>
-                <i class="fa fa-exchange"></i> <label> Exchange Money</label>
+                <i class="fa fa-credit-card"></i> <label> Black List</label>
             </li>
             
         </ol>
 
         <div class="form-group input-group" style="margin-top:-20px; margin-bottom: -1px;">
-        <input type="text" class="form-control" ng-model="searchText">
+        <input type="text" class="form-control">
         <span class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></span>
     </div>
     </div>
@@ -32,20 +32,17 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">
-        <label class="panel-title"><i class="fa fa-exchange" aria-hidden="true"></i> Type Money</label>
-        <label class="text-right" style="float: right"> <a ng-href="#/exchangeMoneyAdd">Add Money <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+        <label class="panel-title"><i class="fa fa-credit-card" aria-hidden="true"></i> SCB Bank</label>
+        <label class="text-right" style="float: right"> <a ng-href="#/blackList"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back </a>
         </label>
     </div>
     <div class="panel-body">
         <div class="list-group">
-            <a ng-href="#/exchangeMoneyAdd" class="row list-group-item" ng-repeat="exchange in exchanges | filter:searchText" style="margin-left: 10px;margin-right: 10px;">
-                <div class="col-md-1"><label><i class="fa fa-exchange"></i></label></div>
-                <div class="col-md-10">{{exchange.Name}}
-                    <br>1 {{exchange.Name}} = {{exchange.change}} THB.
-                </div>
-                <span ><i class="fa fa-trash" aria-hidden="true" align="right"></i>
-                                        </span>
-            </a>
+            <div class="row list-group-item" ng-repeat="pp in human" style="margin-left: 10px;margin-right: 10px;">
+                <div class="col-md-1"><label><i class="fa fa-credit-card"></i></label></div>
+                <div class="col-md-10">ID : {{pp}} </div>
+                <!-- <span ><i class="fa fa-trash" aria-hidden="true" align="right"></i></span> -->
+            </div>
         </div>
         <!-- <div class="text-right">
             <a href="#">View All Activity <i class="fa fa-arrow-circle-right" style="float: right"></i></a>

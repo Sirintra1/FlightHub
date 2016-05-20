@@ -60,6 +60,7 @@ angular
             controllerAs: 'exchangeMoney'
 
         })
+        
         .when('/dailyAmount', {
             templateUrl: 'views/dailyAmount.html',
             controller: 'dailyAmountCtrl',
