@@ -6773,6 +6773,20 @@ button.close {
   border-color: #ddd; 
 }
 
+.imgset{
+  width: 75px;
+  height: 60px;
+}
+.productSet{
+  width: 155px;
+  height: 140px;
+}
+.setBorder{
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ddd;
+}
+
 .xx {
         border-style: solid;
     border-width: 2px 0px 2px 0px;
@@ -6789,5 +6803,6 @@ button.close {
 a {
   color: #848484;
   text-decoration: none;
+>>>>>>> baa9721d5485b8ee060353ba172e7f575a565421
 }
 /*# sourceMappingURL=bootstrap.css.map */

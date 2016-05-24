@@ -2,17 +2,34 @@
     <div class="col-lg-12">
         <h1 class="page-header">
                             Upload Cart
-                            <small>Subheading</small>
+                          
                         </h1>
         <ol class="breadcrumb">
             <li>
-                <i class="fa fa-dashboard"></i> <a href="index.html">Dashboard</a>
-            </li>
-            <li class="active">
-                <i class="fa fa-file"></i> Blank Page
+                <i class="fa fa-plane"></i> <a href="index.html"> Upload Cart</a>
             </li>
         </ol>
+        <div class="form-group input-group" style="margin-top: -19px; margin-bottom:1px;">
+            <input type="text" class="form-control">
+            <span class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></span>
+        </div>
     </div>
 </div>
 <!-- /.row -->
-<p>This is the about view.</p>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <span class="panel-title"><i class="fa fa-plane"></i> Upload Cart</span>
+        <span class="panel-title" style="float: right;">Add Upload <a href="#/uploadCartAdd"> <i class="fa fa-plus-circle"></i></a></span>
+    </div>
+    <div class="panel-body">
+        <div class="list-group">
+            <a ng-href="#/uploadCartAdd" class="list-group-item" ng-repeat="itm in product">
+                <i class="fa fa-plane"></i> {{itm.name}}
+                <br> <span style="margin-left: 15px;">{{itm.detail}} </span>
+                <i class="fa  fa-trash " style="float: right;"></i>
+            </a>
+        </div>
+        <div class="text-right">
+        </div>
+    </div>
+</div>
