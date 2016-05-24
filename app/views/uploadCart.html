@@ -23,9 +23,9 @@
     </div>
     <div class="panel-body">
         <div class="list-group">
-            <a ng-href="#/uploadCartAdd" class="list-group-item" ng-repeat="itm in product">
-                <i class="fa fa-plane"></i> {{itm.name}}
-                <br> <span style="margin-left: 15px;">{{itm.detail}} </span>
+            <a ng-href="#/uploadCartAdd/{{item.id}}" class="list-group-item" ng-repeat="item in uploads" ng-model="item.flightName">
+                <i class="fa fa-plane"></i> Flight No. {{item.flightName}}
+                <br> <span style="margin-left: 15px;">{{item.detail}} </span>
                 <i class="fa  fa-trash " style="float: right;"></i>
             </a>
         </div>

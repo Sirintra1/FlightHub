@@ -6,13 +6,16 @@
                         </h1>
         <div class="breadcrumb">
             <span> Cancel</span>
-            <span style="float: right;">Done </span>
+            <a ng-href="#/uploadCart">
+            <span style="float: right;" ng-show="isEdit==false" ng-click="addUpload()">Done </span>
+            <span style="float: right;" ng-show="isEdit==true" ng-click="editFn()">Edit </span>
+            </a>
         </div>
     </div>
 </div>
 <div class="form-group">
     <label style="margin-left: 15px;">Flight Name</label>
-    <input class="form-control" placeholder="AK25">
+    <input class="form-control" placeholder="AK25" ng-model="newUpload.flightName">
 </div>
 <div class="form-group">
     <label class="radio-inline" style="margin-left: 50px;">
@@ -26,17 +29,17 @@
     </label>
 </div>
 <!-- /.row -->
-<div class="panel panel-default" style="margin-bottom:-1px;"ng-repeat="nam in product">
-<div class="row" >
-        <div class="col-md-1 text-center" ><i class="fa fa-minus-circle"></i></div>
-        <div class="col-md-4" >
+<div class="panel panel-default" style="margin-bottom:-1px;" ng-repeat="nam in product">
+    <div class="row">
+        <div class="col-md-1 text-center"><i class="fa fa-minus-circle"></i></div>
+        <div class="col-md-4">
             <i class="fa fa-shopping-cart"></i>
             <a href="#/">
-            <span class="panel-title text-center" style="margin-left:10px;margin-right:10px;">{{nam.cart}}</span>
-            <i class="fa fa-chevron-right"></i>
+                <span class="panel-title text-center" style="margin-left:10px;margin-right:10px;">{{nam.cart}}</span>
+                <i class="fa fa-chevron-right"></i>
             </a>
         </div>
-        <div class="col-md-7" style="border-style: solid;border-width: 0px 0px 0px 1px;" >{{nam.detailadd}}</div>
+        <div class="col-md-7" style="border-style: solid;border-width: 0px 0px 0px 1px;">{{nam.detailadd}}</div>
     </div>
 </div>
 <div class="panel panel-default">
@@ -46,7 +49,7 @@
                 <i class="fa fa-plus-circle"></i>
             </div>
             <div class="col-md-10">
-            <i class="fa fa-shopping-cart"></i>
+                <i class="fa fa-shopping-cart"></i>
                 <span class="panel-title" style="margin-left:10px;">  Add Class</span>
             </div>
         </div>

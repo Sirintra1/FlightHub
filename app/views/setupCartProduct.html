@@ -70,24 +70,27 @@
                     <div class="row">
                         <div class="col-md-10 text-center">
                             <label>{{itm.name}}</label>
+
                         </div>
                     </div>
                     <div class="row" align="middle">
                         <div class="col-md-10" >
-                             <img class="productSet" src="{{itm.img}}" >
+                            <p class="pp">{{itm.qty}}</p> <!-- <img class="noti" src="{{itm.noti}}"> --> 
+                             <img class="productSet" src="{{itm.img}}" > 
                         </div>
+                        
                         <div class="col-md-2" align="left">
                             <div class="row" style="margin-top:30px;">
-                                <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                <button class="btn btn-default" ng-click="clickAdd(itm)"><i class="fa fa-plus" ></i></button>
                             </div>
                             <div class="row">
-                                <button><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                <button button class="btn btn-default" ng-click="clickRemove(itm)"><i class="fa fa-minus"></i></button>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-10 text-center">
-                            <label>{{itm.price}}</label> <label > THB.</label> <label> / {{itm.qty}} Qty.</label>
+                            <label>{{itm.price}}</label> <label > THB.</label> <label> / {{itm.quality}} Qty.</label>
                         </div>
                     </div>
                 </div>
@@ -99,4 +102,3 @@
             <span> Cancel</span>
             <span style="float: right;">Done </span>
         </div>
-
