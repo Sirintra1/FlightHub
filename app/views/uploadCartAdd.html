@@ -5,8 +5,7 @@
                           
                         </h1>
         <div class="breadcrumb">
-            <span> Cancel</span>
-            <a ng-href="#/uploadCart">
+            <a ng-href="#/uploadCart">Cancel
             <span style="float: right;" ng-show="isEdit==false" ng-click="addUpload()">Done </span>
             <span style="float: right;" ng-show="isEdit==true" ng-click="editFn()">Edit </span>
             </a>
@@ -50,12 +49,14 @@
             </div>
             <div class="col-md-10">
                 <i class="fa fa-shopping-cart"></i>
-                <span class="panel-title" style="margin-left:10px;">  Add Class</span>
+                <span class="panel-title" style="margin-left:10px;">  Add Cart</span>
             </div>
         </div>
     </div>
     <div class="breadcrumb">
-        <span> Cancel</span>
-        <span style="float: right;">Done </span>
+        <a ng-href="#/uploadCart">Cancel
+            <span style="float: right;" ng-show="isEdit==false" ng-click="addUpload()">Done </span>
+            <span style="float: right;" ng-show="isEdit==true" ng-click="editFn()">Edit </span>
+            </a>
     </div>
 </div>
