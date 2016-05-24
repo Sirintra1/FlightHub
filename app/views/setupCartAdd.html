@@ -18,7 +18,6 @@
     <label style="margin-left: 15px;">Cart Name</label>
     <input class="form-control" ng-model="newCart.cartName">
 </div>
-
 <!-- /.row -->
 <div class="panel panel-default" style="margin-bottom:-1px;">
     <div class="row">
@@ -86,5 +85,9 @@
 </div>
 <div class="breadcrumb">
     <span> Cancel</span>
-    <span style="float: right;">Done </span>
+    <span ng-repeat="item in carts"></span>
+    <a ng-href="#/setupCart/">
+        <span style="float: right;" ng-show="isEdit==false" ng-click="addCart()">Done </span>
+        <span style="float: right;" ng-show="isEdit==true" ng-click="editFn()">Edit </span>
+    </a>
 </div>

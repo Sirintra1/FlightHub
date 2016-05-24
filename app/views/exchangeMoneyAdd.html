@@ -5,54 +5,53 @@
                             <!-- <small>Subheading</small> -->
                         </h1>
         <ol class="breadcrumb">
-        <div class="row">
-            <div class="col-lg-4">
-                <!-- <i class="fa fa-dashboard"></i>  <--><label><a href="#/exchangeMoney">Cancle</a></label>
+            <div class="row">
+                <div class="col-lg-4">
+                    <!-- <i class="fa fa-dashboard"></i>  <-->
+                    <label><a href="#/exchangeMoney">Cancle</a></label>
+                </div>
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4" align="right">
+                    <label><a href="#/exchangeMoney" ng-show="isEdit==false" ng-click="addExchange()">Done</a></label>
+                    <label><a href="#/exchangeMoney" ng-show="isEdit==true" ng-click="editFn()">Edit</a></label>
+                </div>
             </div>
-            <div class="col-lg-4"></div>
-            <div class="col-lg-4" align="right">
-                <label><a href="#/exchangeMoney">Done</a></label>
-            </div>
-        </div>
             <!-- <li>
                 <i class="fa fa-dashboard"></i> <a href="index.html">one</a>
             </li>
             <li class="active">
                 <i class="fa fa-file"></i>Done            </li> -->
         </ol>
-       <!--  Hello --><h3>Exchange Name</h3>
-    <div class="row xx">
-        <div class="col-lg-1 " align="center">
-            <i class="fa fa-minus-circle" style="color:red;" style="size:10;" aria-hidden="true" ></i>
-            <!-- <p class="xx">Some text.</p> -->
-        </div>
-        <div class="col-lg-5 xx1">
-            <label>EUR.</label>
-        </div>
-        <div class="col-lg-6 xx1">
-            <label>40.35 THB.</label>
-        </div>
-    </div>
-    <br>
-    <br>
-    <ol class="breadcrumb">
-        <div class="row">
-            <div class="col-lg-4">
-                <!-- <i class="fa fa-dashboard"></i>  <--><label><a href="#/exchangeMoney">Cancle</a></label>
+        <!--  Hello -->
+        <h3>Exchange Name</h3>
+        <div class="row xx">
+            <div class="col-lg-1 " align="center">
+                <i class="fa fa-minus-circle" style="color:red;" style="size:10;" aria-hidden="true"></i>
+                <!-- <p class="xx">Some text.</p> -->
             </div>
-            <div class="col-lg-4"></div>
-            <div class="col-lg-4" align="right">
-                <label><a ng-href="#/exchangeMoney">Done</a></label>
+            <div class="col-lg-5 xx1">
+                <input type="text" ng-model="newExchange.exchangeName">
+                <label></label>
+            </div>
+            <div class="col-lg-6 xx1">
+                <input type="text " ng-model="newExchange.exchangeMoney">
+                <label></label>
             </div>
         </div>
-
+        <br>
+        <br>
+        <ol class="breadcrumb">
+            <div class="row">
+                <div class="col-lg-4">
+                    <!-- <i class="fa fa-dashboard"></i>  <-->
+                    <label><a href="#/exchangeMoney">Cancle</a></label>
+                </div>
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4" align="right">
+                    <label><a href="#/exchangeMoney" ng-show="isEdit==false" ng-click="addExchange()">Done</a></label>
+                    <label><a href="#/exchangeMoney" ng-show="isEdit==true" ng-click="editFn()">Edit</a></label>
+                </div>
+            </div>
+        </ol>
     </div>
-    <!-- <h5>Exchange Name</h5>
-    <div class="row">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-5"></div>
-        <div class="col-lg-6"></div>
-    </div> -->
 </div>
-<!-- /.row -->
-<!-- <p>This is the about view.</p> -->

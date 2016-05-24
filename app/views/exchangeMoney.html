@@ -38,10 +38,10 @@
     </div>
     <div class="panel-body">
         <div class="list-group">
-            <a ng-href="#/exchangeMoneyAdd" class="row list-group-item" ng-repeat="exchange in exchanges | filter:searchText" style="margin-left: 10px;margin-right: 10px;">
+            <a ng-href="#/exchangeMoneyAdd/{{item.id}}" class="row list-group-item" ng-repeat="item in exchanges | filter:searchText" style="margin-left: 10px;margin-right: 10px;">
                 <div class="col-md-1"><label><i class="fa fa-exchange"></i></label></div>
-                <div class="col-md-10">{{exchange.Name}}
-                    <br>1 {{exchange.Name}} = {{exchange.change}} THB.
+                <div class="col-md-10">{{item.exchangeName}}
+                    <br>1 {{item.exchangeName}} = {{item.exchangeMoney}} THB.
                 </div>
                 <span ><i class="fa fa-trash" aria-hidden="true" align="right"></i>
                                         </span>
