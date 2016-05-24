@@ -24,15 +24,14 @@
     </div>
     <div class="panel-body">
         <div class="list-group">
-            <a ng-href="#/exchangeMoneyAdd/{{item.id}}" class="row list-group-item" ng-repeat="item in exchanges | filter:searchText" style="margin-left: 10px;margin-right: 10px;">
-                <div class="col-md-1">
-                    <label><i class="fa fa-exchange"></i></label>
-                </div>
-                <div class="col-md-10">{{item.exchangeName}}
-                    <br>1 {{item.exchangeName}} = {{item.exchangeMoney}} THB.
-                </div>
-                <span><i class="fa fa-trash" aria-hidden="true" align="right"></i>
-                                        </span>
+            <a ng-href="#/exchangeMoneyAdd/{{item.id}}" class="list-group-item" ng-repeat="item in exchanges | filter:searchText" style="margin-left: 10px;margin-right: 10px;">
+                
+                    <i class="fa fa-exchange"></i> {{item.exchangeName}} 
+               
+                    <br><span style="margin-left: 20px;">1 {{item.exchangeName}} = {{item.exchangeMoney}} THB.</span>
+                
+               <i class="fa fa-trash" aria-hidden="true" style="float: right;"></i>
+                                       
             </a>
         </div>
         <!-- <div class="text-right">
