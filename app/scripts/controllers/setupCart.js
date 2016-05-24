@@ -68,45 +68,40 @@ angular.module('inflightHubApp')
             qty: 1, 
             img: "images/hamburger.jpg" 
         }, { 
-            name: "Humburger", 
-            price: 130, 
+            name: "Macaroni", 
+            price: 230, 
             qty: 1, 
-            img: "images/hamburger.jpg" 
+            img: "images/Macaroni.jpg" 
         }, { 
-            name: "Humburger", 
-            price: 130, 
+            name: "Salad", 
+            price: 100, 
             qty: 1, 
-            img: "images/hamburger.jpg" 
+            img: "images/salad.jpg" 
         }, { 
-            name: "Humburger", 
-            price: 130, 
+            name: "Sandwich", 
+            price: 90, 
             qty: 1, 
-            img: "images/hamburger.jpg" 
+            img: "images/sandwich.jpg" 
         }, { 
-            name: "Humburger", 
-            price: 130, 
+            name: "Sapagetti", 
+            price: 146, 
             qty: 1, 
-            img: "images/hamburger.jpg" 
+            img: "images/sapagetti.jpg" 
         }, { 
-            name: "Humburger", 
-            price: 130, 
+            name: "Sausage", 
+            price: 99, 
             qty: 1, 
-            img: "images/hamburger.jpg" 
+            img: "images/sausage.jpg" 
         }, { 
-            name: "Humburger", 
-            price: 130, 
+            name: "Soup", 
+            price: 78, 
             qty: 1, 
-            img: "images/hamburger.jpg" 
+            img: "images/soup.jpg" 
         }, { 
-            name: "Humburger", 
-            price: 130, 
+            name: "Steak", 
+            price: 340, 
             qty: 1, 
-            img: "images/hamburger.jpg" 
-        }, { 
-            name: "Humburger", 
-            price: 130, 
-            qty: 1, 
-            img: "images/hamburger.jpg" 
+            img: "images/steak.jpg" 
         }]; 
         $scope.purchase = function(item) {
             if (item.qty > 0) {
