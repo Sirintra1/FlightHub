@@ -149,6 +149,8 @@ angular
                 controllerAs: 'uploadCart'
 
             })
+
+        
             .otherwise({
                 redirectTo: '/'
             });
