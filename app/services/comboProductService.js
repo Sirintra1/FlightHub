@@ -9,17 +9,19 @@
  */
 angular.module('inflightHubApp').service('comboProductservice', function() {
 
-    
+
     var combos = [{
-        id: 1,
-        comboName: "Set 1",
-        comboMoney: 250
-    }, {
-        id: 2,
-        comboName: "Set 2",
-        comboMoney: 350
-    }
-        
+            id: 1,
+            comboName: "Set 1",
+            comboMoney: 250,
+            img: "images/hamburger.jpg"
+        }, {
+            id: 2,
+            comboName: "Set 2",
+            comboMoney: 350,
+            img: "images/hamburger.jpg"
+        }
+
     ];
 
     this.getComboList = function() {

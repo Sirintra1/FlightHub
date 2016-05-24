@@ -6756,6 +6756,21 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+
+
+}
+.imgset{ 
+  width: 75px; 
+  height: 60px; 
+} 
+.productSet{ 
+  width: 155px; 
+  height: 140px; 
+} 
+.setBorder{ 
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: #ddd; 
 }
 
 .imgset{
@@ -6788,6 +6803,17 @@ button.close {
 a {
   color: #848484;
   text-decoration: none;
->>>>>>> baa9721d5485b8ee060353ba172e7f575a565421
 }
+.pp{
+  margin-left: 180px;
+  margin-bottom: -15px;
+
+}
+.noti{ 
+  width: 55px; 
+  height: 45px; 
+  margin-left: 180px;
+  margin-bottom: -15px;
+ 
+} 
 /*# sourceMappingURL=bootstrap.css.map */
