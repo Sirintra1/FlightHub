@@ -28,8 +28,8 @@
     </div>
     <div class="panel-body">
         <div class="list-group" >
-            <a ng-href="#/setupCartAdd" class="list-group-item" ng-repeat="itm in cart">
-                <i class="fa fa-shopping-cart"></i> {{itm}}  
+            <a  ng-repeat="item in carts" ng-href="#/setupCartAdd/{{item.id}}" class="list-group-item" ng-model="item.cartName">
+                <i class="fa fa-shopping-cart"></i> {{item.cartName}}  
                 <i class="fa  fa-trash " style="float: right;"></i>
             </a>
 

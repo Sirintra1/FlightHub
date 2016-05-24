@@ -1,3 +1,12 @@
+ function guid() {
+    function s4() {
+        return Math.floor((1 + Math.random()) * 0x10000)
+            .toString(16)
+            .substring(1);
+    }
+    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+        s4() + '-' + s4() + s4() + s4();
+}
 'use strict';
 
 /**
@@ -8,6 +17,8 @@
  *
  * Main module of the application.
  */
+
+
 angular
     .module('inflightHubApp', [
         'ngAnimate',
@@ -37,6 +48,12 @@ angular
 
         })
         .when('/setupCartAdd', {
+            templateUrl: 'views/setupCartAdd.html',
+            controller: 'setupCartCtrl',
+            controllerAs: 'setupCart'
+
+        })
+        .when('/setupCartAdd/:cardID', {
             templateUrl: 'views/setupCartAdd.html',
             controller: 'setupCartCtrl',
             controllerAs: 'setupCart'
