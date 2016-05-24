@@ -1,9 +1,6 @@
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header"> 
-                            Setup Cart 
-                           
-                        </h1>
+        <h1 class="page-header">Setup Cart </h1>
         <div class="breadcrumb">
             <span> Cancel</span>
             <span style="float: right;">Done </span>
@@ -12,44 +9,45 @@
 </div>
 <div class="form-group">
     <label style="margin-left: 15px;">Cart Name</label>
-    <input class="form-control">
+    <!-- <input class="form-control"> -->
 </div>
 <!-- /.row -->
 <div class="panel panel-default" style="margin-bottom:-1px;">
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-5" style="padding-top: 15px;">
-            <!-- <h3 class="panel-title">Set name <br>
-            Set1</h3> -->
-             <input type="text" placeholder="Set Name" style="width: 470px;height: 50px; border-style:none">
+            <input type="text" placeholder="Set Name" style="width: 470px;height: 50px; border-style:none">
         </div>
-        <div class="col-md-5" style="padding-top: 15px;"> 
+        <div class="col-md-5" style="padding-top: 15px;">
+            <input type="text" placeholder="Price" style="width: 470px;height: 50px; border-style:none">
+        </div>
+    </div>
 
-             <input type="text" placeholder="Price" style="width: 470px;height: 50px; border-style:none">
-
-            </div>
-    </div>
-    <div class="row">
-        <div class="col-md-2 text-center">
-            <i class="fa fa-minus-circle"></i>
+    <div class="row"> 
+        <div class="col-xs-2 text-center" style="margin-top:30px;">
+        <i class="fa fa-minus-circle" aria-hidden="true"></i>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-10">
-            <i class="fa fa-angle-left"></i>
-            <span ng-repeat="mg in img"> <img class="imgset" ng-src="{{mg}}"  
-                style="margin-left: 30px;margin-right: 30px;"></span>
-            <i class="fa fa-angle-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a ng-href="#/setupCartProduct"><i class="fa fa-info-circle"></i></a>
-        </div>
-    </div>
-    <div class="panel-body">
-        <div class="text-right">
-        </div>
+       <button type="button" ng-click="scrollLeft();" class="btn btn-defualt">
+            <span class="fa fa-angle-left fa-4x"></span>
+        </button>
+        <span ng-repeat="item in comboSet | limitTo:limitNumber:runNumber">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="{{item.img}}" height="80" />
+        <span class="badge red_badge">{{item.badge}}</span>
+        </span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" ng-click="scrollRight();" class="btn btn-defualt">
+            <span class="fa fa-angle-right fa-4x"></span>
+        </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a ng-href="#/setupCartProduct"> <i class="fa fa-info-circle"> </i> </a>
     </div>
 </div>
-
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<!-- <div class="panel-body">
+    <div class="text-right">
+    </div> -->
     <div class="breadcrumb">
         <span> Cancel</span>
         <span style="float: right;">Done </span>
