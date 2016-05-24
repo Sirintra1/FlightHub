@@ -143,6 +143,12 @@ angular
                 controllerAs: 'uploadCart'
 
             })
+        .when('/uploadCartAdd/:uploadID', {
+                templateUrl: 'views/uploadCartAdd.html',
+                controller: 'uploadCartCtrl',
+                controllerAs: 'uploadCart'
+
+            })
         .when('/uploadCart', {
                 templateUrl: 'views/uploadCart.html',
                 controller: 'uploadCartCtrl',
