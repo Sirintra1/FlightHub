@@ -83,6 +83,12 @@ angular
             controllerAs: 'promotionDiscount'
 
         })
+        .when('/promotionDiscountAdd/:promotionID', {
+            templateUrl: 'views/promotionDiscountAdd.html',
+            controller: 'promotionDiscountCtrl',
+            controllerAs: 'promotionDiscount'
+
+        })
         .when('/promotionDiscountAdd', {
             templateUrl: 'views/promotionDiscountAdd.html',
             controller: 'promotionDiscountCtrl',
