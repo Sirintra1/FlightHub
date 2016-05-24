@@ -6,30 +6,16 @@
                         </h1>
         <ol class="breadcrumb">
             <li>
-                <i class="fa fa-exchange"></i> <label> Exchange Money</label>
+                <i class="fa fa-exchange"></i>
+                <label> Exchange Money</label>
             </li>
-            
         </ol>
-
         <div class="form-group input-group" style="margin-top:-20px; margin-bottom: -1px;">
-        <input type="text" class="form-control" ng-model="searchText">
-        <span class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></span>
+            <input type="text" class="form-control" ng-model="searchText">
+            <span class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></span>
+        </div>
     </div>
-    </div>
-    
 </div>
-<!-- /.row -->
-<!-- <div class="panel panel-default">
-    <div class="panel-heading">
-        <label class="panel-title"><i class="fa fa-cutlery" aria-hidden="true"></i> Combo</label>
-        <label class="text-right" style="float: right"> <a ng-href="#/comboProductAdd">Add Combo <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
-        </label>
-    </div>
-    </div> -->
-    <!-- jjjjjjjjj -->
-
-
-
 <div class="panel panel-default">
     <div class="panel-heading">
         <label class="panel-title"><i class="fa fa-exchange" aria-hidden="true"></i> Type Money</label>
@@ -38,12 +24,14 @@
     </div>
     <div class="panel-body">
         <div class="list-group">
-            <a ng-href="#/exchangeMoneyAdd" class="row list-group-item" ng-repeat="exchange in exchanges | filter:searchText" style="margin-left: 10px;margin-right: 10px;">
-                <div class="col-md-1"><label><i class="fa fa-exchange"></i></label></div>
-                <div class="col-md-10">{{exchange.Name}}
-                    <br>1 {{exchange.Name}} = {{exchange.change}} THB.
+            <a ng-href="#/exchangeMoneyAdd/{{item.id}}" class="row list-group-item" ng-repeat="item in exchanges | filter:searchText" style="margin-left: 10px;margin-right: 10px;">
+                <div class="col-md-1">
+                    <label><i class="fa fa-exchange"></i></label>
                 </div>
-                <span ><i class="fa fa-trash" aria-hidden="true" align="right"></i>
+                <div class="col-md-10">{{item.exchangeName}}
+                    <br>1 {{item.exchangeName}} = {{item.exchangeMoney}} THB.
+                </div>
+                <span><i class="fa fa-trash" aria-hidden="true" align="right"></i>
                                         </span>
             </a>
         </div>
@@ -51,4 +39,4 @@
             <a href="#">View All Activity <i class="fa fa-arrow-circle-right" style="float: right"></i></a>
         </div>
     </div> -->
-</div>
+    </div>

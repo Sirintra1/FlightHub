@@ -101,6 +101,12 @@ angular
                 controllerAs: 'comboProduct'
 
             })
+        .when('/comboProductAdd/:comboID', {
+                templateUrl: 'views/comboProductAdd.html',
+                controller: 'comboProductCtrl',
+                controllerAs: 'comboProduct'
+
+            })
         .when('/exchangeMoney', {
             templateUrl: 'views/exchangeMoney.html',
             controller: 'exchangeMoneyCtrl',
@@ -108,6 +114,12 @@ angular
 
         })
          .when('/exchangeMoneyAdd', {
+            templateUrl: 'views/exchangeMoneyAdd.html',
+            controller: 'exchangeMoneyCtrl',
+            controllerAs: 'exchangeMoney'
+
+        })
+         .when('/exchangeMoneyAdd/:exchangeID', {
             templateUrl: 'views/exchangeMoneyAdd.html',
             controller: 'exchangeMoneyCtrl',
             controllerAs: 'exchangeMoney'
@@ -161,3 +173,4 @@ angular
                 redirectTo: '/'
             });
     });
+

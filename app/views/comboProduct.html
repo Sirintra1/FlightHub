@@ -34,80 +34,25 @@
     </div>
     <div class="panel-body">
         <div class="list-group">
-            <div class="row list-group-item" style="margin-left: 10px;margin-right: 10px;">
+            <a ng-href="#/comboProductAdd/{{item.id}}" class="row list-group-item" ng-repeat="item in combos" style="margin-left: 10px;margin-right: 10px;">
                 <div class="col-xs-3">
                     <div class="col-xs-2">
                         <i class="fa fa-fw fa-cutlery"></i>
                     </div>
                     <div class="col-xs-10">
-                        Combo Set1
+                        {{item.comboName}}
                         <br>
-                        <span class="list-price">Price (359 THB.)</span>
+                        <span class="list-price">Price {{item.comboMoney}} THB.</span>
                     </div>
                 </div>
-                <div class="col-xs-2">
-                    <img src="http://aa-storage-int.s3.amazonaws.com/aa-images/common/meal/ak-ndcb.png" width="100" height="80" />
-                    <span class="badge red_badge">5</span>
-                </div>
-                <div class="col-xs-2">
-                    <img src="http://aa-storage-int.s3.amazonaws.com/aa-images/common/meal/ak-ndcb.png" width="100" height="80" />
-                    <span class="badge red_badge">2</span>
-                </div>
-                <div class="col-xs-2">
-                    <img src="http://aa-storage-int.s3.amazonaws.com/aa-images/common/meal/ak-ndcb.png" width="100" height="80" />
-                    <span class="badge red_badge">1</span>
-                </div>
-                <div class="col-xs-2">
-                    <img src="http://aa-storage-int.s3.amazonaws.com/aa-images/common/meal/ak-ndcb.png" width="100" height="80" />
-                    <span class="badge red_badge">1</span>
-                </div>
+                <div class="col-xs-5">
+                    <img class="imgset" src="{{item.img}}">
+                        
+                    </div>
                 <label class="text-right" style="float: right"><i class="fa fa-trash" aria-hidden="true"></i></label>
-            </div>
-            <div class="row list-group-item" style="margin-left: 10px;margin-right: 10px;">
-                <div class="col-xs-3">
-                    <div class="col-xs-2">
-                        <i class="fa fa-fw fa-cutlery"></i>
-                    </div>
-                    <div class="col-xs-10">
-                        Combo Set2
-                        <br>
-                        <span class="list-price">Price (259 THB.)</span>
-                    </div>
-                </div>
-                <div class="col-xs-2">
-                    <img src="http://aa-storage-int.s3.amazonaws.com/aa-images/common/meal/ak-ndcb.png" width="100" height="80" />
-                    <span class="badge red_badge">5</span>
-                </div>
-                <div class="col-xs-2">
-                    <img src="http://aa-storage-int.s3.amazonaws.com/aa-images/common/meal/ak-ndcb.png" width="100" height="80" />
-                    <span class="badge red_badge">2</span>
-                </div>
-                <div class="col-xs-2">
-                    <img src="http://aa-storage-int.s3.amazonaws.com/aa-images/common/meal/ak-ndcb.png" width="100" height="80" />
-                    <span class="badge red_badge">1</span>
-                </div>
-                <label class="text-right" style="float: right"><i class="fa fa-trash" aria-hidden="true"></i></label>
-            </div>
-            <div class="row list-group-item" style="margin-left: 10px;margin-right: 10px;">
-                <div class="col-xs-3">
-                    <div class="col-xs-2">
-                        <i class="fa fa-fw fa-cutlery"></i>
-                    </div>
-                    <div class="col-xs-10">
-                        Combo Set3
-                        <br>
-                        <span class="list-price">Price (159 THB.)</span>
-                    </div>
-                </div>
-                <div class="col-xs-2">
-                    <img src="http://aa-storage-int.s3.amazonaws.com/aa-images/common/meal/ak-ndcb.png" width="100" height="80" />
-                    <span class="badge red_badge">5</span>
-                </div>
-                <div class="col-xs-2">
-                    <img src="http://aa-storage-int.s3.amazonaws.com/aa-images/common/meal/ak-ndcb.png" width="100" height="80" />
-                    <span class="badge red_badge">2</span>
-                </div>
-                <label class="text-right" style="float: right"><i class="fa fa-trash" aria-hidden="true"></i></label>
+
+            </a>
+
             </div>
         </div>
     </div>

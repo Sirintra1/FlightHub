@@ -8,8 +8,54 @@
  * Controller of the inflightHubApp
  */
 angular.module('inflightHubApp')
-  .controller('exchangeMoneyCtrl', function ($scope) {
-    
-    $scope.exchanges = [{Name:"EUR",change:"40.35"},
-    {Name:"USD",change:"35.65"}];
-  });
+    .controller('exchangeMoneyCtrl', function($scope, exchangeMoneyService, $filter, $routeParams) {
+        this.awesomeThings = [
+      'HTML5 Boilerplate',
+      'AngularJS',
+      'Karma'
+    ];
+
+
+        $scope.exchanges = [];
+        $scope.isEdit = $routeParams.exchangeID ? true : false;
+        $scope.newExchange = {};
+        $scope.init = function() {
+            $scope.exchanges = exchangeMoneyService.getExchangeList();
+        }
+
+        $scope.newFn = function() {
+            $scope.newExchange = {};
+        };
+
+        $scope.addExchange = function() {
+            $scope.newExchange.id = guid();
+            $scope.exchanges.push($scope.newExchange);
+            $scope.newFn();
+        };
+
+
+        $scope.setVal = function() {
+            // alert('');
+            // var result = $filter("filter")($scope.carts, { id: $routeParams.cardID });
+            var result = exchangeMoneyService.getExchange($scope.exchanges, $routeParams.exchangeID);
+            console.log(result);
+            if (result) {
+                $scope.newExchange = result;
+            }
+
+        };
+
+        $scope.editFn = function() {
+            //
+        };
+        $scope.init();
+
+        if ($routeParams.exchangeID) {
+            $scope.setVal();
+        } else {
+            $scope.newFn();
+        }
+
+
+        
+    });
