@@ -9,8 +9,8 @@
                 <i class="fa fa-plane"></i> <a href="index.html"> Upload Cart</a>
             </li>
         </ol>
-        <div class="form-group input-group" style="margin-top: -19px; margin-bottom:1px;">
-            <input type="text" class="form-control">
+        <div class="form-group input-group" style="margin-top:-20px; margin-bottom: -1px;">
+            <input type="text" class="form-control" ng-model="searchText">
             <span class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></span>
         </div>
     </div>
@@ -23,7 +23,7 @@
     </div>
     <div class="panel-body">
         <div class="list-group">
-            <a ng-href="#/uploadCartAdd/{{item.id}}" class="list-group-item" ng-repeat="item in uploads" ng-model="item.flightName">
+            <a ng-href="#/uploadCartAdd/{{item.id}}" class="list-group-item" ng-repeat="item in uploads| filter:searchText" ng-model="item.flightName">
                 <i class="fa fa-plane"></i> Flight No. {{item.flightName}}
                 <br> <span style="margin-left: 20px;">{{item.detail}} </span>
                 <i class="fa  fa-trash " style="float: right;"></i>
