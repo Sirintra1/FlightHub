@@ -23,14 +23,14 @@
    
         <span class="panel-title"><i class="fa fa-shopping-cart"></i> Type Cart</span> 
 
-        <span class="panel-title"  style="float: right;">Add Cart <a href="#/setupCartAdd"> <i class="fa fa-plus-circle"></i></a></span> 
+        <span class="panel-title"  style="float: right;">Add Cart <a href="#/setupCartAdd"> <i class="fa fa-plus-circle" style="color:#088A08;"></i></a></span> 
    
     </div>
     <div class="panel-body">
         <div class="list-group" >
             <a  ng-repeat="item in carts | filter:searchText" ng-href="#/setupCartAdd/{{item.id}}" class="list-group-item" ng-model="item.cartName">
                 <i class="fa fa-shopping-cart"></i> {{item.cartName}}  
-                <i class="fa  fa-trash " style="float: right;"></i>
+                <i class="fa  fa-trash " style="float: right;color:red;"></i>
             </a>
 
             
