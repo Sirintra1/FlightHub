@@ -28,16 +28,18 @@
     </div>
     <div class="row">
         <div class="col-md-2 text-center">
-            <i class="fa fa-minus-circle" style="color:red;"></i>
+            <i class="fa fa-minus-circle" style="color: red;"></i>
         </div>
     </div>
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-10">
             <i class="fa fa-angle-left"></i>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span ng-repeat="mg in floor.cartProd"> 
-            <img class="imgset" ng-src="{{mg.img}}" style="margin-left: 30px;margin-right: 30px;">
+            <img class="imgset" ng-src="{{mg.img}}">
             <span class="badge red_badge">{{mg.qty}}</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
             <i class="fa fa-angle-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a ng-href="#/setupCartProduct/{{newCart.id}}/{{floor.floorId}}"><i class="fa fa-info-circle"></i></a>
@@ -47,15 +49,14 @@
         <div class="text-right">
         </div>
     </div>
-
-    <div class="panel panel-default">
-        <div class="row">
-            <div class="col-md-2 text-center">
-                <i class="fa fa-plus-circle" style="color:#088A08;"></i>
-            </div>
-            <div class="col-md-10">
-                <h3 class="panel-title" ng-click="addItem()">  Add Class</h3>
-            </div>
+</div>
+<div class="panel panel-default">
+    <div class="row" style="cursor:pointer;" ng-click="addFloor()">
+        <div class="col-md-2 text-center">
+            <i class="fa fa-plus-circle" style="color: #088A08"></i>
+        </div>
+        <div class="col-md-10">
+            <h3 class="panel-title" ng-click="addItem()">  Add Class</h3>
         </div>
     </div>
 </div>

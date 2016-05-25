@@ -78,6 +78,14 @@ angular.module('inflightHubApp')
             $scope.newFn();
         };
 
+         $scope.addFloor = function() {
+            $scope.newCart.floor.push({
+                floorId: ($scope.newCart.floor.length+1),
+                cartCate: "New Class "+($scope.newCart.floor.length+1),
+                cartProd: []
+            });
+            console.log($scope.newCart);
+        };
 
         $scope.setVal = function() {
             // alert(''); 
