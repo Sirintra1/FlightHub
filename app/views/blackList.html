@@ -12,41 +12,33 @@
         </ol>
         <div class="form-group input-group" style="margin-top:-20px; margin-bottom: -1px;">
             <input type="text" class="form-control" ng-model="searchText">
-            <span class="input-group-btn" ><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></span>
+            <span class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></span>
         </div>
     </div>
 </div>
 <!-- /.row -->
-<!-- <div class="panel panel-default">
-    <div class="panel-heading">
-        <label class="panel-title"><i class="fa fa-cutlery" aria-hidden="true"></i> Combo</label>
-        <label class="text-right" style="float: right"> <a ng-href="#/comboProductAdd">Add Combo <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
-        </label>
-    </div>
-    </div> -->
-<!-- jjjjjjjjj -->
 <div class="panel panel-default">
     <div class="panel-heading">
         <label class="panel-title"><i class="fa fa-credit-card" aria-hidden="true"></i> Bank</label>
-        <label class="text-right" style="float: right"> <a ng-href="">Upload <i class="fa fa-folder-open" aria-hidden="true"></i></a>
+        <label class="text-right" style="float: right"> <a ng-href="" ng-click="addFileName()">Upload <i class="fa fa-folder-open" aria-hidden="true"></i></a>
         </label>
     </div>
-    <div class="panel-body">
-        <div class="list-group">
-            <a ng-href="#/blackListlist" class="row list-group-item" ng-repeat="ba in bank | filter:searchText" style="margin-left: 10px;margin-right: 10px;">
-               
-                    <div class="col-md-1">
-                        <label><i class="fa fa-credit-card"></i></label>
-                    </div>
-                    <div class="col-md-10">Excel From {{ba.Name}} Bank
-                        <br>Black List ({{ba.people}})
-                    </div>
-                    <span><i class="fa fa-trash" aria-hidden="true" align="right"></i></span>
-                
-            </a>
-        </div>
-        <!-- <div class="text-right">
-            <a href="#">View All Activity <i class="fa fa-arrow-circle-right" style="float: right"></i></a>
-        </div>
-    </div> -->
+</div>
+
+<div class="form-group" style="margin-top: 10px; margin-left: 30px;">
+    <input type="file" id="fileSelected"/>
+</div>
+
+<div class="panel-body">
+    <div class="list-group">
+        <a ng-href="#/blackListlist" class="row list-group-item" ng-repeat="item in fileNameList | filter:searchText" style="margin-left: 10px;margin-right: 10px;">
+            <div class="col-md-1">
+                <label><i class="fa fa-credit-card"></i></label>
+            </div>
+            <div class="col-md-10"> Excel From {{item.name}}
+                <br> Black List
+            </div>
+            <span><i class="fa fa-trash" aria-hidden="true" align="right"></i></span>
+        </a>
     </div>
+</div>

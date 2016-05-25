@@ -15,11 +15,34 @@ angular.module('inflightHubApp')
             'Karma'
         ];
 
+        var fileName_select = "";
+        $scope.fileNameList = [];
+        $scope.fileName = {
+            "id": guid(),
+            "name": "xxx"
+        };
+
+        $('#fileSelected').on('change', function(evt) {
+            var files = $(evt.currentTarget).get(0).files;
+
+            if (files.length > 0) {
+                fileName_select = files[0].name;
+            }
+        });
+        $scope.addFileName = function() {
+            $scope.fileName.name = fileName_select;
+            $scope.fileNameList.push($scope.fileName);
+            $scope.fileName = {};
+        };
+
+
         $scope.bank = [{ Name: "SCB", people: 34 },
-            { Name: "TMB", people: 37  },
-            { Name: "KTB", people: 55  },
-            { Name: "BBL", people: 23  },
-            { Name: "GHB", people: 65  }
+            { Name: "TMB", people: 37 },
+            { Name: "KTB", people: 55 },
+            { Name: "BBL", people: 23 },
+            { Name: "GHB", people: 65 }
         ];
-    	$scope.human = [3985763094,2938574938,0985673923,2048463930,3048364839,456584937565,03836576958];
-});
+        $scope.human = [3985763094, 2938574938, 0985673923, 2048463930, 3048364839, 456584937565, 03836576958];
+
+        
+    });
