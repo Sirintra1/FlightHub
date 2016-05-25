@@ -65,7 +65,7 @@
 <div class="panel panel-default" style="margin-top: -20px;" >
     <div class="panel-body" >
         
-            <div class="col-md-4 setBorder" ng-repeat="itm in product | filter:searchText"" >
+            <div class="col-md-4 setBorder" ng-repeat="itm in product | filter:searchText" >
                 <div class="row">
                     <div class="row">
                         <div class="col-md-10 text-center">
@@ -80,11 +80,12 @@
                         </div>
                         
                         <div class="col-md-2" align="left">
-                            <div class="row" style="margin-top:30px;">
-                                <button class="btn btn-default" ng-click="clickAdd(itm)"><i class="fa fa-plus" ></i></button>
+                            <div class="row" style="margin-top:30px;" >
+                                <button class="btn btn-default" ng-click="clickAdd(itm)" >
+                                <i class="fa fa-plus" style="color:#088A08;"></i></button>
                             </div>
                             <div class="row">
-                                <button button class="btn btn-default" ng-click="clickRemove(itm)"><i class="fa fa-minus"></i></button>
+                                <button button class="btn btn-default" ng-click="clickRemove(itm)"><i class="fa fa-minus" style="color:red;"></i></button>
                             </div>
                         </div>
                     </div>
