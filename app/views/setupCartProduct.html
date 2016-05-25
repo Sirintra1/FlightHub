@@ -7,7 +7,7 @@
 
         <div class="breadcrumb">
             <span> Cancel</span>
-            <span style="float: right;">Done </span>
+            <span style="float: right;"><a href="javascript:window.history.back();" ng-click="addProduct()"> Done </a></span>
         </div>
         <div class="form-group input-group" style="margin-top:-20px; margin-bottom: -1px;">
             <input type="text" class="form-control" ng-model="searchText">
@@ -75,8 +75,10 @@
                     </div>
                     <div class="row" align="middle">
                         <div class="col-md-10" >
-                            <p class="pp">{{itm.qty}}</p> <!-- <img class="noti" src="{{itm.noti}}"> --> 
+
+                             <!-- <img class="noti" src="{{itm.noti}}"> --> 
                              <img class="productSet" src="{{itm.img}}" > 
+                             <span class="badge red_badge">{{itm.qty}}</span>
                         </div>
                         
                         <div class="col-md-2" align="left">

@@ -1,4 +1,4 @@
-'use strict'; 
+'use strict';
 
 /** 
  * @ngdoc function 
@@ -6,103 +6,133 @@
  * @description 
  * # AboutCtrl 
  * Controller of the inflightHubApp 
- */ 
-angular.module('inflightHubApp') 
-    .controller('setupCartCtrl', function($scope, setupCartService, $filter, $routeParams) { 
-        this.awesomeThings = [ 
-            'HTML5 Boilerplate', 
-            'AngularJS', 
-            'Karma' 
-        ]; 
-        $scope.carts = []; 
-        $scope.isEdit = $routeParams.cardID ? true : false; 
-        $scope.newCart = {}; 
-        $scope.init = function() { 
-            $scope.carts = setupCartService.getCartList(); 
-        } 
+ */
+angular.module('inflightHubApp')
+    .controller('setupCartCtrl', function($scope, setupCartService, $filter, $routeParams) {
+        this.awesomeThings = [
+            'HTML5 Boilerplate',
+            'AngularJS',
+            'Karma'
+        ];
+        $scope.product = [{
+            name: "Humburger",
+            price: 130,
+            qty: 0,
+            img: "images/hamburger.jpg"
+        }, {
+            name: "Macaroni",
+            price: 230,
+            qty: 0,
+            img: "images/Macaroni.jpg"
+        }, {
+            name: "Salad",
+            price: 100,
+            qty: 0,
+            img: "images/salad.jpg"
+        }, {
+            name: "Sandwich",
+            price: 90,
+            qty: 0,
+            img: "images/sandwich.jpg"
+        }, {
+            name: "Sapagetti",
+            price: 146,
+            qty: 0,
+            img: "images/sapagetti.jpg"
+        }, {
+            name: "Sausage",
+            price: 99,
+            qty: 0,
+            img: "images/sausage.jpg"
+        }, {
+            name: "Soup",
+            price: 78,
+            qty: 0,
+            img: "images/soup.jpg"
+        }, {
+            name: "Steak",
+            price: 340,
+            qty: 0,
+            img: "images/steak.jpg"
+        }];
 
-        $scope.newFn = function() { 
-            $scope.newCart = {}; 
-        }; 
+        $scope.cartID = $routeParams.cardID;
 
-        $scope.addCart = function() { 
-            $scope.newCart.id = guid(); 
-            $scope.carts.push($scope.newCart); 
-            $scope.newFn(); 
-        }; 
+        $scope.carts = [];
+        $scope.isEdit = $routeParams.cardID ? true : false;
+        $scope.newCart = {};
+        $scope.init = function() {
+            $scope.carts = setupCartService.getCartList();
+        }
 
- 
-        $scope.setVal = function() { 
-           // alert(''); 
-           // var result = $filter("filter")($scope.carts, { id: $routeParams.cardID }); 
-           var result = setupCartService.getCart($scope.carts,$routeParams.cardID ); 
-            console.log(result); 
-            if (result) { 
-                $scope.newCart = result; 
-            } 
+        $scope.newFn = function() {
+            $scope.newCart = setupCartService.getTemp();
+        };
+        $scope.setTemp = function() {
+            //$scope.newCart.cartName = "555";
+        };
 
-        }; 
+        $scope.addCart = function() {
+            $scope.newCart.id = guid();
+            $scope.carts.push($scope.newCart);
+            $scope.newFn();
+        };
 
-        $scope.editFn = function() { 
+
+        $scope.setVal = function() {
+            // alert(''); 
+            // var result = $filter("filter")($scope.carts, { id: $routeParams.cardID }); 
+            var result = setupCartService.getCart($scope.carts, $routeParams.cardID);
+            console.log(result);
+            if (result) {
+                $scope.newCart = result;
+            }
+
+        };
+
+        $scope.editFn = function() {
             // 
-        }; 
-        $scope.init(); 
+        };
+        $scope.addProduct = function() {
+            console.log($scope.newCart);
+            var addItems = [];
+            for (var i = 0; i < $scope.product.length; i++) {
+                console.log($scope.product[i]);
+                if ($scope.product[i].qty > 0) {
+                    addItems.push($scope.product[i]);
+                }
+            }
+            for (var i = 0; i < $scope.newCart.floor.length; i++) {
+                if ($routeParams.floorId == i + 1) {
+                    $scope.newCart.floor[i].cartProd=addItems;
+                    break;
+                }
+            }
+        };
 
-        if ($routeParams.cardID) { 
-            $scope.setVal(); 
-        } else { 
-            $scope.newFn(); 
-        } 
 
- 
 
- 
 
- 
 
-        $scope.cart1 = ["Cart 001A", "Cart 002B", "Cart 003C", "Cart 004D", "Cart 005E", "Cart 006F", "Cart 007G", "Cart 008H"]; 
-        $scope.img = ["images/hamburger.jpg", "images/Macaroni.jpg", "images/salad.jpg", "images/sandwich.jpg", "images/sapagetti.jpg"]; 
-        $scope.product = [{ 
-            name: "Humburger", 
-            price: 130, 
-            qty: 1, 
-            img: "images/hamburger.jpg" 
-        }, { 
-            name: "Macaroni", 
-            price: 230, 
-            qty: 1, 
-            img: "images/Macaroni.jpg" 
-        }, { 
-            name: "Salad", 
-            price: 100, 
-            qty: 1, 
-            img: "images/salad.jpg" 
-        }, { 
-            name: "Sandwich", 
-            price: 90, 
-            qty: 1, 
-            img: "images/sandwich.jpg" 
-        }, { 
-            name: "Sapagetti", 
-            price: 146, 
-            qty: 1, 
-            img: "images/sapagetti.jpg" 
-        }, { 
-            name: "Sausage", 
-            price: 99, 
-            qty: 1, 
-            img: "images/sausage.jpg" 
-        }, { 
-            name: "Soup", 
-            price: 78, 
-            qty: 1, 
-            img: "images/soup.jpg" 
-        }, { 
-            name: "Steak", 
-            price: 340, 
-            qty: 1, 
-            img: "images/steak.jpg" 
-        }]; 
+
+
+        $scope.init();
+
+        if ($routeParams.cardID) {
+            $scope.setVal();
+        } else {
+            $scope.newFn();
+        }
+
+
+
+
+
+
+
+        $scope.cart1 = ["Cart 001A", "Cart 002B", "Cart 003C", "Cart 004D", "Cart 005E", "Cart 006F", "Cart 007G", "Cart 008H"];
+        $scope.img = ["images/hamburger.jpg", "images/Macaroni.jpg", "images/salad.jpg", "images/sandwich.jpg", "images/sapagetti.jpg"];
+
         $scope.purchase = function(item) {
             if (item.qty > 0) {
                 return true;

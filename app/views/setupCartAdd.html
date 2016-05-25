@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-                            Setup Cart
+                            Setup Cart 
                           
                         </h1>
         <div class="breadcrumb">
@@ -19,11 +19,11 @@
     <input class="form-control" ng-model="newCart.cartName">
 </div>
 <!-- /.row -->
-<div class="panel panel-default" style="margin-bottom:-1px;">
+<div class="panel panel-default" style="margin-bottom:-1px;" ng-repeat="floor in newCart.floor">
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-10" style="padding-top: 15px;">
-            <input class="form-control" style="width:400px;" type="text" ng-model="newCart.cartCate" placeholder="A1 Food, Soft Drink">
+            <input class="form-control" style="width:400px;" type="text" ng-model="floor.cartCate" placeholder="A1 Food, Soft Drink">
         </div>
     </div>
     <div class="row">
@@ -35,24 +35,26 @@
         <div class="col-md-2"></div>
         <div class="col-md-10">
             <i class="fa fa-angle-left"></i>
-            <span ng-repeat="mg in newCart.cartProd"> <img class="imgset" ng-src="{{mg.prodImg}}" 
-                style="margin-left: 30px;margin-right: 30px;"></span>
+            <span ng-repeat="mg in floor.cartProd"> 
+            <img class="imgset" ng-src="{{mg.img}}" style="margin-left: 30px;margin-right: 30px;">
+            <span class="badge red_badge">{{mg.qty}}</span>
+            </span>
             <i class="fa fa-angle-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a ng-href="#/setupCartProduct"><i class="fa fa-info-circle"></i></a>
+            <a ng-href="#/setupCartProduct/{{newCart.id}}/{{floor.floorId}}"><i class="fa fa-info-circle"></i></a>
         </div>
     </div>
     <div class="panel-body">
         <div class="text-right">
         </div>
     </div>
-    <div class="panel panel-default">
-        <div class="row">
-            <div class="col-md-2 text-center">
-                <i class="fa fa-plus-circle"></i>
-            </div>
-            <div class="col-md-10">
-                <h3 class="panel-title" ng-click="addItem()">  Add Class</h3>
-            </div>
+</div>
+<div class="panel panel-default">
+    <div class="row">
+        <div class="col-md-2 text-center">
+            <i class="fa fa-plus-circle"></i>
+        </div>
+        <div class="col-md-10">
+            <h3 class="panel-title" ng-click="addItem()">  Add Class</h3>
         </div>
     </div>
 </div>

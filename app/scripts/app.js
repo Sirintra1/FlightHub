@@ -64,6 +64,12 @@ angular
             controllerAs: 'setupCart'
 
         })
+        .when('/setupCartProduct/:cardID/:floorId', {
+            templateUrl: 'views/setupCartProduct.html',
+            controller: 'setupCartCtrl',
+            controllerAs: 'setupCart'
+
+        })
         .when('/blackList', {
             templateUrl: 'views/blackList.html',
             controller: 'blackListCtrl',

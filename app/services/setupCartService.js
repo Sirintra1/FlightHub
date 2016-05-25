@@ -11,28 +11,30 @@ angular.module('inflightHubApp').service('setupCartService', function() {
     var carts = [{
         id: 1,
         cartName: "Cart 001A",
-        cartCate: "A1 Food",
-        cartProd : [{
-            prodName:"",
-            prodPrice:0,
-            prodQty:0,
-            prodImg:"images/hamburger.jpg"
-        },
-        {
-            prodName:"",
-            prodPrice:0,
-            prodQty:0,
-            prodImg:"images/sandwich.jpg"
+        floor: [{
+            floorId: 1,
+            cartCate: "A1 Food",
+            cartProd: [{
+                name: "Salad",
+                price: 100,
+                qty: 1,
+                img: "images/sandwich.jpg"
+            }, {
+                name: "Salad",
+                price: 100,
+                qty: 1,
+                img: "images/salad.jpg"
+            }]
+        }, {
+            floorId: 2,
+            cartCate: "A2 Foodx",
+            cartProd: [{
+                name: "Soup",
+                price: 78,
+                qty: 1,
+                img: "images/soup.jpg"
+            }]
         }]
-    }, {
-        id: 2,
-        cartName: "Cart 002B",
-        cartCate: "B1 Drink"
-    }, {
-        id: 3,
-        cartName: "Cart 003C",
-        cartCate: "C1 Dessert"
-      
     }];
 
     this.getCartList = function() {
@@ -50,5 +52,24 @@ angular.module('inflightHubApp').service('setupCartService', function() {
         }
         return [];
 
+    };
+    this.getTemp = function() {
+        return {
+            id: guid(),
+            cartName: "",
+            floor: [{
+                floorId: 1,
+                cartCate: "",
+                cartProd: []
+            }]
+        };
+    };
+    this.setTemp = function() {
+        return {
+            id: guid(),
+            cartName: "xx",
+            cartCate: "",
+            cartProd: []
+        }
     };
 });
