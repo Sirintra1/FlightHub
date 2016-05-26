@@ -105,7 +105,7 @@ angular.module('inflightHubApp')
         };
 
         $scope.editFn = function() {
-            // 
+            setupCartService.clearTemp();
         };
         $scope.addProduct = function() {
             console.log($scope.newCart);
