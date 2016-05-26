@@ -47,8 +47,11 @@
                         <span class="list-price">Price {{item.comboMoney}} THB.</span>
                     </div>
                 </div>
-                <div class="col-xs-5">
-                    <img class="imgset" src="{{item.img}}">
+                <div class="col-xs-5" >
+                    <span ng-repeat = "itm in item.comboProd">
+                        <img class="imgset" src="{{itm.prodImg}}">
+                    </span>
+                    
                 </div>
                 <label class="text-right" style="float: right"><i class="fa fa-trash" aria-hidden="true" style="color:red;"></i></label>
             </a>
