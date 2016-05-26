@@ -62,6 +62,15 @@ angular.module('inflightHubApp').service('setupCartService', function() {
         return [];
 
     };
+    this.deleteCart = function(id) {
+        for (var i = 0; i < carts.length; i++) {
+            if (carts[i].id == id) {
+                carts.splice(i, 1);
+                break;
+            }
+        }
+        return carts;
+    };
     this.getTemp = function() {
         return varTemp;
     };
