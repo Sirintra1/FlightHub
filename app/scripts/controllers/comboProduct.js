@@ -14,7 +14,7 @@ angular.module('inflightHubApp')
             'AngularJS',
             'Karma'
         ];
-
+        $scope.comboID = $routeParams.comboID;
         $scope.combos = [];
         $scope.isEdit = $routeParams.comboID ? true : false;
         $scope.newCombo = {};
@@ -23,15 +23,19 @@ angular.module('inflightHubApp')
         }
 
         $scope.newFn = function() {
-            $scope.newCombo = {};
+            $scope.newCombo = comboProductservice.getTemp();
         };
 
         $scope.addCombo = function() {
             $scope.newCombo.id = guid();
             $scope.combos.push($scope.newCombo);
             $scope.newFn();
+            comboProductservice.clearTemp();
         };
-
+        $scope.setTemp = function() {
+            //$scope.newCart.cartName = "555";
+            comboProductservice.setTemp($scope.newCombo);
+        };
 
         $scope.setVal = function() {
             // alert('');
@@ -45,8 +49,35 @@ angular.module('inflightHubApp')
         };
 
         $scope.editFn = function() {
-            //
+            comboProductservice.clearTemp();
         };
+
+         
+
+        $scope.addProduct = function() {
+            console.log($scope.newCombo);
+            var addItems = [];
+            for (var i = 0; i < $scope.product.length; i++) {
+                console.log($scope.product[i]);
+                if ($scope.product[i].qty > 0) {
+                    addItems.push($scope.product[i]);
+                }
+            }
+            console.log($scope.newCombo);
+            if (!$routeParams.comboID) {
+
+            } else {
+                $scope.newCombo = comboProductservice.getTemp();
+
+            }
+            for (var i = 0; i < $scope.newCombo.floor.length; i++) {
+                if ($routeParams.floorId == i + 1) {
+                    $scope.newCombo.floor[i].comboProd = addItems;
+                    break;
+                }
+            }
+        };
+
         $scope.init();
 
         if ($routeParams.comboID) {
@@ -62,50 +93,44 @@ angular.module('inflightHubApp')
         $scope.product = [{
             name: "Humburger",
             price: 130,
-            qty: 1,
+            qty: 0,
             img: "images/hamburger.jpg"
         }, {
-            name: "Humburger",
-            price: 130,
-            qty: 1,
-            img: "images/hamburger.jpg"
+            name: "Macaroni",
+            price: 230,
+            qty: 0,
+            img: "images/Macaroni.jpg"
         }, {
-            name: "Humburger",
-            price: 130,
-            qty: 1,
-            img: "images/hamburger.jpg"
+            name: "Salad",
+            price: 100,
+            qty: 0,
+            img: "images/salad.jpg"
         }, {
-            name: "Humburger",
-            price: 130,
-            qty: 1,
-            img: "images/hamburger.jpg"
+            name: "Sandwich",
+            price: 90,
+            qty: 0,
+            img: "images/sandwich.jpg"
         }, {
-            name: "Humburger",
-            price: 130,
-            qty: 1,
-            img: "images/hamburger.jpg"
+            name: "Sapagetti",
+            price: 146,
+            qty: 0,
+            img: "images/sapagetti.jpg"
         }, {
-            name: "Humburger",
-            price: 130,
-            qty: 1,
-            img: "images/hamburger.jpg"
+            name: "Sausage",
+            price: 99,
+            qty: 0,
+            img: "images/sausage.jpg"
         }, {
-            name: "Humburger",
-            price: 130,
-            qty: 1,
-            img: "images/hamburger.jpg"
+            name: "Soup",
+            price: 78,
+            qty: 0,
+            img: "images/soup.jpg"
         }, {
-            name: "Humburger",
-            price: 130,
-            qty: 1,
-            img: "images/hamburger.jpg"
-        }, {
-            name: "Humburger",
-            price: 130,
-            qty: 1,
-            img: "images/hamburger.jpg"
+            name: "Steak",
+            price: 340,
+            qty: 0,
+            img: "images/steak.jpg"
         }];
-
         $scope.limitNumber = 5;
         $scope.runNumber = 0;
         $scope.comboSet = [
@@ -128,5 +153,22 @@ angular.module('inflightHubApp')
                 $scope.runNumber++;
             }
         };
-
+        $scope.purchase = function(item) {
+            if (item.qty > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+        $scope.clickAdd = function(item) {
+            item.qty += 1;
+        };
+        $scope.clickRemove = function(item) {
+            if (item.qty > 0) {
+                item.qty -= 1;
+                return true;
+            } else {
+                return false;
+            }
+        };
     });

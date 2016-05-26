@@ -126,6 +126,18 @@ angular
                 controllerAs: 'comboProduct'
 
             })
+        .when('/product', {
+                templateUrl: 'views/product.html',
+                controller: 'comboProductCtrl',
+                controllerAs: 'comboProduct'
+
+            })
+        .when('/product/:comboID/:floorId', {
+                templateUrl: 'views/product.html',
+                controller: 'comboProductCtrl',
+                controllerAs: 'comboProduct'
+
+            })
         .when('/exchangeMoney', {
             templateUrl: 'views/exchangeMoney.html',
             controller: 'exchangeMoneyCtrl',

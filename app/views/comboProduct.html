@@ -42,14 +42,19 @@
                         <i class="fa fa-fw fa-cutlery"></i>
                     </div>
                     <div class="col-xs-10">
-                        {{item.comboName}}
+                     <span ng-repeat = "itm in item.floor">
+                        {{itm.comboName}}
                         <br>
-                        <span class="list-price">Price {{item.comboMoney}} THB.</span>
+                        <span class="list-price">Price {{itm.comboMoney}} THB.</span>
+                        </span>
                     </div>
                 </div>
                 <div class="col-xs-5" >
-                    <span ng-repeat = "itm in item.comboProd">
-                        <img class="imgset" src="{{itm.prodImg}}">
+                    <span ng-repeat = "itm in item.floor">
+                        <span ng-repeat="it  in itm.comboProd">
+                            <img class="imgset" src="{{it.img}}">
+                        </span>
+                        
                     </span>
                     
                 </div>

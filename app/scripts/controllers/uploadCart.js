@@ -29,7 +29,7 @@ angular.module('inflightHubApp')
         $scope.addUpload = function() { 
             $scope.newUpload.id = guid(); 
             $scope.uploads.push($scope.newUpload); 
-            $scope.newFn(); 
+            $scope.newFn();
         }; 
 
  

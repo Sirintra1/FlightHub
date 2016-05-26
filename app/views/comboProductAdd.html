@@ -23,14 +23,14 @@
        
 
 
-<div class="panel panel-default" style="margin-bottom:-1px;">
+<div class="panel panel-default" style="margin-bottom:-1px;" ng-repeat="item in newCombo.floor">
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-5" style="padding-top: 15px;">
-            <input type="text" ng-model="newCombo.comboName" placeholder="Set Name" style="width: 420px;height: 50px; border-style:none">
+            <input type="text" ng-model="item.comboName" placeholder="Set Name" style="width: 420px;height: 50px; border-style:none">
         </div>
         <div class="col-md-5" style="padding-top: 15px;">
-            <input type="text" ng-model="newCombo.comboMoney" placeholder="Price" style="width: 420px;height: 50px; border-style:none">
+            <input type="text" ng-model="item.comboMoney" placeholder="Price" style="width: 420px;height: 50px; border-style:none">
         </div>
     </div>
 
@@ -41,20 +41,22 @@
        <button type="button" ng-click="scrollLeft();" class="btn btn-defualt">
             <span class="fa fa-angle-left fa-4x"></span>
         </button>
-        <span ng-repeat="itm in newCombo.comboProd | limitTo:limitNumber:runNumber">
+        <span ng-repeat="itm in item.comboProd | limitTo:limitNumber:runNumber">
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{{itm.prodImg}}" class="imgset" />
-        <span class="badge red_badge">{{itm.prodQty}}</span>
+        <img src="{{itm.img}}" class="imgset" />
+        <span class="badge red_badge">{{itm.qty}}</span>
         </span>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <button type="button" ng-click="scrollRight();" class="btn btn-defualt">
             <span class="fa fa-angle-right fa-4x"></span>
         </button>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a ng-href="#/setupCartProduct"> <i class="fa fa-info-circle"> </i> </a>
+        <span >
+            <a  ng-href="#/product/{{newCombo.id}}/{{item.floorId}}"  ng-click="setTemp()"> <i class="fa fa-info-circle"> </i> </a>
+        </span>
+        
     </div>
 </div>
-
 
 
         <br>
