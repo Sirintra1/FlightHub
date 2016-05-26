@@ -70,6 +70,7 @@ angular.module('inflightHubApp')
         };
         $scope.setTemp = function() {
             //$scope.newCart.cartName = "555";
+            setupCartService.setTemp($scope.newCart);
         };
 
         $scope.addCart = function() {
@@ -78,10 +79,10 @@ angular.module('inflightHubApp')
             $scope.newFn();
         };
 
-         $scope.addFloor = function() {
+        $scope.addFloor = function() {
             $scope.newCart.floor.push({
-                floorId: ($scope.newCart.floor.length+1),
-                cartCate: "New Class "+($scope.newCart.floor.length+1),
+                floorId: ($scope.newCart.floor.length + 1),
+                cartCate: "New Class " + ($scope.newCart.floor.length + 1),
                 cartProd: []
             });
             console.log($scope.newCart);
@@ -110,9 +111,16 @@ angular.module('inflightHubApp')
                     addItems.push($scope.product[i]);
                 }
             }
+            console.log($scope.newCart);
+            if (!$routeParams.cardID) {
+
+            } else {
+                $scope.newCart = setupCartService.getTemp();
+
+            }
             for (var i = 0; i < $scope.newCart.floor.length; i++) {
                 if ($routeParams.floorId == i + 1) {
-                    $scope.newCart.floor[i].cartProd=addItems;
+                    $scope.newCart.floor[i].cartProd = addItems;
                     break;
                 }
             }

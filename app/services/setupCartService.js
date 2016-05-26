@@ -36,6 +36,15 @@ angular.module('inflightHubApp').service('setupCartService', function() {
             }]
         }]
     }];
+    var varTemp = {
+        id: guid(),
+        cartName: "",
+        floor: [{
+            floorId: 1,
+            cartCate: "",
+            cartProd: []
+        }]
+    };
 
     this.getCartList = function() {
         return carts;
@@ -54,22 +63,9 @@ angular.module('inflightHubApp').service('setupCartService', function() {
 
     };
     this.getTemp = function() {
-        return {
-            id: guid(),
-            cartName: "",
-            floor: [{
-                floorId: 1,
-                cartCate: "",
-                cartProd: []
-            }]
-        };
+        return varTemp;
     };
-    this.setTemp = function() {
-        return {
-            id: guid(),
-            cartName: "xx",
-            cartCate: "",
-            cartProd: []
-        }
+    this.setTemp = function(item) {
+        varTemp = item;
     };
 });
