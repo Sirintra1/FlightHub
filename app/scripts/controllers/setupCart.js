@@ -67,16 +67,21 @@ angular.module('inflightHubApp')
 
         $scope.newFn = function() {
             $scope.newCart = setupCartService.getTemp();
+
         };
         $scope.setTemp = function() {
             //$scope.newCart.cartName = "555";
             setupCartService.setTemp($scope.newCart);
         };
+
         $scope.addCart = function() {
             $scope.newCart.id = guid();
             $scope.carts.push($scope.newCart);
             $scope.newFn();
             setupCartService.clearTemp();
+        };
+        $scope.deleteCart = function(id){
+            setupCartService.deleteCart(id);
         };
 
         $scope.addFloor = function() {

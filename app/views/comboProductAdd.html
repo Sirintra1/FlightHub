@@ -41,10 +41,10 @@
        <button type="button" ng-click="scrollLeft();" class="btn btn-defualt">
             <span class="fa fa-angle-left fa-4x"></span>
         </button>
-        <span ng-repeat="item in comboSet | limitTo:limitNumber:runNumber">
+        <span ng-repeat="itm in newCombo.comboProd | limitTo:limitNumber:runNumber">
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{{item.img}}" height="80" />
-        <span class="badge red_badge">{{item.badge}}</span>
+        <img src="{{itm.prodImg}}" class="imgset" />
+        <span class="badge red_badge">{{itm.prodQty}}</span>
         </span>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <button type="button" ng-click="scrollRight();" class="btn btn-defualt">

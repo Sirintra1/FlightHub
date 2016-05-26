@@ -9,20 +9,43 @@
  */
 angular.module('inflightHubApp').service('comboProductservice', function() {
 
-
     var combos = [{
             id: 1,
             comboName: "Set 1",
             comboMoney: 250,
-            img: "images/hamburger.jpg"
-        }, {
-            id: 2,
-            comboName: "Set 2",
-            comboMoney: 350,
-            img: "images/hamburger.jpg"
-        }
+            comboProd: [{
+                prodId: 1,
+                prodImg: "images/hamburger.jpg",
+                prodQty: "1"
+            }, {
+                prodId: 2,
+                prodImg: "images/sandwich.jpg",
+                prodQty: "1"
+            },
+            {
+                prodId: 3,
+                prodImg: "images/Macaroni.jpg",
+                prodQty: "1"
+            },
+            {
+                prodId: 4,
+                prodImg: "images/salad.jpg",
+                prodQty: "1"
+            }]
+        }];
+        // var combos = [{
+        //         id: 1,
+        //         comboName: "Set 1",
+        //         comboMoney: 250,
+        //         img: "images/hamburger.jpg"
+        //     }, {
+        //         id: 2,
+        //         comboName: "Set 2",
+        //         comboMoney: 350,
+        //         img: "images/hamburger.jpg"
+        //     }
 
-    ];
+    // ];
 
     this.getComboList = function() {
         return combos;
