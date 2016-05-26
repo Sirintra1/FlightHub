@@ -131,6 +131,24 @@ angular
                 controllerAs: 'comboProduct'
 
             })
+        .when('/promotionProduct', {
+                templateUrl: 'views/promotionProduct.html',
+                controller: 'promotionDiscountCtrl',
+                controllerAs: 'promotionDiscount'
+
+            })
+        .when('/promotionProduct/:comboID/:floorId', {
+                templateUrl: 'views/promotionProduct.html',
+                controller: 'promotionDiscountCtrl',
+                controllerAs: 'promotionDiscount'
+
+            })
+        .when('/promotionProduct/:comboID/:floorFreeId', {
+                templateUrl: 'views/promotionProduct.html',
+                controller: 'promotionDiscountCtrl',
+                controllerAs: 'promotionDiscount'
+
+            })
         .when('/exchangeMoney', {
             templateUrl: 'views/exchangeMoney.html',
             controller: 'exchangeMoneyCtrl',
