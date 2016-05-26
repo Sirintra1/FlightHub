@@ -68,4 +68,15 @@ angular.module('inflightHubApp').service('setupCartService', function() {
     this.setTemp = function(item) {
         varTemp = item;
     };
+    this.clearTemp = function() {
+        varTemp = {
+            id: guid(),
+            cartName: "",
+            floor: [{
+                floorId: 1,
+                cartCate: "",
+                cartProd: []
+            }]
+        };
+    };
 });
