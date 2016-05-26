@@ -32,15 +32,15 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">
-        <label class="panel-title"><i class="fa fa-credit-card" aria-hidden="true"></i> SCB Bank</label>
+        <label class="panel-title"><i class="fa fa-credit-card" aria-hidden="true"></i> {{blackListDetails.name}}</label>
         <label class="text-right" style="float: right"> <a ng-href="#/blackList"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back </a>
         </label>
     </div>
     <div class="panel-body">
         <div class="list-group">
-            <div class="row list-group-item" ng-repeat="pp in human" style="margin-left: 10px;margin-right: 10px;">
+            <div class="row list-group-item" ng-repeat="item in blackListDetails.listIds" style="margin-left: 10px;margin-right: 10px;">
                 <div class="col-md-1"><label><i class="fa fa-credit-card"></i></label></div>
-                <div class="col-md-10">ID : {{pp}} </div>
+                <div class="col-md-10">ID : {{item.cardID}} </div>
                 <!-- <span ><i class="fa fa-trash" aria-hidden="true" align="right"></i></span> -->
             </div>
         </div>

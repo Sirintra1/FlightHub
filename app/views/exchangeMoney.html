@@ -22,6 +22,27 @@
         <label class="text-right" style="float: right"> <a ng-href="#/exchangeMoneyAdd">Add Money <i class="fa fa-plus-circle" aria-hidden="true" style="color:#088A08;"></i></a>
         </label>
     </div>
+
+    <div class="panel-body">
+        <div class="list-group">
+            <div ng-repeat="item in exchanges | filter:searchText">
+                <div class="col-xs-11">
+                    <a ng-href="#/exchangeMoneyAdd/{{item.id}}" class="list-group-item" ng-model="item.exchangeName">
+                        <i class="fa fa-exchange"></i> {{item.exchangeName}} = {{item.exchangeMoney}} THB.
+                    </a>
+                </div>
+                <div class="col-xs-1" style="padding-left: 0;padding-right: 0; text-align: center;">
+                    <a ng-href="#/exchangeMoney" class="list-group-item" ng-click="deleteExchange(item.id)" onclick="return false;">
+                        <i class="fa  fa-trash fa-1x" style="color:red;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-right">
+        </div>
+    </div>
+
+    <!-- 
     <div class="panel-body">
         <div class="list-group">
             <a ng-href="#/exchangeMoneyAdd/{{item.id}}" class="list-group-item" ng-repeat="item in exchanges | filter:searchText" style="margin-left: 10px;margin-right: 10px;">
@@ -33,9 +54,9 @@
                <i class="fa fa-trash" aria-hidden="true" style="float: right;color:red;"></i>
                                        
             </a>
-        </div>
+        </div> -->
         <!-- <div class="text-right">
             <a href="#">View All Activity <i class="fa fa-arrow-circle-right" style="float: right"></i></a>
         </div>
     </div> -->
-    </div>
+    <!-- </div> -->

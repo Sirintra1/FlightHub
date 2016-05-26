@@ -10,10 +10,10 @@
 angular.module('inflightHubApp')
     .controller('exchangeMoneyCtrl', function($scope, exchangeMoneyService, $filter, $routeParams) {
         this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+            'HTML5 Boilerplate',
+            'AngularJS',
+            'Karma'
+        ];
 
 
         $scope.exchanges = [];
@@ -31,6 +31,10 @@ angular.module('inflightHubApp')
             $scope.newExchange.id = guid();
             $scope.exchanges.push($scope.newExchange);
             $scope.newFn();
+        };
+
+        $scope.deleteExchange = function(id){
+            exchangeMoneyService.deleteExchange(id);
         };
 
 
@@ -57,5 +61,7 @@ angular.module('inflightHubApp')
         }
 
 
-        
+
+
+
     });

@@ -83,6 +83,13 @@ angular
 
         })
 
+        .when('/blackListDetail/:blacklistID', {
+            templateUrl: 'views/blackListlist.html',
+            controller: 'blackListDetailCtrl',
+            controllerAs: 'blackList'
+
+        })
+
         .when('/promotionDiscount', {
             templateUrl: 'views/promotionDiscount.html',
             controller: 'promotionDiscountCtrl',

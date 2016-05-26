@@ -36,4 +36,14 @@ angular.module('inflightHubApp').service('exchangeMoneyService', function() {
         return [];
 
     };
+
+    this.deleteExchange = function(id) {
+            for (var i = 0; i < exchanges.length; i++) {
+                if (exchanges[i].id == id) {
+                    exchanges.splice(i, 1);
+                    break;
+                }
+            }
+            return exchanges;
+        };
 });
