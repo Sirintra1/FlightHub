@@ -32,6 +32,11 @@ angular.module('inflightHubApp')
             $scope.newFn();
             comboProductservice.clearTemp();
         };
+
+        $scope.deleteCombo = function(id){
+            comboProductservice.deleteCombo(id);
+            
+        };
         $scope.setTemp = function() {
             //$scope.newCart.cartName = "555";
             comboProductservice.setTemp($scope.newCombo);

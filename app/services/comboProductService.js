@@ -44,6 +44,16 @@ angular.module('inflightHubApp').service('comboProductservice', function() {
         }]
     };
 
+    this.deleteCombo = function(id) {
+        for (var i = 0; i < combos.length; i++) {
+            if (combos[i].id == id) {
+                combos.splice(i, 1);
+                break;
+            }
+        }
+        return combos;
+    };
+
 
 
     this.getComboList = function() {
