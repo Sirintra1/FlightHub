@@ -124,7 +124,7 @@ angular.module('inflightHubApp')
         };
 
         $scope.setProduct = function() {
-            if ($routeParams.floorId && $routeParams.cardID) {
+            if ($routeParams.floorId && $routeParams.cardID && typeof $scope.newCart.floor != "undefined") {
                 for (var i = 0; i < $scope.newCart.floor.length; i++) { //หาชั้นที่จะแอดค่า
                     if ($routeParams.floorId == i + 1) {
                         var cartProducts = $scope.newCart.floor[i].cartProd;
