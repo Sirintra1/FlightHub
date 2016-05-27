@@ -15,41 +15,49 @@ angular.module('inflightHubApp')
             'Karma'
         ];
         $scope.product = [{
+            id: 1,
             name: "Humburger",
             price: 130,
             qty: 0,
             img: "images/hamburger.jpg"
         }, {
+            id: 2,
             name: "Macaroni",
             price: 230,
             qty: 0,
             img: "images/Macaroni.jpg"
         }, {
+            id: 3,
             name: "Salad",
             price: 100,
             qty: 0,
             img: "images/salad.jpg"
         }, {
+            id: 4,
             name: "Sandwich",
             price: 90,
             qty: 0,
             img: "images/sandwich.jpg"
         }, {
+            id: 5,
             name: "Sapagetti",
             price: 146,
             qty: 0,
             img: "images/sapagetti.jpg"
         }, {
+            id: 6,
             name: "Sausage",
             price: 99,
             qty: 0,
             img: "images/sausage.jpg"
         }, {
+            id: 7,
             name: "Soup",
             price: 78,
             qty: 0,
             img: "images/soup.jpg"
         }, {
+            id: 8,
             name: "Steak",
             price: 340,
             qty: 0,
@@ -63,6 +71,7 @@ angular.module('inflightHubApp')
         $scope.newCart = {};
         $scope.init = function() {
             $scope.carts = setupCartService.getCartList();
+
         }
 
         $scope.newFn = function() {
@@ -73,24 +82,22 @@ angular.module('inflightHubApp')
             //$scope.newCart.cartName = "555";
             setupCartService.setTemp($scope.newCart);
         };
-
-         $scope.clearData = function() {
-             setupCartService.clearTemp();
-        }; 
+        $scope.clearData = function() {
+            setupCartService.clearTemp();
+        };
         $scope.addCart = function() {
             $scope.newCart.id = guid();
             $scope.carts.push($scope.newCart);
             $scope.newFn();
             setupCartService.clearTemp();
+            uploadCartService.setCarts($scope.carts);
         };
         $scope.deleteCart = function(id) {
             setupCartService.deleteCart(id);
         };
-
         $scope.removeItem = function(index) {
                 $scope.newCart.floor.splice(index, 1);
             },
-
             $scope.addFloor = function() {
                 $scope.newCart.floor.push({
                     floorId: ($scope.newCart.floor.length + 1),
@@ -107,6 +114,7 @@ angular.module('inflightHubApp')
             console.log(result);
             if (result) {
                 $scope.newCart = result;
+                $scope.setProduct();
             }
 
         };
@@ -114,6 +122,24 @@ angular.module('inflightHubApp')
         $scope.editFn = function() {
             setupCartService.clearTemp();
         };
+
+        $scope.setProduct = function() {
+            if ($routeParams.floorId && $routeParams.cardID) {
+                for (var i = 0; i < $scope.newCart.floor.length; i++) { //หาชั้นที่จะแอดค่า
+                    if ($routeParams.floorId == i + 1) {
+                        var cartProducts = $scope.newCart.floor[i].cartProd;
+                        for (var p = 0; p < $scope.product.length; p++) { //หาขนาดของโปรดัก
+                            for (var j = 0; j < cartProducts.length; j++) { //หาขนาดของโปรดักที่อยู่ในรถเข็น
+                                if ($scope.product[p].id == cartProducts[j].id) {
+                                    $scope.product[p].qty = cartProducts[j].qty;
+                                }
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+        }
 
         $scope.addProduct = function() {
             console.log($scope.newCart);
