@@ -33,17 +33,14 @@
         <div class="col-md-1 text-center"><i class="fa fa-minus-circle" style="color: red;"></i></div>
         
 <!-- /repeat form SetupCart -->
-
-        <div class="col-md-4" >
+        <div class="col-md-4">
             <i class="fa fa-shopping-cart"></i>
-            
-                <!-- <span class="panel-title text-center" style="margin-left:10px;margin-right:10px;">{{}}</span> -->
-                <select  name="singleSelect" ng-model="newUpload.singleSelect">
-      <option ng-repeat="item in carts" value="item.cartName">{{item.cartName}}</option>
-    </select>   
-
-                <span ng-repeat="item in carts" ng-model="newUpload.singleSelect">
-                <a ng-href="#/setupCartAdd/{{item.id}}" >
+            <!-- <span class="panel-title text-center" style="margin-left:10px;margin-right:10px;">{{}}</span> -->
+            <select name="singleSelect" ng-model="item.singleSelect" value="" >
+                <option ng-repeat="item in carts" value="{{item.id}}">{{item.cartName}}</option>
+            </select>
+            <span ng-show="item.singleSelect">
+                <a ng-href="#/setupCartAdd/{{item.singleSelect}}" >
                 <i class="fa fa-chevron-right"></i>
             </a>
             </span>
