@@ -79,7 +79,7 @@ angular.module('inflightHubApp')
             promotionDiscountService.clearTemp();
         };
 
-          $scope.addFloor = function() {
+        $scope.addFloor = function() {
             $scope.newPromotion.floorProduct.push({
                 floorId: ($scope.newPromotion.floorProduct.length + 1),
                 proProd: []
@@ -111,6 +111,12 @@ angular.module('inflightHubApp')
             promotionDiscountService.clearTemp();
         };
 
+        $scope.setAddTypeVal = "";
+        $scope.getAddTypeVal = "";
+        $scope.setAddType = function(addType) {
+            $scope.setAddTypeVal = addType;
+            promotionDiscountService.setAddProductType($scope.setAddTypeVal);
+        }
         $scope.addProduct = function() {
             console.log($scope.newPromotion);
             var addItems = [];
@@ -125,21 +131,28 @@ angular.module('inflightHubApp')
 
             } else {
                 $scope.newPromotion = promotionDiscountService.getTemp();
-
             }
-            for (var i = 0; i < $scope.newPromotion.floorProduct.length; i++) {
-                if ($routeParams.floorId == i + 1) {
-                    $scope.newPromotion.floorProduct[i].proProd = addItems;
-                    break;
-                }
-            }
-            for (var i = 0; i < $scope.newPromotion.floorFree.length; i++) {
-                if ($routeParams.floorFreeId == i + 1) {
-                    $scope.newPromotion.floorFree[i].proProd = addItems;
-                    break;
+            $scope.getAddTypeVal = promotionDiscountService.getAddProductType();
+            if ($scope.getAddTypeVal == "addProduct") {
+                for (var i = 0; i < $scope.newPromotion.floorProduct.length; i++) {
+                    if ($routeParams.floorId == i + 1) {
+                        $scope.newPromotion.floorProduct[i].proProd = addItems;
+                        $scope.isAddProduct = false;
+                        break;
+                    }
                 }
             }
 
+            if ($scope.getAddTypeVal == "addFreeProduct") {
+                for (var i = 0; i < $scope.newPromotion.floorFree.length; i++) {
+                    if ($routeParams.floorId == i + 1) {
+                        $scope.newPromotion.floorFree[i].proFree = addItems;
+                        $scope.isAddFreeProduct = false;
+                        break;
+                    }
+                }
+            }
+            promotionDiscountService.setAddProductType("");
         };
         $scope.init();
 
@@ -170,7 +183,7 @@ angular.module('inflightHubApp')
         };
 
 
-       // $scope.Promotion = ["Buy 500 Discount 100 THB.", "Buy 500 Discount 90 THB.", "Buy 3 Coke Free 1 Water", ];
+        // $scope.Promotion = ["Buy 500 Discount 100 THB.", "Buy 500 Discount 90 THB.", "Buy 3 Coke Free 1 Water", ];
         // $scope.product = [{
         //     name: "Coke",
         //     qty: 1,

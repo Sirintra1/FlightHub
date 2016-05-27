@@ -123,4 +123,18 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
 
         };
     };
+    var addType = "";
+    this.setAddProductType = function(type){
+        
+        if(type == "addProduct"){
+            addType = "addProduct";
+        } else if(type == "addFreeProduct"){
+            addType = "addFreeProduct";
+        } else{
+            addType = "";
+        }
+    };
+    this.getAddProductType = function(){
+        return addType;
+    }
 });
