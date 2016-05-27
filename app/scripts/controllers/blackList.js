@@ -22,7 +22,7 @@ angular.module('inflightHubApp')
             "name": "xxx"
         };
 
-        
+
         // $scope.addFileName = function() {
         //     $scope.fileName.id = guid();
         //     $scope.fileName.name = fileName_select;
@@ -40,10 +40,28 @@ angular.module('inflightHubApp')
                     "name": fileName_select,
                     "listIds": [{
                         "id": 1,
-                        "cardID": "3985763094"
+                        "cardID": "4434567891234534"
                     }, {
                         "id": 2,
-                        "cardID": "2938574938"
+                        "cardID": "9984567891244534"
+                    }, {
+                        "id": 3,
+                        "cardID": "1234567899234534"
+                    }, {
+                        "id": 4,
+                        "cardID": "1200987894234534"
+                    }, {
+                        "id": 5,
+                        "cardID": "1213667991234534"
+                    }, {
+                        "id": 6,
+                        "cardID": "1456785891234534"
+                    }, {
+                        "id": 7,
+                        "cardID": "6564537891234534"
+                    }, {
+                        "id": 8,
+                        "cardID": "1334567891234534"
                     }]
                 };
                 blackListService.addBlackList(item);
