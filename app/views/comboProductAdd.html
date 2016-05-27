@@ -30,21 +30,39 @@
                     <input type="text" ng-model="item.comboMoney" placeholder="Price" style="width: 420px;height: 50px; border-style:none">
                 </div>
             </div>
+            <!--  <div class="col-md-10">
+                <input type="hidden" ng-model="item.limitNumber" ng-init="item.limitNumber=5">
+                <input type="hidden" ng-model="item.runNumber" ng-init="item.runNumber=0">
+                <button type="button" ng-click="item.runNumber>0?(item.runNumber=item.runNumber-1):item.runNumber=item.runNumber" class="btn btn-link">
+                    <span class="fa fa-angle-left fa-4x"> </span>
+                </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.runNumber}}
+                <span ng-repeat="itm in item.comboProd | limitTo:item.limitNumber:item.runNumber"> 
+            <img src="{{itm.img}}" class="imgset" />
+            <span class="badge red_badge">{{mg.qty}}</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <button type="button" ng-click="item.runNumber!=(floor.cartProd.length-item.limitNumber)?(item.runNumber=item.runNumber+1):item.runNumber=item.runNumber" class="btn btn-link">
+                    <span class="fa fa-angle-right fa-4x"> </span>
+                </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a ng-href="#/product/{{newCombo.id}}/{{item.floorId}}" ng-click="setTemp()"><i class="fa fa-info-circle"></i></a>
+            </div> -->
             <div class="row">
                 <div class="col-xs-2 text-center" style="margin-top:30px;">
                     <!--  <i class="fa fa-minus-circle" aria-hidden="true" ng-click="removeItem($index)" style="color:red;"></i> -->
                 </div>
-                <button type="button" ng-click="scrollLeft();" class="btn btn-link">
+                <input type="hidden" ng-model="item.limitNumber" ng-init="item.limitNumber=5">
+                <input type="hidden" ng-model="item.runNumber" ng-init="item.runNumber=0">
+                <input type="hidden" ng-model="item.length" ng-init="item.length=item.comboProd.length">
+                <button type="button" ng-click="item.runNumber>0?(item.runNumber=item.runNumber-1):item.runNumber=item.runNumber" class="btn btn-link">
                     <span class="fa fa-angle-left fa-4x"> </span>
                 </button>
                 <!-- <span><i class="fa fa-angle-left fa-4x" ng-click="scrollLeft();" ></i></span> -->
-                <span ng-repeat="itm in item.comboProd | limitTo:limitNumber:runNumber">
+                <span ng-repeat="itm in item.comboProd | limitTo:item.limitNumber:item.runNumber">
         &nbsp;&nbsp;&nbsp;&nbsp;
         <img src="{{itm.img}}" class="imgset" />
         <span class="badge red_badge">{{itm.qty}}</span>
                 </span>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <button type="button" ng-click="scrollRight();" class="btn btn-link">
+                <button type="button" onclick="return false;" ng-click="(item.runNumber+item.limitNumber)<item.length?(item.runNumber=item.runNumber+1):item.runNumber=item.runNumber" class="btn btn-link">
                     <span class="fa fa-angle-right fa-4x"> </span>
                 </button>
                 <!-- scroll -->
