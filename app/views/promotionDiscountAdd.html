@@ -16,14 +16,24 @@
     <label style="margin-left: 15px;">Promotion Name</label>
     <input class="form-control" placeholder="Buy 3 Coke Free 1 Water" ng-model="newPromotion.promotionName">
 </div>
+
+
+
 <div class="form-group">
     <label class="radio-inline" style="margin-left: 200px;">
-        <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked>By Bill
+        <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" ng-model="newPromotion.optionsRadiosInline">By Bill
     </label>
     <label class="radio-inline" style="margin-left: 250px;">
-        <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2">By Product
+        <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2" ng-model="newPromotion.optionsRadiosInline">By Product
     </label>
 </div>
+<!-- <div style="margin-bottom: 10px;">
+<span ng-repeat="floor in newPromotion.proBy" for="{{floor}}" style="margin-left: 250px;margin-top: 50px;">
+            <label style="font-weight: normal;">
+                <input type="radio"  ng-model="newPromotion.optionsRadiosInline" ng-value="floor" id="{{floor}}" />
+            &nbsp;&nbsp;{{floor}}
+            </label></span>
+        </div> -->
 <!-- /.row -->
 <div class="panel panel-default" style="margin-bottom:-1px;" ng-repeat="floor in newPromotion.floorProduct">
     <div class="row">
@@ -52,8 +62,7 @@
             </div>
         </div>
     </div>
-    <div class="panel panel-default" style="margin-top:-20px;margin-bottom:-1px;"
-    >
+    <div class="panel panel-default" style="margin-top:-20px;margin-bottom:-1px;">
         <div class="row">
             <div class="col-md-6" >
             <input type="text" placeholder="Percent" style="width: 470px;height: 50px; border-style:none" ng-model="newPromotion.percent">

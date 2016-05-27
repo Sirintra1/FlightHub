@@ -12,7 +12,7 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
     var promotions = [{
         id: 1,
         promotionName: "Buy 500 THB. Free Coke 1 Qty",
-        proBy: "A1 Food",
+        proBy: ['By Bill', 'By Product'],
         percent: "20 %",
         bath: 100,
         offerBuy: "Test",
@@ -51,7 +51,6 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
                 img: "images/steak.jpg"
             }]
         }]
-
     }];
     var varTemp = {
         id: guid(),
@@ -69,7 +68,6 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
             floorFreeId: 1,
             proFree: []
         }]
-
     };
 
     // var promotions = [{
@@ -120,7 +118,6 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
                 floorFreeId: 1,
                 proFree: []
             }]
-
         };
     };
     var addType = "";

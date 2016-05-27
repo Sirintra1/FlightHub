@@ -11,6 +11,7 @@ angular.module('inflightHubApp').service('uploadCartService', function() {
     var uploads = [{
         id: 1,
         flightName: "AK 001",
+        trunBy: ['Inbound', 'Outbound', 'Quick Turn'],
         cart: [{
             cartId : 1,
             cartName: "Cart 001A",
@@ -22,6 +23,7 @@ angular.module('inflightHubApp').service('uploadCartService', function() {
 var varTemp = {
         id: guid(),
         flightName: "",
+        trunBy: [],
         cart: []
     };
 
@@ -51,6 +53,7 @@ var varTemp = {
         varTemp = {
         id: guid(),
         flightName: "",
+        trunBy: [],
         cart: []
     };
     };
