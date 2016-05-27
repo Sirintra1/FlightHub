@@ -22,13 +22,7 @@ angular.module('inflightHubApp').service('uploadCartService', function() {
 var varTemp = {
         id: guid(),
         flightName: "",
-        cart: [{
-            cartId : 1,
-            cartName: "",
-            name: "",
-            detail: "",
-            detailadd: ""
-        }]
+        cart: []
     };
 
     this.getUploadList = function() {
@@ -57,13 +51,7 @@ var varTemp = {
         varTemp = {
         id: guid(),
         flightName: "",
-        cart: [{
-            cartId : 1,
-            cartName: "",
-            name: "",
-            detail: "",
-            detailadd: ""
-        }]
+        cart: []
     };
     };
 });

@@ -14,7 +14,7 @@ angular.module('inflightHubApp')
             'AngularJS',
             'Karma'
         ];
-
+        
         $scope.uploads = [];
         $scope.isEdit = $routeParams.uploadID ? true : false;
         $scope.newUpload = {};

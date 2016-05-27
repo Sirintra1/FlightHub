@@ -34,14 +34,22 @@
         
 <!-- /repeat form SetupCart -->
 
-        <div class="col-md-4" ng-repeat="item in carts">
+        <div class="col-md-4" >
             <i class="fa fa-shopping-cart"></i>
-            <a ng-href="#/setupCartAdd/{{item.id}}
-" ng-model="item.cartName">
-                <span class="panel-title text-center" style="margin-left:10px;margin-right:10px;">{{item.cartName}}</span>
+            
+                <!-- <span class="panel-title text-center" style="margin-left:10px;margin-right:10px;">{{}}</span> -->
+                <select  name="singleSelect" ng-model="newUpload.singleSelect">
+      <option ng-repeat="item in carts" value="item.cartName">{{item.cartName}}</option>
+    </select>   
+
+                <span ng-repeat="item in carts" ng-model="newUpload.singleSelect">
+                <a ng-href="#/setupCartAdd/{{item.id}}" >
                 <i class="fa fa-chevron-right"></i>
             </a>
+            </span>
         </div>
+
+        
 
 
 
