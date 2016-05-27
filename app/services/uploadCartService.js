@@ -12,18 +12,20 @@ angular.module('inflightHubApp').service('uploadCartService', function() {
         id: 1,
         flightName: "AK 001",
         cart: [{
-            cartId : 1,
+            cartId: 1,
             cartName: "Cart 001A",
             name: "Flight No. AK25",
             detail: "Outbound (cart 3)",
             detailadd: "Left Front Outbound"
         }]
     }];
-var varTemp = {
+    var varTemp = {
         id: guid(),
         flightName: "",
         cart: []
     };
+
+    
 
     this.getUploadList = function() {
         return uploads;
@@ -41,6 +43,17 @@ var varTemp = {
         return [];
 
     };
+
+    this.deleteUpload = function(id) {
+        for (var i = 0; i < uploads.length; i++) {
+            if (uploads[i].id == id) {
+                uploads.splice(i, 1);
+                break;
+            }
+        }
+        return uploads;
+    };
+
     this.getTemp = function() {
         return varTemp;
     };
@@ -49,9 +62,9 @@ var varTemp = {
     };
     this.clearTemp = function() {
         varTemp = {
-        id: guid(),
-        flightName: "",
-        cart: []
-    };
+            id: guid(),
+            flightName: "",
+            cart: []
+        };
     };
 });
