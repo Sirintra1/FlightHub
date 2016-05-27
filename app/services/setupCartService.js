@@ -15,11 +15,13 @@ angular.module('inflightHubApp').service('setupCartService', function() {
             floorId: 1,
             cartCate: "A1 Food",
             cartProd: [{
-                name: "Salad",
-                price: 100,
+                id: 4,
+                name: "Sandwich",
+                price: 90,
                 qty: 1,
                 img: "images/sandwich.jpg"
             }, {
+                id: 3,
                 name: "Salad",
                 price: 100,
                 qty: 1,
@@ -29,6 +31,7 @@ angular.module('inflightHubApp').service('setupCartService', function() {
             floorId: 2,
             cartCate: "A2 Foodx",
             cartProd: [{
+                id: 7,
                 name: "Soup",
                 price: 78,
                 qty: 1,

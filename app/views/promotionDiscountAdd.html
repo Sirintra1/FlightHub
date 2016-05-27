@@ -5,9 +5,10 @@
                           
                         </h1>
         <div class="breadcrumb">
-            <a ng-href="#/promotionDiscount">Cancel
-            <span style="float: right;" ng-show="isEdit==false" ng-click="addPromotion()">Done </span>
-            <span style="float: right;" ng-show="isEdit==true" ng-click="editFn()">Edit </span>
+            <a ng-href="#/promotionDiscount" ng-click="clearData()">Cancel</a>
+            <a ng-href="#/promotionDiscount">
+                <span style="float: right;" ng-show="isEdit==false" ng-click="addPromotion()">Done </span>
+                <span style="float: right;" ng-show="isEdit==true" ng-click="editFn()">Edit </span>
             </a>
         </div>
     </div>
@@ -37,17 +38,18 @@
 <!-- /.row -->
 <div class="panel panel-default" style="margin-bottom:-1px;" ng-repeat="floor in newPromotion.floorProduct">
     <div class="row">
-        <div class="col-md-1 text-center"><i class="fa fa-minus-circle" style="color:red;"></i></div>
+        <div class="col-md-1 text-center"><i class="fa fa-minus-circle"
+        ng-click="removeItem($index)"  style="color:red;"></i></div>
         <div class="col-md-2">
             <i class="fa fa-cutlery"></i>
             <a ng-href="#/promotionProduct/{{newPromotion.id}}/{{floor.floorId}}" ng-click="setTemp(); setAddType('addProduct');">
-            <span ng-repeat="mg in floor.proProd"> 
+                <span ng-repeat="mg in floor.proProd"> 
                 <span class="panel-title text-center" style="margin-left:10px;margin-right:10px;">{{mg.name}}</span></span>
                 <i class="fa fa-chevron-right"></i>
             </a>
         </div>
         <div class="col-md-9" style="border-style: solid;border-color:#ddd;border-width: 0px 0px 0px 1px;"><span ng-repeat="mg in floor.proProd"> 
-        <input type="number" ng-model="mg.qty"> Qty. </span></div> 
+        <input type="number" ng-model="mg.qty"> Qty. </span></div>
     </div>
 </div>
 <div class="panel panel-default">
@@ -64,11 +66,9 @@
     </div>
     <div class="panel panel-default" style="margin-top:-20px;margin-bottom:-1px;">
         <div class="row">
-            <div class="col-md-6" >
-            <input type="text" placeholder="Percent" style="width: 470px;height: 50px; border-style:none" ng-model="newPromotion.percent">
+            <div class="col-md-6">
+                <input type="text" placeholder="Percent" style="width: 470px;height: 50px; border-style:none" ng-model="newPromotion.percent">
                 <br>
-               
-                
             </div>
             <div class="col-md-6">
                 <input type="text" ng-model="newPromotion.bath" placeholder="Baht" style="width: 470px;height: 50px;border-style: solid;border-color:#ddd;border-width: 0px 0px 0px 1px;">
@@ -78,18 +78,18 @@
     </div>
     <div class="panel panel-default" style="margin-bottom:-1px;" ng-repeat="floor in newPromotion.floorFree">
         <div class="row">
-            <div class="col-md-1 text-center"><i class="fa fa-minus-circle" style="color:red;"></i></div>
+            <div class="col-md-1 text-center"><i class="fa fa-minus-circle" 
+            ng-click="removeItem2($index)"  style="color:red;"></i></div>
             <div class="col-md-2">
                 <i class="fa fa-cutlery"></i>
-                <a ng-href="#/promotionProduct/{{newPromotion.id}}/{{floor.floorFreeId}}"
-                ng-click="setTemp(); setAddType('addFreeProduct');">
-                <span ng-repeat="mg in floor.proFree"> 
+                <a ng-href="#/promotionProduct/{{newPromotion.id}}/{{floor.floorFreeId}}" ng-click="setTemp(); setAddType('addFreeProduct');">
+                    <span ng-repeat="mg in floor.proFree"> 
                     <span class="panel-title text-center" style="margin-left:10px;margin-right:10px;">{{mg.name}}</span></span>
                     <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
             <div class="col-md-9" style="border-style: solid;border-color:#ddd;border-width: 0px 0px 0px 1px;">
-            <span ng-repeat="mg in floor.proFree"> 
+                <span ng-repeat="mg in floor.proFree"> 
             <input type="number" ng-model="mg.qty"> Qty.
             </span></div>
         </div>
@@ -117,8 +117,9 @@
     </div>
 </div>
 <div class="breadcrumb">
-    <a ng-href="#/promotionDiscount">Cancel
-            <span style="float: right;" ng-show="isEdit==false" ng-click="addPromotion()">Done </span>
-            <span style="float: right;" ng-show="isEdit==true" ng-click="editFn()">Edit </span>
-            </a>
+    <a ng-href="#/promotionDiscount" ng-click="clearData()">Cancel</a>
+    <a ng-href="#/promotionDiscount">
+        <span style="float: right;" ng-show="isEdit==false" ng-click="addPromotion()">Done </span>
+        <span style="float: right;" ng-show="isEdit==true" ng-click="editFn()">Edit </span>
+    </a>
 </div>

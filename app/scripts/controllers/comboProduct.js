@@ -32,33 +32,55 @@ angular.module('inflightHubApp')
             $scope.newFn();
             comboProductservice.clearTemp();
         };
-
-        $scope.deleteCombo = function(id){
+        $scope.clearData = function() {
+            comboProductservice.clearTemp();
+        };
+        $scope.deleteCombo = function(id) {
             comboProductservice.deleteCombo(id);
-            
+
         };
         $scope.setTemp = function() {
             //$scope.newCart.cartName = "555";
             comboProductservice.setTemp($scope.newCombo);
         };
+        $scope.removeItem = function(index) {
+                $scope.newCombo.floor.splice(index, 1);
+            },
 
-        $scope.setVal = function() {
-            // alert('');
-            // var result = $filter("filter")($scope.carts, { id: $routeParams.cardID });
-            var result = comboProductservice.getCombo($scope.combos, $routeParams.comboID);
-            console.log(result);
-            if (result) {
-                $scope.newCombo = result;
-            }
+            $scope.setVal = function() {
+                // alert('');
+                // var result = $filter("filter")($scope.carts, { id: $routeParams.cardID });
+                var result = comboProductservice.getCombo($scope.combos, $routeParams.comboID);
+                console.log(result);
+                if (result) {
+                    $scope.newCombo = result;
+                    $scope.setProduct();
+                }
 
-        };
+            };
 
         $scope.editFn = function() {
             comboProductservice.clearTemp();
         };
 
-         
 
+        $scope.setProduct = function() {
+            if ($routeParams.floorId && $routeParams.cardID) {
+                for (var i = 0; i < $scope.newCombo.floor.length; i++) { //หาชั้นที่จะแอดค่า
+                    if ($routeParams.floorId == i + 1) {
+                        var cartProducts = $scope.newCombo.floor[i].cartProd;
+                        for (var p = 0; p < $scope.product.length; p++) { //หาขนาดของโปรดัก
+                            for (var j = 0; j < cartProducts.length; j++) { //หาขนาดของโปรดักที่อยู่ในรถเข็น
+                                if ($scope.product[p].id == cartProducts[j].id) {
+                                    $scope.product[p].qty = cartProducts[j].qty;
+                                }
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+        }
         $scope.addProduct = function() {
             console.log($scope.newCombo);
             var addItems = [];
@@ -95,47 +117,57 @@ angular.module('inflightHubApp')
 
         $scope.cart = ["Cart 001A", "Cart 002B", "Cart 003C", "Cart 004D", "Cart 005E", "Cart 006F", "Cart 007G", "Cart 008H"];
         $scope.img = ["images/hamburger.jpg", "images/Macaroni.jpg", "images/salad.jpg", "images/sandwich.jpg", "images/sapagetti.jpg"]
+
         $scope.product = [{
+            id: 1,
             name: "Humburger",
             price: 130,
             qty: 0,
             img: "images/hamburger.jpg"
         }, {
+            id: 2,
             name: "Macaroni",
             price: 230,
             qty: 0,
             img: "images/Macaroni.jpg"
         }, {
+            id: 3,
             name: "Salad",
             price: 100,
             qty: 0,
             img: "images/salad.jpg"
         }, {
+            id: 4,
             name: "Sandwich",
             price: 90,
             qty: 0,
             img: "images/sandwich.jpg"
         }, {
+            id: 5,
             name: "Sapagetti",
             price: 146,
             qty: 0,
             img: "images/sapagetti.jpg"
         }, {
+            id: 6,
             name: "Sausage",
             price: 99,
             qty: 0,
             img: "images/sausage.jpg"
         }, {
+            id: 7,
             name: "Soup",
             price: 78,
             qty: 0,
             img: "images/soup.jpg"
         }, {
+            id: 8,
             name: "Steak",
             price: 340,
             qty: 0,
             img: "images/steak.jpg"
         }];
+
         $scope.limitNumber = 5;
         $scope.runNumber = 0;
         $scope.comboSet = [

@@ -79,6 +79,10 @@ angular.module('inflightHubApp')
             promotionDiscountService.clearTemp();
         };
 
+        $scope.clearData = function() {
+             promotionDiscountService.clearTemp();
+        }; 
+
         $scope.addFloor = function() {
             $scope.newPromotion.floorProduct.push({
                 floorId: ($scope.newPromotion.floorProduct.length + 1),
@@ -94,6 +98,17 @@ angular.module('inflightHubApp')
             });
             console.log($scope.newPromotion);
         };
+
+         $scope.deletePromotion = function(id){
+            promotionDiscountService.deletePromotion(id);
+        };
+
+        $scope.removeItem = function(index) {
+                $scope.newPromotion.floorProduct.splice(index, 1);
+            },
+            $scope.removeItem2 = function(index) {
+                $scope.newPromotion.floorFree.splice(index, 1);
+            },
 
 
         $scope.setVal = function() {
