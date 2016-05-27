@@ -14,109 +14,6 @@ angular.module('inflightHubApp')
             'AngularJS',
             'Karma'
         ];
-        $scope.comboID = $routeParams.comboID;
-        $scope.combos = [];
-        $scope.isEdit = $routeParams.comboID ? true : false;
-        $scope.newCombo = {};
-        $scope.init = function() {
-            $scope.combos = comboProductservice.getComboList();
-        }
-
-        $scope.newFn = function() {
-            $scope.newCombo = comboProductservice.getTemp();
-        };
-
-        $scope.addCombo = function() {
-            $scope.newCombo.id = guid();
-            $scope.combos.push($scope.newCombo);
-            $scope.newFn();
-            comboProductservice.clearTemp();
-        };
-        $scope.clearData = function() {
-            comboProductservice.clearTemp();
-        };
-        $scope.deleteCombo = function(id) {
-            comboProductservice.deleteCombo(id);
-
-        };
-        $scope.setTemp = function() {
-            //$scope.newCart.cartName = "555";
-            comboProductservice.setTemp($scope.newCombo);
-        };
-        $scope.removeItem = function(index) {
-                $scope.newCombo.floor.splice(index, 1);
-            },
-
-            $scope.setVal = function() {
-                // alert('');
-                // var result = $filter("filter")($scope.carts, { id: $routeParams.cardID });
-                var result = comboProductservice.getCombo($scope.combos, $routeParams.comboID);
-                console.log(result);
-                if (result) {
-                    $scope.newCombo = result;
-                    $scope.setProduct();
-                }
-
-            };
-
-        $scope.editFn = function() {
-            comboProductservice.clearTemp();
-        };
-
-
-        $scope.setProduct = function() {
-            if ($routeParams.floorId && $routeParams.cardID) {
-                for (var i = 0; i < $scope.newCombo.floor.length; i++) { //หาชั้นที่จะแอดค่า
-                    if ($routeParams.floorId == i + 1) {
-                        var cartProducts = $scope.newCombo.floor[i].cartProd;
-                        for (var p = 0; p < $scope.product.length; p++) { //หาขนาดของโปรดัก
-                            for (var j = 0; j < cartProducts.length; j++) { //หาขนาดของโปรดักที่อยู่ในรถเข็น
-                                if ($scope.product[p].id == cartProducts[j].id) {
-                                    $scope.product[p].qty = cartProducts[j].qty;
-                                }
-                            }
-                        }
-                        break;
-                    }
-                }
-            }
-        }
-        $scope.addProduct = function() {
-            console.log($scope.newCombo);
-            var addItems = [];
-            for (var i = 0; i < $scope.product.length; i++) {
-                console.log($scope.product[i]);
-                if ($scope.product[i].qty > 0) {
-                    addItems.push($scope.product[i]);
-                }
-            }
-            console.log($scope.newCombo);
-            if (!$routeParams.comboID) {
-
-            } else {
-                $scope.newCombo = comboProductservice.getTemp();
-
-            }
-            for (var i = 0; i < $scope.newCombo.floor.length; i++) {
-                if ($routeParams.floorId == i + 1) {
-                    $scope.newCombo.floor[i].comboProd = addItems;
-                    break;
-                }
-            }
-        };
-
-        $scope.init();
-
-        if ($routeParams.comboID) {
-            $scope.setVal();
-        } else {
-            $scope.newFn();
-        }
-
-
-
-        $scope.cart = ["Cart 001A", "Cart 002B", "Cart 003C", "Cart 004D", "Cart 005E", "Cart 006F", "Cart 007G", "Cart 008H"];
-        $scope.img = ["images/hamburger.jpg", "images/Macaroni.jpg", "images/salad.jpg", "images/sandwich.jpg", "images/sapagetti.jpg"]
 
         $scope.product = [{
             id: 1,
@@ -168,6 +65,109 @@ angular.module('inflightHubApp')
             img: "images/steak.jpg"
         }];
 
+        $scope.comboID = $routeParams.comboID;
+        $scope.combos = [];
+        $scope.isEdit = $routeParams.comboID ? true : false;
+        $scope.newCombo = {};
+        $scope.init = function() {
+            $scope.combos = comboProductservice.getComboList();
+        }
+
+        $scope.newFn = function() {
+            $scope.newCombo = comboProductservice.getTemp();
+        };
+
+        $scope.addCombo = function() {
+            $scope.newCombo.id = guid();
+            $scope.combos.push($scope.newCombo);
+            $scope.newFn();
+            comboProductservice.clearTemp();
+        };
+        $scope.clearData = function() {
+            comboProductservice.clearTemp();
+        };
+        $scope.deleteCombo = function(id) {
+            comboProductservice.deleteCombo(id);
+
+        };
+        $scope.setTemp = function() {
+            //$scope.newCart.cartName = "555";
+            comboProductservice.setTemp($scope.newCombo);
+        };
+        $scope.removeItem = function(index) {
+                $scope.newCombo.floor.splice(index, 1);
+            },
+
+            $scope.setVal = function() {
+                // alert('');
+                // var result = $filter("filter")($scope.carts, { id: $routeParams.cardID });
+                var result = comboProductservice.getCombo($scope.combos, $routeParams.comboID);
+                console.log(result);
+                if (result) {
+                    $scope.newCombo = result;
+                    $scope.setProduct();
+                }
+
+            };
+
+        $scope.editFn = function() {
+            comboProductservice.clearTemp();
+        };
+        $scope.setProduct = function() {
+            if ($routeParams.floorId && $routeParams.comboID) {
+                for (var i = 0; i < $scope.newCombo.floor.length; i++) { //หาชั้นที่จะแอดค่า
+                    if ($routeParams.floorId == i + 1) {
+                        var cartProducts = $scope.newCombo.floor[i].comboProd;
+                        for (var p = 0; p < $scope.product.length; p++) { //หาขนาดของโปรดัก
+                            for (var j = 0; j < cartProducts.length; j++) { //หาขนาดของโปรดักที่อยู่ในรถเข็น
+                                if ($scope.product[p].id == cartProducts[j].id) {
+                                    $scope.product[p].qty = cartProducts[j].qty;
+                                }
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+        $scope.addProduct = function() {
+            console.log($scope.newCombo);
+            var addItems = [];
+            for (var i = 0; i < $scope.product.length; i++) {
+                console.log($scope.product[i]);
+                if ($scope.product[i].qty > 0) {
+                    addItems.push($scope.product[i]);
+                }
+            }
+            console.log($scope.newCombo);
+            if (!$routeParams.comboID) {
+
+            } else {
+                $scope.newCombo = comboProductservice.getTemp();
+
+            }
+            for (var i = 0; i < $scope.newCombo.floor.length; i++) {
+                if ($routeParams.floorId == i + 1) {
+                    $scope.newCombo.floor[i].comboProd = addItems;
+                    break;
+                }
+            }
+        };
+
+        $scope.init();
+
+        if ($routeParams.comboID) {
+            $scope.setVal();
+        } else {
+            $scope.newFn();
+        }
+
+
+
+        $scope.cart = ["Cart 001A", "Cart 002B", "Cart 003C", "Cart 004D", "Cart 005E", "Cart 006F", "Cart 007G", "Cart 008H"];
+        $scope.img = ["images/hamburger.jpg", "images/Macaroni.jpg", "images/salad.jpg", "images/sandwich.jpg", "images/sapagetti.jpg"]
+
+        
         $scope.limitNumber = 5;
         $scope.runNumber = 0;
         $scope.comboSet = [
