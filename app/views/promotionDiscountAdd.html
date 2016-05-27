@@ -5,7 +5,7 @@
                           
                         </h1>
         <div class="breadcrumb">
-            <a ng-href="#/promotionDiscount">Cancel</a>
+            <a ng-href="#/promotionDiscount" ng-click="clearData()">Cancel</a>
             <a ng-href="#/promotionDiscount">
                 <span style="float: right;" ng-show="isEdit==false" ng-click="addPromotion()">Done </span>
                 <span style="float: right;" ng-show="isEdit==true" ng-click="editFn()">Edit </span>
@@ -107,7 +107,7 @@
     </div>
 </div>
 <div class="breadcrumb">
-    <a ng-href="#/promotionDiscount">Cancel</a>
+    <a ng-href="#/promotionDiscount" ng-click="clearData()">Cancel</a>
     <a ng-href="#/promotionDiscount">
         <span style="float: right;" ng-show="isEdit==false" ng-click="addPromotion()">Done </span>
         <span style="float: right;" ng-show="isEdit==true" ng-click="editFn()">Edit </span>

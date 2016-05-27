@@ -79,6 +79,10 @@ angular.module('inflightHubApp')
             promotionDiscountService.clearTemp();
         };
 
+        $scope.clearData = function() {
+             promotionDiscountService.clearTemp();
+        }; 
+
         $scope.addFloor = function() {
             $scope.newPromotion.floorProduct.push({
                 floorId: ($scope.newPromotion.floorProduct.length + 1),

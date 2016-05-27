@@ -7,7 +7,7 @@
         <div class="breadcrumb">
             <!-- <span> Cancel</span> -->
             <span ng-repeat="item in carts"></span>
-            <a ng-href="#/setupCart">Cancel</a>
+            <a ng-href="#/setupCart" ng-click="clearData()">Cancel</a>
             <a href="javascript:window.history.back();">
                 <span style="float: right;" ng-show="isEdit==false" ng-click="addCart()">Done </span>
                 <span style="float: right;" ng-show="isEdit==true" ng-click="editFn()">Edit </span>
@@ -64,7 +64,7 @@
 <div class="breadcrumb">
     <!-- <span> Cancel</span> -->
     <span ng-repeat="item in carts"></span>
-    <a ng-href="#/setupCart">Cancel</a>
+    <a ng-href="#/setupCart" ng-click="clearData()">Cancel</a>
     <a href="javascript:window.history.back();">
         <span style="float: right;" ng-show="isEdit==false" ng-click="addCart()">Done </span>
         <span style="float: right;" ng-show="isEdit==true" ng-click="editFn()">Edit </span>
