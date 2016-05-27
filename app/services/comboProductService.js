@@ -16,15 +16,18 @@ angular.module('inflightHubApp').service('comboProductservice', function() {
             comboName: "Set 1",
             comboMoney: 250,
             comboProd: [{
+                id:1,
                 img: "images/hamburger.jpg",
                 qty: "1"
             }, {
+                id:4,
                 img: "images/sandwich.jpg",
                 qty: "1"
             }, {
+                id:2,
                 img: "images/Macaroni.jpg",
                 qty: "1"
-            }, {
+            }, {id:3,
                 img: "images/salad.jpg",
                 qty: "1"
             }]

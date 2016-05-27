@@ -196,23 +196,4 @@ angular.module('inflightHubApp')
                 return false;
             }
         };
-
-
-        // $scope.Promotion = ["Buy 500 Discount 100 THB.", "Buy 500 Discount 90 THB.", "Buy 3 Coke Free 1 Water", ];
-        // $scope.product = [{
-        //     name: "Coke",
-        //     qty: 1,
-        //     detail: "Outbound (cart 3)",
-        //     detailadd: "Left Front Outbound"
-        // }, {
-        //     name: "Snack",
-        //     qty: 3,
-        //     detail: "inbound (cart 5)",
-        //     detailadd: "Left Front Inbound"
-        // }, {
-        //     name: "Banana",
-        //     qty: 5,
-        //     detail: "Outbound (cart 1)",
-        //     detailadd: "Left Front Outbound"
-        // }];
     });
