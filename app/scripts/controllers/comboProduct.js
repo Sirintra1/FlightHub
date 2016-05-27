@@ -114,7 +114,7 @@ angular.module('inflightHubApp')
             comboProductservice.clearTemp();
         };
         $scope.setProduct = function() {
-            if ($routeParams.floorId && $routeParams.comboID) {
+            if ($routeParams.floorId && $routeParams.comboID && typeof $scope.newCombo.floor != "undefined") {
                 for (var i = 0; i < $scope.newCombo.floor.length; i++) { //หาชั้นที่จะแอดค่า
                     if ($routeParams.floorId == i + 1) {
                         var cartProducts = $scope.newCombo.floor[i].comboProd;
