@@ -32,7 +32,9 @@ angular.module('inflightHubApp')
             $scope.newFn();
             comboProductservice.clearTemp();
         };
-
+         $scope.clearData = function() {
+              comboProductservice.clearTemp();
+        };
         $scope.deleteCombo = function(id){
             comboProductservice.deleteCombo(id);
             

@@ -14,7 +14,7 @@ angular.module('inflightHubApp')
             'AngularJS',
             'Karma'
         ];
-        
+
         $scope.uploads = [];
         $scope.isEdit = $routeParams.uploadID ? true : false;
         $scope.newUpload = {};
@@ -36,13 +36,16 @@ angular.module('inflightHubApp')
 
         };
 
+        $scope.clearData = function() {
+             uploadCartService.clearTemp();
+        };
         $scope.removeItem = function(index) {
                 $scope.newUpload.cart.splice(index, 1);
             },
 
-        $scope.setTemp = function() {
-            uploadCartService.setTemp($scope.newUpload);
-        };
+            $scope.setTemp = function() {
+                uploadCartService.setTemp($scope.newUpload);
+            };
         $scope.addFloor = function() {
             $scope.newUpload.cart.push({
 
@@ -50,7 +53,7 @@ angular.module('inflightHubApp')
             console.log($scope.newUpload);
         };
 
-        $scope.deleteUpload = function(id){
+        $scope.deleteUpload = function(id) {
             uploadCartService.deleteUpload(id);
         };
 
