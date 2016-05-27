@@ -46,6 +46,10 @@ angular.module('inflightHubApp')
             console.log($scope.newUpload);
         };
 
+        $scope.deleteUpload = function(id){
+            uploadCartService.deleteUpload(id);
+        };
+
         $scope.setVal = function() {
             // alert(''); 
             // var result = $filter("filter")($scope.carts, { id: $routeParams.cardID }); 

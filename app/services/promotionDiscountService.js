@@ -134,6 +134,17 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
             addType = "";
         }
     };
+
+    this.deletePromotion = function(id) {
+        for (var i = 0; i < promotions.length; i++) {
+            if (promotions[i].id == id) {
+                promotions.splice(i, 1);
+                break;
+            }
+        }
+        return promotions;
+    };
+    
     this.getAddProductType = function(){
         return addType;
     }
