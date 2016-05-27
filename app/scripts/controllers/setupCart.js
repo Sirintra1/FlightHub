@@ -80,18 +80,22 @@ angular.module('inflightHubApp')
             $scope.newFn();
             setupCartService.clearTemp();
         };
-        $scope.deleteCart = function(id){
+        $scope.deleteCart = function(id) {
             setupCartService.deleteCart(id);
         };
 
-        $scope.addFloor = function() {
-            $scope.newCart.floor.push({
-                floorId: ($scope.newCart.floor.length + 1),
-                cartCate: "",
-                cartProd: []
-            });
-            console.log($scope.newCart);
-        };
+        $scope.removeItem = function(index) {
+                $scope.newCart.floor.splice(index, 1);
+            },
+
+            $scope.addFloor = function() {
+                $scope.newCart.floor.push({
+                    floorId: ($scope.newCart.floor.length + 1),
+                    cartCate: "",
+                    cartProd: []
+                });
+                console.log($scope.newCart);
+            };
 
         $scope.setVal = function() {
             // alert(''); 
@@ -107,7 +111,7 @@ angular.module('inflightHubApp')
         $scope.editFn = function() {
             setupCartService.clearTemp();
         };
-        
+
         $scope.addProduct = function() {
             console.log($scope.newCart);
             var addItems = [];

@@ -28,7 +28,8 @@
 <!-- /.row -->
 <div class="panel panel-default" style="margin-bottom:-1px;" ng-repeat="floor in newPromotion.floorProduct">
     <div class="row">
-        <div class="col-md-1 text-center"><i class="fa fa-minus-circle" style="color:red;"></i></div>
+        <div class="col-md-1 text-center"><i class="fa fa-minus-circle"
+        ng-click="removeItem($index)"  style="color:red;"></i></div>
         <div class="col-md-2">
             <i class="fa fa-cutlery"></i>
             <a ng-href="#/promotionProduct/{{newPromotion.id}}/{{floor.floorId}}" ng-click="setTemp(); setAddType('addProduct');">
@@ -67,7 +68,8 @@
     </div>
     <div class="panel panel-default" style="margin-bottom:-1px;" ng-repeat="floor in newPromotion.floorFree">
         <div class="row">
-            <div class="col-md-1 text-center"><i class="fa fa-minus-circle" style="color:red;"></i></div>
+            <div class="col-md-1 text-center"><i class="fa fa-minus-circle" 
+            ng-click="removeItem2($index)"  style="color:red;"></i></div>
             <div class="col-md-2">
                 <i class="fa fa-cutlery"></i>
                 <a ng-href="#/promotionProduct/{{newPromotion.id}}/{{floor.floorFreeId}}" ng-click="setTemp(); setAddType('addFreeProduct');">

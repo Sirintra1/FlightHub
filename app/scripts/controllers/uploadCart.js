@@ -36,6 +36,10 @@ angular.module('inflightHubApp')
 
         };
 
+        $scope.removeItem = function(index) {
+                $scope.newUpload.cart.splice(index, 1);
+            },
+
         $scope.setTemp = function() {
             uploadCartService.setTemp($scope.newUpload);
         };

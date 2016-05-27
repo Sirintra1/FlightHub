@@ -99,6 +99,12 @@ angular.module('inflightHubApp')
             promotionDiscountService.deletePromotion(id);
         };
 
+        $scope.removeItem = function(index) {
+                $scope.newPromotion.floorProduct.splice(index, 1);
+            },
+            $scope.removeItem2 = function(index) {
+                $scope.newPromotion.floorFree.splice(index, 1);
+            },
 
 
         $scope.setVal = function() {

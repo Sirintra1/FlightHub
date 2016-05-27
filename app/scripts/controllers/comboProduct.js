@@ -41,6 +41,9 @@ angular.module('inflightHubApp')
             //$scope.newCart.cartName = "555";
             comboProductservice.setTemp($scope.newCombo);
         };
+         $scope.removeItem = function(index) {
+                $scope.newCombo.floor.splice(index, 1);
+            },
 
         $scope.setVal = function() {
             // alert('');
