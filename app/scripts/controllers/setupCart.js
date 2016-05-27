@@ -8,7 +8,7 @@
  * Controller of the inflightHubApp 
  */
 angular.module('inflightHubApp')
-    .controller('setupCartCtrl', function($scope, setupCartService, $filter, $routeParams) {
+    .controller('setupCartCtrl', function($scope, setupCartService, uploadCartService, $filter, $routeParams) {
         this.awesomeThings = [
             'HTML5 Boilerplate',
             'AngularJS',
@@ -87,7 +87,7 @@ angular.module('inflightHubApp')
         $scope.addFloor = function() {
             $scope.newCart.floor.push({
                 floorId: ($scope.newCart.floor.length + 1),
-                cartCate: "New Class " + ($scope.newCart.floor.length + 1),
+                cartCate: "",
                 cartProd: []
             });
             console.log($scope.newCart);
