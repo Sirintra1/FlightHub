@@ -1,0 +1,107 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+                           Promotion Product
+                          
+                        </h1>
+
+        <div class="breadcrumb">
+            <span> Cancel</span>
+            <span style="float: right;"><a href="javascript:window.history.back();" ng-click="addProduct()"> Done </a></span>
+        </div>
+        <div class="form-group input-group" style="margin-top:-20px; margin-bottom: -1px;">
+            <input type="text" class="form-control" ng-model="searchText">
+            <span class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></span>
+        </div>
+
+    </div>
+</div>
+</div>
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+        </div>
+        <div class="navbar-collapse collapse" style="margin-left: -158px;">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Food</a>
+                </li>
+                <li><a ng-href="#/setupCartProduct">Drink</a>
+                </li>
+                <li><a ng-href="#/setupCartProduct">Snack</a>
+                </li>
+                <li><a ng-href="#/setupCartProduct">Dessert</a>
+                </li>
+                <li><a ng-href="#/setupCartProduct">Beauty</a>
+                </li>
+                <li class="dropdown">
+                    <a ng-href="#/setupCartProduct" class="dropdown-toggle" data-toggle="dropdown">Gift <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Doll</a>
+                        </li>
+                        <li><a href="#">Another action</a>
+                        </li>
+                        <li><a href="#">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a>
+                        </li>
+                        <li><a href="#">One more separated link</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+<div class="panel panel-default" style="margin-top: -20px;" >
+    <div class="panel-body" >
+        
+            <div class="col-md-4 setBorder" ng-repeat="itm in product | filter:searchText" >
+                <div class="row">
+                    <div class="row">
+                        <div class="col-md-10 text-center">
+                            <label>{{itm.name}}</label>
+
+                        </div>
+                    </div>
+                    <div class="row" align="middle">
+                        <div class="col-md-10" >
+
+                             <!-- <img class="noti" src="{{itm.noti}}"> --> 
+                             <img class="productSet" src="{{itm.img}}" > 
+                             <span class="badge red_badge">{{itm.qty}}</span>
+                        </div>
+                        
+                        <div class="col-md-2" align="left">
+                            <div class="row" style="margin-top:30px;" >
+                                <button class="btn btn-default" ng-click="clickAdd(itm)" >
+                                <i class="fa fa-plus" style="color:#088A08;"></i></button>
+                            </div>
+                            <div class="row">
+                                <button button class="btn btn-default" ng-click="clickRemove(itm)"><i class="fa fa-minus" style="color:red;"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 text-center">
+                            <label>{{itm.price}}</label> <label > THB.</label> <label> / {{itm.quality}} Qty.</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</div>
+ <div class="breadcrumb">
+            <span> Cancel</span>
+            <span style="float: right;">Done </span>
+        </div>

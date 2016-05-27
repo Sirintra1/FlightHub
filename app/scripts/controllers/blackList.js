@@ -8,7 +8,7 @@
  * Controller of the inflightHubApp
  */
 angular.module('inflightHubApp')
-    .controller('blackListCtrl', function($scope) {
+    .controller('blackListCtrl', function($scope, blackListService) {
         this.awesomeThings = [
             'HTML5 Boilerplate',
             'AngularJS',
@@ -22,18 +22,44 @@ angular.module('inflightHubApp')
             "name": "xxx"
         };
 
+        
+        // $scope.addFileName = function() {
+        //     $scope.fileName.id = guid();
+        //     $scope.fileName.name = fileName_select;
+        //     $scope.fileNameList.push($scope.fileName);
+        //     $scope.fileName = {};
+        // };
+
+        $scope.addFileName = function() {
+            // $scope.fileName.name = fileName_select;
+            // $scope.fileNameList.push($scope.fileName);
+            // $scope.fileName = {};
+            if (fileName_select) {
+                var item = {
+                    "id": guid(),
+                    "name": fileName_select,
+                    "listIds": [{
+                        "id": 1,
+                        "cardID": "3985763094"
+                    }, {
+                        "id": 2,
+                        "cardID": "2938574938"
+                    }]
+                };
+                blackListService.addBlackList(item);
+            }
+        };
         $('#fileSelected').on('change', function(evt) {
             var files = $(evt.currentTarget).get(0).files;
 
             if (files.length > 0) {
                 fileName_select = files[0].name;
+                // bindDataAgain that 555
+                // $scope.addFileName();
             }
         });
-        $scope.addFileName = function() {
-            $scope.fileName.name = fileName_select;
-            $scope.fileNameList.push($scope.fileName);
-            $scope.fileName = {};
-        };
+
+        $scope.blackLists = blackListService.getBlackLists()
 
 
         $scope.bank = [{ Name: "SCB", people: 34 },
@@ -44,5 +70,8 @@ angular.module('inflightHubApp')
         ];
         $scope.human = [3985763094, 2938574938, 0985673923, 2048463930, 3048364839, 456584937565, 03836576958];
 
-        
+        $scope.deleteBlackList = function(id) {
+            blackListService.deleteBlackList(id);
+        };
+
     });

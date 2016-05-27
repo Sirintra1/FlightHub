@@ -83,6 +83,13 @@ angular
 
         })
 
+        .when('/blackListDetail/:blacklistID', {
+            templateUrl: 'views/blackListlist.html',
+            controller: 'blackListDetailCtrl',
+            controllerAs: 'blackList'
+
+        })
+
         .when('/promotionDiscount', {
             templateUrl: 'views/promotionDiscount.html',
             controller: 'promotionDiscountCtrl',
@@ -117,6 +124,36 @@ angular
                 templateUrl: 'views/comboProductAdd.html',
                 controller: 'comboProductCtrl',
                 controllerAs: 'comboProduct'
+
+            })
+        .when('/product', {
+                templateUrl: 'views/product.html',
+                controller: 'comboProductCtrl',
+                controllerAs: 'comboProduct'
+
+            })
+        .when('/product/:comboID/:floorId', {
+                templateUrl: 'views/product.html',
+                controller: 'comboProductCtrl',
+                controllerAs: 'comboProduct'
+
+            })
+        .when('/promotionProduct', {
+                templateUrl: 'views/promotionProduct.html',
+                controller: 'promotionDiscountCtrl',
+                controllerAs: 'promotionDiscount'
+
+            })
+        .when('/promotionProduct/:comboID/:floorId', {
+                templateUrl: 'views/promotionProduct.html',
+                controller: 'promotionDiscountCtrl',
+                controllerAs: 'promotionDiscount'
+
+            })
+        .when('/promotionProduct/:comboID/:floorFreeId', {
+                templateUrl: 'views/promotionProduct.html',
+                controller: 'promotionDiscountCtrl',
+                controllerAs: 'promotionDiscount'
 
             })
         .when('/exchangeMoney', {

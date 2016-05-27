@@ -10,42 +10,41 @@
 angular.module('inflightHubApp').service('comboProductservice', function() {
 
     var combos = [{
-            id: 1,
+        id: 1,
+        floor: [{
+            floorId: 1,
             comboName: "Set 1",
             comboMoney: 250,
             comboProd: [{
-                prodId: 1,
-                prodImg: "images/hamburger.jpg",
-                prodQty: "1"
+                img: "images/hamburger.jpg",
+                qty: "1"
             }, {
-                prodId: 2,
-                prodImg: "images/sandwich.jpg",
-                prodQty: "1"
-            },
-            {
-                prodId: 3,
-                prodImg: "images/Macaroni.jpg",
-                prodQty: "1"
-            },
-            {
-                prodId: 4,
-                prodImg: "images/salad.jpg",
-                prodQty: "1"
+                img: "images/sandwich.jpg",
+                qty: "1"
+            }, {
+                img: "images/Macaroni.jpg",
+                qty: "1"
+            }, {
+                img: "images/salad.jpg",
+                qty: "1"
             }]
-        }];
-        // var combos = [{
-        //         id: 1,
-        //         comboName: "Set 1",
-        //         comboMoney: 250,
-        //         img: "images/hamburger.jpg"
-        //     }, {
-        //         id: 2,
-        //         comboName: "Set 2",
-        //         comboMoney: 350,
-        //         img: "images/hamburger.jpg"
-        //     }
+        }]
 
-    // ];
+    }];
+
+
+
+    var varTemp = {
+        id: guid(),
+        floor: [{
+            floorId: 1,
+            comboName: "",
+            comboMoney: 0,
+            comboProd: []
+        }]
+    };
+
+
 
     this.getComboList = function() {
         return combos;
@@ -62,5 +61,24 @@ angular.module('inflightHubApp').service('comboProductservice', function() {
         }
         return [];
 
+    };
+
+
+    this.getTemp = function() {
+        return varTemp;
+    };
+    this.setTemp = function(item) {
+        varTemp = item;
+    };
+    this.clearTemp = function() {
+        varTemp = {
+            id: guid(),
+            floor: [{
+                floorId: 1,
+                comboName: "",
+                comboMoney: 0,
+                comboProd: []
+            }]
+        };
     };
 });

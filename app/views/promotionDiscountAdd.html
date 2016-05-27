@@ -25,74 +25,84 @@
     </label>
 </div>
 <!-- /.row -->
-<div class="panel panel-default" style="margin-bottom:-1px;" ng-repeat="nam in product">
+<div class="panel panel-default" style="margin-bottom:-1px;" ng-repeat="floor in newPromotion.floorProduct">
     <div class="row">
         <div class="col-md-1 text-center"><i class="fa fa-minus-circle" style="color:red;"></i></div>
         <div class="col-md-2">
             <i class="fa fa-cutlery"></i>
-            <a href="#/">
-                <span class="panel-title text-center" style="margin-left:10px;margin-right:10px;">{{nam.name}}</span>
+            <a ng-href="#/promotionProduct/{{newPromotion.id}}/{{floor.floorId}}" ng-click="setTemp()">
+            <span ng-repeat="mg in floor.proProd"> 
+                <span class="panel-title text-center" style="margin-left:10px;margin-right:10px;">{{mg.name}}</span></span>
                 <i class="fa fa-chevron-right"></i>
             </a>
         </div>
-        <div class="col-md-9" style="border-style: solid;border-color:#ddd;border-width: 0px 0px 0px 1px;">{{nam.qty}} Qty.</div>
+        <div class="col-md-9" style="border-style: solid;border-color:#ddd;border-width: 0px 0px 0px 1px;"><span ng-repeat="mg in floor.proProd"> 
+        <input type="number" ng-model="mg.qty"> Qty. </span></div> 
     </div>
 </div>
 <div class="panel panel-default">
     <div class="panel panel-default">
-        <div class="row">
+        <div class="row" ng-click="addFloor()">
             <div class="col-md-1 text-center">
                 <i class="fa fa-plus-circle" style="color:#088A08;"></i>
             </div>
             <div class="col-md-10">
                 <i class="fa fa-cutlery"></i>
-                <span class="panel-title" style="margin-left:10px;">  Add Product</span>
+                <span class="panel-title" style="margin-left:10px;" ng-click="addItem()">  Add Product</span>
             </div>
         </div>
     </div>
-    <div class="panel panel-default" style="margin-top:-20px;margin-bottom:-1px;">
+    <div class="panel panel-default" style="margin-top:-20px;margin-bottom:-1px;"
+    >
         <div class="row">
-            <div class="col-md-6">
-                <input type="text" placeholder="Percent" style="width: 470px;height: 50px; border-style:none">
+            <div class="col-md-6" >
+            <input type="text" placeholder="Percent" style="width: 470px;height: 50px; border-style:none" ng-model="newPromotion.percent">
                 <br>
+               
+                
             </div>
             <div class="col-md-6">
-                <input type="text" placeholder="Baht" style="width: 470px;height: 50px;border-style: solid;border-color:#ddd;border-width: 0px 0px 0px 1px;">
+                <input type="text" ng-model="newPromotion.bath" placeholder="Baht" style="width: 470px;height: 50px;border-style: solid;border-color:#ddd;border-width: 0px 0px 0px 1px;">
                 <br>
             </div>
         </div>
     </div>
-    <div class="panel panel-default" style="margin-bottom:-1px;" ng-repeat="nam in product">
+    <div class="panel panel-default" style="margin-bottom:-1px;" ng-repeat="floor in newPromotion.floorFree">
         <div class="row">
             <div class="col-md-1 text-center"><i class="fa fa-minus-circle" style="color:red;"></i></div>
             <div class="col-md-2">
                 <i class="fa fa-cutlery"></i>
-                <a href="#/">
-                    <span class="panel-title text-center" style="margin-left:10px;margin-right:10px;">{{nam.name}}</span>
+                <a ng-href="#/promotionProduct/{{newPromotion.id}}/{{floor.floorFreeId}}"
+                ng-click="setTemp()">
+                <span ng-repeat="mg in floor.proFree"> 
+                    <span class="panel-title text-center" style="margin-left:10px;margin-right:10px;">{{mg.name}}</span></span>
                     <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
-            <div class="col-md-9" style="border-style: solid;border-color:#ddd;border-width: 0px 0px 0px 1px;">{{nam.qty}} Qty.</div>
+            <div class="col-md-9" style="border-style: solid;border-color:#ddd;border-width: 0px 0px 0px 1px;">
+            <span ng-repeat="mg in floor.proFree"> 
+            <input type="number" ng-model="mg.qty"> Qty.
+            </span></div>
         </div>
     </div>
-    <div class="row">
+    <div class="row" ng-click="addFloor2()">
         <div class="col-md-1 text-center">
             <i class="fa fa-plus-circle" style="color:#088A08;"></i>
         </div>
         <div class="col-md-10">
             <i class="fa fa-cutlery"></i>
-            <span class="panel-title" style="margin-left:10px;">  Add Free Product</span>
+            <span class="panel-title" style="margin-left:10px;" ng-click="addItem2()">  Add Free Product</span>
         </div>
     </div>
 </div>
 <div class="panel panel-default" style="margin-top:-20px;">
     <div class="row">
         <div class="col-md-6">
-            <input type="text" placeholder="Offer Buy" style="width: 470px;height: 50px; border-style:none">
+            <input type="text" ng-model="newPromotion.offerBuy" placeholder="Offer Buy" style="width: 470px;height: 50px; border-style:none">
             <br>
         </div>
         <div class="col-md-6">
-            <input type="text" placeholder="Card" style="width: 470px;height: 50px;border-style: solid;border-color:#ddd;border-width: 0px 0px 0px 1px;">
+            <input type="text" ng-model="newPromotion.card" placeholder="Card" style="width: 470px;height: 50px;border-style: solid;border-color:#ddd;border-width: 0px 0px 0px 1px;">
             <br>
         </div>
     </div>
