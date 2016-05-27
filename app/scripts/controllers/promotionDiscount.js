@@ -95,6 +95,11 @@ angular.module('inflightHubApp')
             console.log($scope.newPromotion);
         };
 
+         $scope.deletePromotion = function(id){
+            promotionDiscountService.deletePromotion(id);
+        };
+
+
 
         $scope.setVal = function() {
             // alert(''); 
