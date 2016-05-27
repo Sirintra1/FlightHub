@@ -1,6 +1,6 @@
-<!-- fa fa-minus-circle --><div class="row">
+<!-- fa fa-minus-circle -->
+<div class="row">
     <div class="col-lg-12">
-
         <h1 class="page-header">
                             Combo / Product
                             <!-- <small>Subheading</small> -->
@@ -20,45 +20,38 @@
         </ol>
         <!--  Hello -->
         <label style="margin-left: 15px;">Combo Name</label>
-       
-
-
-<div class="panel panel-default" style="margin-bottom:-1px;" ng-repeat="item in newCombo.floor">
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-5" style="padding-top: 15px;">
-            <input type="text" ng-model="item.comboName" placeholder="Set Name" style="width: 420px;height: 50px; border-style:none">
-        </div>
-        <div class="col-md-5" style="padding-top: 15px;">
-            <input type="text" ng-model="item.comboMoney" placeholder="Price" style="width: 420px;height: 50px; border-style:none">
-        </div>
-    </div>
-
-    <div class="row"> 
-        <div class="col-xs-2 text-center" style="margin-top:30px;">
-       <!--  <i class="fa fa-minus-circle" aria-hidden="true" ng-click="removeItem($index)" style="color:red;"></i> -->
-        </div>
-       <button type="button" ng-click="scrollLeft();" class="btn btn-defualt">
-            <span class="fa fa-angle-left fa-4x"></span>
-        </button>
-        <span ng-repeat="itm in item.comboProd | limitTo:limitNumber:runNumber">
+        <div class="panel panel-default" style="margin-bottom:-1px;" ng-repeat="item in newCombo.floor">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-5" style="padding-top: 15px;">
+                    <input type="text" ng-model="item.comboName" placeholder="Set Name" style="width: 420px;height: 50px; border-style:none">
+                </div>
+                <div class="col-md-5" style="padding-top: 15px;">
+                    <input type="text" ng-model="item.comboMoney" placeholder="Price" style="width: 420px;height: 50px; border-style:none">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2 text-center" style="margin-top:30px;">
+                    <!--  <i class="fa fa-minus-circle" aria-hidden="true" ng-click="removeItem($index)" style="color:red;"></i> -->
+                </div>
+                <button type="button" ng-click="scrollLeft();" class="btn btn-link">
+                    <span class="fa fa-angle-left fa-4x"> </span>
+                </button>
+                <!-- <span><i class="fa fa-angle-left fa-4x" ng-click="scrollLeft();" ></i></span> -->
+                <span ng-repeat="itm in item.comboProd | limitTo:limitNumber:runNumber">
         &nbsp;&nbsp;&nbsp;&nbsp;
         <img src="{{itm.img}}" class="imgset" />
         <span class="badge red_badge">{{itm.qty}}</span>
-        </span>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <button type="button" ng-click="scrollRight();" class="btn btn-defualt">
-            <span class="fa fa-angle-right fa-4x"></span>
-        </button>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <span >
-            <a  ng-href="#/product/{{newCombo.id}}/{{item.floorId}}"  ng-click="setTemp()"> <i class="fa fa-info-circle"> </i> </a>
-        </span>
-        
-    </div>
-</div>
-
-
+                </span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" ng-click="scrollRight();" class="btn btn-link">
+                    <span class="fa fa-angle-right fa-4x"> </span>
+                </button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a ng-href="#/product/{{newCombo.id}}/{{item.floorId}}" ng-click="setTemp()"> <i class="fa fa-info-circle"> </i> </a>
+                <br> &nbsp;
+            </div>
+        </div>
         <br>
         <br>
         <ol class="breadcrumb">
