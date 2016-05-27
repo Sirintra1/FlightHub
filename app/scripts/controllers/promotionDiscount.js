@@ -185,8 +185,14 @@ angular.module('inflightHubApp')
                 return false;
             }
         };
-        $scope.clickAdd = function(item) {
-            item.qty += 1;
+       $scope.clickAdd = function(item) {
+            for (var i = 0; i < $scope.product.length; i++) {
+                if ($scope.product[i].name == item.name) {
+                    item.qty += 1;
+                } else {
+                    $scope.product[i].qty = 0;
+                }
+            }
         };
         $scope.clickRemove = function(item) {
             if (item.qty > 0) {
