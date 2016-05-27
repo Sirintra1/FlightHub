@@ -46,16 +46,18 @@
                         <span class="list-price" style="margin-left: 20px;">Price {{itm.comboMoney}} THB.</span>
                             </span>
                         </div>
-                        <div class="col-xs-10"><span ng-repeat="itm in item.floor">
+                        <div class="col-xs-8"><span ng-repeat="itm in item.floor">
                         <span ng-repeat="it  in itm.comboProd">
                             <img class="imgset" src="{{it.img}}">
                             <span class="badge red_badge">{{it.qty}}</span> &nbsp;
                             </span>
                             </span>
                         </div>
-        
-                        <i class="fa  fa-trash fa-1x" ng-href="#/setupCart" class="list-group-item" ng-click="deleteCombo(item.id)" onclick="return false;" style="float: right;color:red;margin-top:-5px;"></i>
+                        <div class="col-xs-2">
+                            <i class="fa  fa-trash fa-1x" ng-href="#/setupCart" class="list-group-item" ng-click="deleteCombo(item.id)" onclick="return false;" style="float: right;color:red;margin-top:15px;"></i>
                         <br>&nbsp;
+                        </div>
+                        
                     </a>
                 
                 <!-- 
