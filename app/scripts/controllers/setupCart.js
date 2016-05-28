@@ -67,43 +67,43 @@ angular.module('inflightHubApp')
 
 
         $scope.drink = [{
-            id: 1,
+            id: 9,
             name: "Water",
-            price: 130,
+            price: 20,
             qty: 0,
             img: "images/drink/1-Water.jpg"
         }, {
-            id: 2,
+            id: 10,
             name: "Pepsi",
             price: 50,
             qty: 0,
             img: "images/drink/2-Pepsi.jpg"
         }, {
-            id: 3,
+            id: 11,
             name: "Cocacola",
             price: 50,
             qty: 0,
             img: "images/drink/3-Cocacola.jpg"
         }, {
-            id: 4,
+            id: 12,
             name: "Green Fanta",
             price: 30,
             qty: 0,
             img: "images/drink/4-GreenFanta.jpg"
         }, {
-            id: 5,
+            id: 13,
             name: "Red Fanta",
             price: 30,
             qty: 0,
             img: "images/drink/5-RedFanta.jpg"
         }, {
-            id: 6,
+            id: 14,
             name: "Orange Fanta",
             price: 30,
             qty: 0,
             img: "images/drink/6-OrangeFanta.jpg"
         }, {
-            id: 7,
+            id: 15,
             name: "Sprite",
             price: 30,
             qty: 0,

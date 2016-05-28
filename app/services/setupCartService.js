@@ -36,6 +36,12 @@ angular.module('inflightHubApp').service('setupCartService', function() {
                 price: 78,
                 qty: 1,
                 img: "images/soup.jpg"
+            }, {
+                id: 9,
+                name: "Water",
+                price: 20,
+                qty: 1,
+                img: "images/drink/1-Water.jpg"
             }]
         }]
     }];
