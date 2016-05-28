@@ -59,7 +59,7 @@ angular.module('inflightHubApp')
         }, {
             id: 7,
             cate: "Food",
-            name: "Ginger Fried Rice Vegetarian Chicken",
+            name: "Ginger Fried Rice",
             price: 78,
             qty: 0,
             img: "images/food/AK-12-GingerFriedRicewithVegetarianChickenV.png"

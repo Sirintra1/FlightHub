@@ -16,48 +16,31 @@
 </div>
 </div>
 <div class="navbar navbar-default">
-    <div class="container">
+    
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pro">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
         </div>
-        <div class="navbar-collapse collapse" style="margin-left: -158px;">
-            <ul class="nav navbar-nav" id="myNavbar">
-                    <li><a class="btn btn-link" ng-click="changeType('Food')">Food</a>
-                    </li>
-                    <li><a class="btn btn-link" ng-click="changeType('Drink')">Drink</a>
-                    </li>
-                    <li><a class="btn btn-link" ng-click="changeType('Fast')">Fast Food</a>
-                    </li>
-                    <li><a class="btn btn-link" ng-click="changeType('Dessert')">Dessert</a>
-                    </li>
-                    <li><a class="btn btn-link" ng-click="changeType('Combo')">Combo Set</a>
-                    </li>
-                <!-- <li class="dropdown">
-                    <a ng-href="#/setupCartProduct" class="dropdown-toggle" data-toggle="dropdown">Gift <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Doll</a>
-                        </li>
-                        <li><a href="#">Another action</a>
-                        </li>
-                        <li><a href="#">Something else here</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Nav header</li>
-                        <li><a href="#">Separated link</a>
-                        </li>
-                        <li><a href="#">One more separated link</a>
-                        </li>
-                    </ul>
-                </li> -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse" id="pro">
+            <ul class="nav navbar-nav " >
+                <li><a class="btn btn-link" ng-click="changeType('Food')">Food</a>
+                </li>
+                <li><a class="btn btn-link" ng-click="changeType('Drink')">Drink</a>
+                </li>
+                <li><a class="btn btn-link" ng-click="changeType('Fast')">Fast Food</a>
+                </li>
+                <li><a class="btn btn-link" ng-click="changeType('Dessert')">Dessert</a>
+                </li>
+                <li><a class="btn btn-link" ng-click="changeType('Combo')">Combo Set</a>
+                </li>
             </ul>
         </div>
         <!--/.nav-collapse -->
-    </div>
+    
 </div>
 <div class="panel panel-default" style="margin-top: -20px;" ng-show="productType=='Food'">
     <div class="panel-body">
