@@ -15,27 +15,30 @@ angular.module('inflightHubApp').service('setupCartService', function() {
             floorId: 1,
             cartCate: "A1 Food",
             cartProd: [{
-                id: 4,
-                name: "Sandwich",
-                price: 90,
+                id: 1,
+                cate:"Food",
+                name: "KoloMee",
+                price: 130,
                 qty: 1,
-                img: "images/sandwich.jpg"
+                img: "images/food/AK-1-KoloMee.png"
             }, {
-                id: 3,
-                name: "Salad",
-                price: 100,
+                id: 10,
+                cate:"Drink",
+                name: "Water",
+                price: 20,
                 qty: 1,
-                img: "images/salad.jpg"
+                img: "images/drink/1-Water.jpg"
             }]
         }, {
             floorId: 2,
             cartCate: "A2 Foodx",
             cartProd: [{
-                id: 7,
-                name: "Soup",
-                price: 78,
+                id: 16,
+                cate:"Drink",
+                name: "Sprite",
+                price: 30,
                 qty: 1,
-                img: "images/soup.jpg"
+                img: "images/drink/7-sprite.jpg"
             }]
         }]
     }];
