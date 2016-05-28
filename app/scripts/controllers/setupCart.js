@@ -178,7 +178,7 @@ angular.module('inflightHubApp')
         }, {
             id: 24,
             cate: "Dessert",
-            name: "Banana Cake with Malee OrangeJ uice",
+            name: "Banana Cake with Malee",
             price: 30,
             qty: 0,
             img: "images/dessert/XJ-16-BananaCakewithMaleeOrangeJuice.jpg"
@@ -350,7 +350,7 @@ angular.module('inflightHubApp')
         $scope.cart1 = ["Cart 001A", "Cart 002B", "Cart 003C", "Cart 004D", "Cart 005E", "Cart 006F", "Cart 007G", "Cart 008H"];
         $scope.img = ["images/hamburger.jpg", "images/Macaroni.jpg", "images/salad.jpg", "images/sandwich.jpg", "images/sapagetti.jpg"];
 
-        $scope.limitNumber = 5;
+        $scope.limitNumber = 4;
         $scope.runNumber = 0;
         $scope.scrollLeft = function() {
             if ($scope.runNumber > 0) {

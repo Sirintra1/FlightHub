@@ -4,10 +4,18 @@
                             Exchange Money
                             <!-- <small>Subheading</small> -->
                         </h1>
-        <ol class="breadcrumb">
+
+        <div class="breadcrumb">
+            
+            <a ng-href="#/exchangeMoney" >Cancel</a>
+            <a href="#/exchangeMoney">
+                <span style="float: right;" ng-show="isEdit==false" ng-click="addExchange()">Done </span>
+                <span style="float: right;" ng-show="isEdit==true" ng-click="editFn()">Edit </span>
+            </a>
+        </div>
+        <!-- <ol class="breadcrumb">
             <div class="row">
                 <div class="col-lg-4">
-                    <!-- <i class="fa fa-dashboard"></i>  <-->
                     <label><a href="#/exchangeMoney">Cancle</a></label>
                 </div>
                 <div class="col-lg-4"></div>
@@ -16,12 +24,13 @@
                     <label><a href="#/exchangeMoney" ng-show="isEdit==true" ng-click="editFn()">Edit</a></label>
                 </div>
             </div>
+             </ol> -->
             <!-- <li>
                 <i class="fa fa-dashboard"></i> <a href="index.html">one</a>
             </li>
             <li class="active">
                 <i class="fa fa-file"></i>Done            </li> -->
-        </ol>
+       
         <!--  Hello -->
         <label>Exchange Name</label>
         <div class="row xx">
@@ -40,18 +49,13 @@
         </div>
         <br>
         <br>
-        <ol class="breadcrumb">
-            <div class="row">
-                <div class="col-lg-4">
-                    <!-- <i class="fa fa-dashboard"></i>  <-->
-                    <label><a href="#/exchangeMoney">Cancle</a></label>
-                </div>
-                <div class="col-lg-4"></div>
-                <div class="col-lg-4" align="right">
-                    <label><a href="#/exchangeMoney" ng-show="isEdit==false" ng-click="addExchange()">Done</a></label>
-                    <label><a href="#/exchangeMoney" ng-show="isEdit==true" ng-click="editFn()">Edit</a></label>
-                </div>
-            </div>
-        </ol>
+       <div class="breadcrumb">
+            
+            <a ng-href="#/exchangeMoney" >Cancel</a>
+            <a href="#/exchangeMoney">
+                <span style="float: right;" ng-show="isEdit==false" ng-click="addExchange()">Done </span>
+                <span style="float: right;" ng-show="isEdit==true" ng-click="editFn()">Edit </span>
+            </a>
+        </div>
     </div>
 </div>

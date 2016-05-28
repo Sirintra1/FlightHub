@@ -38,15 +38,16 @@
         <div class="list-group">
             <div ng-repeat="item in combos | filter:searchText">
                 
-                    <a ng-href="#/comboProductAdd/{{item.id}}" class="row list-group-item" style="margin-left: 10px;margin-right: 10px;">
-                        <div class="col-xs-2"><span ng-repeat="itm in item.floor">
+                    <a ng-href="#/comboProductAdd/{{item.id}}" class="row list-group-item" >
+                        <div class="col-xs-3">
+                        <span ng-repeat="itm in item.floor">
                         <i class="fa fa-fw fa-cutlery"></i>
                         {{itm.comboName}}
                         <br>
-                        <span class="list-price" style="margin-left: 20px;">Price {{itm.comboMoney}} THB.</span>
+                        <span class="list-price">Price {{itm.comboMoney}} THB.</span>
                             </span>
                         </div>
-                        <div class="col-xs-8"><span ng-repeat="itm in item.floor">
+                        <div class="col-xs-7"><span ng-repeat="itm in item.floor">
                         <span ng-repeat="it  in itm.comboProd">
                             <img class="imgset" src="{{it.img}}">
                             <span class="badge red_badge">{{it.qty}}</span> &nbsp;

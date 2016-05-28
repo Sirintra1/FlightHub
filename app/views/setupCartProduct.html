@@ -27,33 +27,16 @@
         </div>
         <div class="navbar-collapse collapse" style="margin-left: -158px;">
             <ul class="nav navbar-nav" id="myNavbar">
-                    <li><a class="btn btn-link" ng-click="changeType('Food')">Food</a>
-                    </li>
-                    <li><a class="btn btn-link" ng-click="changeType('Drink')">Drink</a>
-                    </li>
-                    <li><a class="btn btn-link" ng-click="changeType('Fast')">Fast Food</a>
-                    </li>
-                    <li><a class="btn btn-link" ng-click="changeType('Dessert')">Dessert</a>
-                    </li>
-                    <li><a class="btn btn-link" ng-click="changeType('Combo')">Combo Set</a>
-                    </li>
-                <!-- <li class="dropdown">
-                    <a ng-href="#/setupCartProduct" class="dropdown-toggle" data-toggle="dropdown">Gift <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Doll</a>
-                        </li>
-                        <li><a href="#">Another action</a>
-                        </li>
-                        <li><a href="#">Something else here</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Nav header</li>
-                        <li><a href="#">Separated link</a>
-                        </li>
-                        <li><a href="#">One more separated link</a>
-                        </li>
-                    </ul>
-                </li> -->
+                <li><a class="btn btn-link" ng-click="changeType('Food')">Food</a>
+                </li>
+                <li><a class="btn btn-link" ng-click="changeType('Drink')">Drink</a>
+                </li>
+                <li><a class="btn btn-link" ng-click="changeType('Fast')">Fast Food</a>
+                </li>
+                <li><a class="btn btn-link" ng-click="changeType('Dessert')">Dessert</a>
+                </li>
+                <li><a class="btn btn-link" ng-click="changeType('Combo')">Combo Set</a>
+                </li>
             </ul>
         </div>
         <!--/.nav-collapse -->
@@ -64,17 +47,17 @@
         <div class="col-md-4 setBorder" ng-repeat="itm in food | filter:searchText">
             <div class="row">
                 <div class="row">
-                    <div class="col-md-10 text-center">
+                    <div class="col-md-9 text-center">
                         <label>{{itm.name}}</label>
                     </div>
                 </div>
                 <div class="row" align="middle">
-                    <div class="col-md-10">
+                    <div class="col-md-9">
                         <!-- <img class="noti" src="{{itm.noti}}"> -->
                         <img class="productSet" src="{{itm.img}}">
                         <span class="badge red_badge">{{itm.qty}}</span>
                     </div>
-                    <div class="col-md-2" align="left">
+                    <div class="col-md-3" >
                         <div class="row" style="margin-top:30px;">
                             <button class="btn btn-default" ng-click="clickAdd(itm)">
                                 <i class="fa fa-plus" style="color:#088A08;"></i></button>
@@ -85,7 +68,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-10 text-center">
+                    <div class="col-md-9 text-center">
                         <label>{{itm.price}}</label>
                         <label> THB.</label>
                         <label> / {{itm.quality}} Qty.</label>
@@ -95,23 +78,22 @@
         </div>
     </div>
 </div>
-
 <div class="panel panel-default" style="margin-top: -20px;" ng-show="productType=='Drink'">
     <div class="panel-body">
         <div class="col-md-4 setBorder" ng-repeat="itm in drink | filter:searchText">
             <div class="row">
                 <div class="row">
-                    <div class="col-md-10 text-center">
+                    <div class="col-md-9 text-center">
                         <label>{{itm.name}}</label>
                     </div>
                 </div>
                 <div class="row" align="middle">
-                    <div class="col-md-10">
+                    <div class="col-md-9">
                         <!-- <img class="noti" src="{{itm.noti}}"> -->
                         <img class="productSet" src="{{itm.img}}">
                         <span class="badge red_badge">{{itm.qty}}</span>
                     </div>
-                    <div class="col-md-2" align="left">
+                    <div class="col-md-3">
                         <div class="row" style="margin-top:30px;">
                             <button class="btn btn-default" ng-click="clickAdd(itm)">
                                 <i class="fa fa-plus" style="color:#088A08;"></i></button>
@@ -122,7 +104,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-10 text-center">
+                    <div class="col-md-9 text-center">
                         <label>{{itm.price}}</label>
                         <label> THB.</label>
                         <label> / {{itm.quality}} Qty.</label>
@@ -132,23 +114,22 @@
         </div>
     </div>
 </div>
-
 <div class="panel panel-default" style="margin-top: -20px;" ng-show="productType=='Fast'">
-   <div class="panel-body">
+    <div class="panel-body">
         <div class="col-md-4 setBorder" ng-repeat="itm in fast | filter:searchText">
             <div class="row">
                 <div class="row">
-                    <div class="col-md-10 text-center">
+                    <div class="col-md-9 text-center">
                         <label>{{itm.name}}</label>
                     </div>
                 </div>
                 <div class="row" align="middle">
-                    <div class="col-md-10">
+                    <div class="col-md-9">
                         <!-- <img class="noti" src="{{itm.noti}}"> -->
                         <img class="productSet" src="{{itm.img}}">
                         <span class="badge red_badge">{{itm.qty}}</span>
                     </div>
-                    <div class="col-md-2" align="left">
+                    <div class="col-md-3">
                         <div class="row" style="margin-top:30px;">
                             <button class="btn btn-default" ng-click="clickAdd(itm)">
                                 <i class="fa fa-plus" style="color:#088A08;"></i></button>
@@ -159,7 +140,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-10 text-center">
+                    <div class="col-md-9 text-center">
                         <label>{{itm.price}}</label>
                         <label> THB.</label>
                         <label> / {{itm.quality}} Qty.</label>
@@ -169,23 +150,22 @@
         </div>
     </div>
 </div>
-
 <div class="panel panel-default" style="margin-top: -20px;" ng-show="productType=='Dessert'">
     <div class="panel-body">
         <div class="col-md-4 setBorder" ng-repeat="itm in dessert | filter:searchText">
             <div class="row">
                 <div class="row">
-                    <div class="col-md-10 text-center">
+                    <div class="col-md-9 text-center">
                         <label>{{itm.name}}</label>
                     </div>
                 </div>
                 <div class="row" align="middle">
-                    <div class="col-md-10">
+                    <div class="col-md-9">
                         <!-- <img class="noti" src="{{itm.noti}}"> -->
                         <img class="productSet" src="{{itm.img}}">
                         <span class="badge red_badge">{{itm.qty}}</span>
                     </div>
-                    <div class="col-md-2" align="left">
+                    <div class="col-md-3">
                         <div class="row" style="margin-top:30px;">
                             <button class="btn btn-default" ng-click="clickAdd(itm)">
                                 <i class="fa fa-plus" style="color:#088A08;"></i></button>
@@ -196,7 +176,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-10 text-center">
+                    <div class="col-md-9 text-center">
                         <label>{{itm.price}}</label>
                         <label> THB.</label>
                         <label> / {{itm.quality}} Qty.</label>
@@ -206,23 +186,22 @@
         </div>
     </div>
 </div>
-
 <div class="panel panel-default" style="margin-top: -20px;" ng-show="productType=='Combo'">
     <div class="panel-body">
         <div class="col-md-4 setBorder" ng-repeat="itm in combo | filter:searchText">
             <div class="row">
                 <div class="row">
-                    <div class="col-md-10 text-center">
+                    <div class="col-md-9 text-center">
                         <label>{{itm.name}}</label>
                     </div>
                 </div>
                 <div class="row" align="middle">
-                    <div class="col-md-10">
+                    <div class="col-md-9">
                         <!-- <img class="noti" src="{{itm.noti}}"> -->
                         <img class="productSet" src="{{itm.img}}">
                         <span class="badge red_badge">{{itm.qty}}</span>
                     </div>
-                    <div class="col-md-2" align="left">
+                    <div class="col-md-3">
                         <div class="row" style="margin-top:30px;">
                             <button class="btn btn-default" ng-click="clickAdd(itm)">
                                 <i class="fa fa-plus" style="color:#088A08;"></i></button>
@@ -233,7 +212,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-10 text-center">
+                    <div class="col-md-9 text-center">
                         <label>{{itm.price}}</label>
                         <label> THB.</label>
                         <label> / {{itm.quality}} Qty.</label>
@@ -243,8 +222,8 @@
         </div>
     </div>
 </div>
-
 <div class="breadcrumb">
     <span> Cancel</span>
-    <span style="float: right;">Done </span>
+    <span style="float: right;"><a href="javascript:window.history.back();" ng-click="addProduct()"> Done </a></span>
 </div>
+

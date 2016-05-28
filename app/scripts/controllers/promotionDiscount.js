@@ -179,7 +179,7 @@ angular.module('inflightHubApp')
         }, {
             id: 24,
             cate: "Dessert",
-            name: "Banana Cake with Malee OrangeJ uice",
+            name: "Banana Cake with Malee",
             price: 30,
             qty: 0,
             img: "images/dessert/XJ-16-BananaCakewithMaleeOrangeJuice.jpg"

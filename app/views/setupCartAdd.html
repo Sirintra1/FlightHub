@@ -23,18 +23,23 @@
 <div class="panel panel-default" style="margin-bottom:-1px;" ng-repeat="floor in newCart.floor">
     <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-10" style="padding-top: 15px;">
-            <input class="form-control" style="width:400px;" type="text" ng-model="floor.cartCate" placeholder="A1 Food, Soft Drink">
+        <div class="col-md-4" style="padding-top: 15px;">
+            <input class="form-control"  type="text" ng-model="floor.cartCate" placeholder="A1 Food, Soft Drink">
         </div>
+        <div class="col-md-4"> </div>
     </div>
     <div class="row">
         <div class="col-md-2 text-center">
-            <i class="fa fa-minus-circle" ng-click="removeItem($index)" style="color: red;"></i>
+            </br>
         </div>
+
     </div>
     <div class="row">
-        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            
+        </div>
         <div class="col-md-10">
+            <i class="fa fa-minus-circle" ng-click="removeItem($index)" style="color: red;"></i>&nbsp;&nbsp;&nbsp;
             <input type="hidden" ng-model="item.limitNumber" ng-init="item.limitNumber=5">
             <input type="hidden" ng-model="item.runNumber" ng-init="item.runNumber=0">
             <button type="button" ng-click="item.runNumber>0?(item.runNumber=item.runNumber-1):item.runNumber=item.runNumber" class="btn btn-link">
@@ -59,10 +64,11 @@
 <div class="panel panel-default">
     <div class="row" style="cursor:pointer;" ng-click="addFloor()">
         <div class="col-md-2 text-center">
-            <i class="fa fa-plus-circle" style="color: #088A08"></i>
+            </br>
         </div>
         <div class="col-md-10">
-            <h3 class="panel-title" ng-click="addItem()">  Add Class</h3>
+            <span> <i class="fa fa-plus-circle" style="color: #088A08"></i>&nbsp;&nbsp;&nbsp;
+            <label class="panel-title" ng-click="addItem()">  Add Class</label></span>
         </div>
     </div>
 </div>
