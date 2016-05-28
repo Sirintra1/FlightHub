@@ -16,94 +16,105 @@ angular.module('inflightHubApp')
         ];
         $scope.product = [{
             id: 1,
+            cate:"Food",
             name: "Humburger",
             price: 130,
             qty: 0,
             img: "images/hamburger.jpg"
         }, {
             id: 2,
+            cate:"Food",
             name: "Macaroni",
             price: 230,
             qty: 0,
             img: "images/Macaroni.jpg"
         }, {
             id: 3,
+            cate:"Food",
             name: "Salad",
             price: 100,
             qty: 0,
             img: "images/salad.jpg"
         }, {
             id: 4,
+            cate:"Food",
             name: "Sandwich",
             price: 90,
             qty: 0,
             img: "images/sandwich.jpg"
         }, {
             id: 5,
+            cate:"Food",
             name: "Sapagetti",
             price: 146,
             qty: 0,
             img: "images/sapagetti.jpg"
         }, {
             id: 6,
+            cate:"Food",
             name: "Sausage",
             price: 99,
             qty: 0,
             img: "images/sausage.jpg"
         }, {
             id: 7,
+            cate:"Food",
             name: "Soup",
             price: 78,
             qty: 0,
             img: "images/soup.jpg"
         }, {
             id: 8,
+            cate:"Food",
             name: "Steak",
             price: 340,
             qty: 0,
             img: "images/steak.jpg"
-        }];
-
-
-
-        $scope.drink = [{
+        },{
             id: 9,
+            cate:"Drink",
             name: "Water",
             price: 20,
             qty: 0,
             img: "images/drink/1-Water.jpg"
         }, {
             id: 10,
+            cate:"Drink",
             name: "Pepsi",
             price: 50,
             qty: 0,
             img: "images/drink/2-Pepsi.jpg"
         }, {
             id: 11,
+            cate:"Drink",
             name: "Cocacola",
             price: 50,
             qty: 0,
             img: "images/drink/3-Cocacola.jpg"
         }, {
             id: 12,
+            cate:"Drink",
             name: "Green Fanta",
             price: 30,
             qty: 0,
             img: "images/drink/4-GreenFanta.jpg"
         }, {
             id: 13,
+            cate:"Drink",
             name: "Red Fanta",
             price: 30,
             qty: 0,
             img: "images/drink/5-RedFanta.jpg"
         }, {
             id: 14,
+            cate:"Drink",
             name: "Orange Fanta",
             price: 30,
             qty: 0,
             img: "images/drink/6-OrangeFanta.jpg"
         }, {
             id: 15,
+            cate:"Drink",
             name: "Sprite",
             price: 30,
             qty: 0,
@@ -264,6 +275,10 @@ angular.module('inflightHubApp')
                 return false;
             }
         };
+
+        $scope.food = $filter("filter")($scope.product, { cate: "Food" });
+        $scope.drink = $filter("filter")($scope.product, { cate: "Drink" });
+
         $scope.productType = "Food";
         $scope.changeType = function(type) {
             $scope.productType = type;
