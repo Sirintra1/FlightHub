@@ -20,35 +20,43 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
         floorProduct: [{
             floorId: 1,
             proProd: [{
-                name: "Salad",
-                price: 100,
+                id: 10,
+                cate: "Drink",
+                name: "Water",
+                price: 20,
                 qty: 1,
-                img: "images/sandwich.jpg"
+                img: "images/drink/1-Water.jpg"
             }]
         }, {
             floorId: 2,
             proProd: [{
-                name: "Sandwich",
-                price: 78,
-                qty: 1,
-                img: "images/sandwich.jpg"
+                id: 1,
+                cate: "Food",
+                name: "KoloMee",
+                price: 130,
+                qty: 0,
+                img: "images/food/AK-1-KoloMee.png"
             }]
         }],
         floorFree: [{
             floorFreeId: 1,
             proFree: [{
-                name: "Soup",
-                price: 100,
-                qty: 1,
-                img: "images/soup.jpg"
+                id: 16,
+                cate: "Drink",
+                name: "Sprite",
+                price: 30,
+                qty: 0,
+                img: "images/drink/7-sprite.jpg"
             }]
         }, {
             floorFreeId: 2,
             proFree: [{
-                name: "Steak",
-                price: 78,
-                qty: 1,
-                img: "images/steak.jpg"
+                id: 25,
+                cate: "Dessert",
+                name: "Yamanishi Mochi",
+                price: 30,
+                qty: 0,
+                img: "images/dessert/XJ-15-YamanishiMochi.png"
             }]
         }]
     }];
@@ -121,13 +129,13 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
         };
     };
     var addType = "";
-    this.setAddProductType = function(type){
-        
-        if(type == "addProduct"){
+    this.setAddProductType = function(type) {
+
+        if (type == "addProduct") {
             addType = "addProduct";
-        } else if(type == "addFreeProduct"){
+        } else if (type == "addFreeProduct") {
             addType = "addFreeProduct";
-        } else{
+        } else {
             addType = "";
         }
     };
@@ -141,8 +149,8 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
         }
         return promotions;
     };
-    
-    this.getAddProductType = function(){
+
+    this.getAddProductType = function() {
         return addType;
     }
 });

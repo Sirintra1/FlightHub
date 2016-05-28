@@ -16,46 +16,217 @@ angular.module('inflightHubApp')
         ];
 
         $scope.product = [{
-            name: "Humburger",
+            id: 1,
+            cate: "Food",
+            name: "KoloMee",
             price: 130,
             qty: 0,
-            img: "images/hamburger.jpg"
+            img: "images/food/AK-1-KoloMee.png"
         }, {
-            name: "Macaroni",
+            id: 2,
+            cate: "Food",
+            name: "Shepherds Pie",
             price: 230,
             qty: 0,
-            img: "images/Macaroni.jpg"
+            img: "images/food/AK-2-ShepherdsPie.png"
         }, {
-            name: "Salad",
+            id: 3,
+            cate: "Food",
+            name: "Pak Nassers Nasi Lemak",
             price: 100,
             qty: 0,
-            img: "images/salad.jpg"
+            img: "images/food/AK-6-PakNassersNasiLemak.png"
         }, {
-            name: "Sandwich",
+            id: 4,
+            cate: "Food",
+            name: "Nasi Dagang with Chicken Curry",
             price: 90,
             qty: 0,
-            img: "images/sandwich.jpg"
+            img: "images/food/AK-7-NasiDagangwithChickenCurry.png"
         }, {
-            name: "Sapagetti",
+            id: 5,
+            cate: "Food",
+            name: "Tomato Rice with Ayam Percik",
             price: 146,
             qty: 0,
-            img: "images/sapagetti.jpg"
+            img: "images/food/AK-8-TomatoRicewithAyamPercik.png"
         }, {
-            name: "Sausage",
+            id: 6,
+            cate: "Food",
+            name: "Roast Chicken with Cream Sauce",
             price: 99,
             qty: 0,
-            img: "images/sausage.jpg"
+            img: "images/food/AK-11-RoastChickenwithCreamSauce.png"
         }, {
-            name: "Soup",
+            id: 7,
+            cate: "Food",
+            name: "Ginger Fried Rice Vegetarian Chicken",
             price: 78,
             qty: 0,
-            img: "images/soup.jpg"
+            img: "images/food/AK-12-GingerFriedRicewithVegetarianChickenV.png"
         }, {
-            name: "Steak",
+            id: 8,
+            cate: "Food",
+            name: "Vegetable Briyani",
             price: 340,
             qty: 0,
-            img: "images/steak.jpg"
+            img: "images/food/AK-13-VegetableBriyaniV.png"
+        }, {
+            id: 9,
+            cate: "Food",
+            name: "Chicken Rice",
+            price: 120,
+            qty: 0,
+            img: "images/food/AK-14-ChickenRice.png"
+        }, {
+            id: 10,
+            cate: "Drink",
+            name: "Water",
+            price: 20,
+            qty: 0,
+            img: "images/drink/1-Water.jpg"
+        }, {
+            id: 11,
+            cate: "Drink",
+            name: "Pepsi",
+            price: 50,
+            qty: 0,
+            img: "images/drink/2-Pepsi.jpg"
+        }, {
+            id: 12,
+            cate: "Drink",
+            name: "Cocacola",
+            price: 50,
+            qty: 0,
+            img: "images/drink/3-Cocacola.jpg"
+        }, {
+            id: 13,
+            cate: "Drink",
+            name: "Green Fanta",
+            price: 30,
+            qty: 0,
+            img: "images/drink/4-GreenFanta.jpg"
+        }, {
+            id: 14,
+            cate: "Drink",
+            name: "Red Fanta",
+            price: 30,
+            qty: 0,
+            img: "images/drink/5-RedFanta.jpg"
+        }, {
+            id: 15,
+            cate: "Drink",
+            name: "Orange Fanta",
+            price: 30,
+            qty: 0,
+            img: "images/drink/6-OrangeFanta.jpg"
+        }, {
+            id: 16,
+            cate: "Drink",
+            name: "Sprite",
+            price: 30,
+            qty: 0,
+            img: "images/drink/7-sprite.jpg"
+        }, {
+            id: 17,
+            cate: "Fast",
+            name: "Chicken Satay Wrap",
+            price: 30,
+            qty: 0,
+            img: "images/fast/AK-9-ChickenSatayWrap.png"
+        }, {
+            id: 18,
+            cate: "Fast",
+            name: "Chicken Tikka Sandwich",
+            price: 30,
+            qty: 0,
+            img: "images/fast/I5-13-ChickenTikkaSandwichwithMintMayo.jpg"
+        }, {
+            id: 19,
+            cate: "Fast",
+            name: "Assorted Sandwiches",
+            price: 30,
+            qty: 0,
+            img: "images/fast/QC-12-AssortedSandwiches.png"
+        }, {
+            id: 20,
+            cate: "Fast",
+            name: "CornBell Peppers Sandwich",
+            price: 30,
+            qty: 0,
+            img: "images/fast/I5-14-CornBellPeppersSandwichwithPestoMayoInMarbleBread.jpg"
+        }, {
+            id: 21,
+            cate: "Fast",
+            name: "Frankster Chicken",
+            price: 30,
+            qty: 0,
+            img: "images/fast/QC-10-FranksterChicken.png"
+        }, {
+            id: 22,
+            cate: "Fast",
+            name: "Deli Chicken Focaccia Sandwich",
+            price: 30,
+            qty: 0,
+            img: "images/fast/XJ-7-DeliChickenFocacciaBreadSandwich.jpg"
+        }, {
+            id: 23,
+            cate: "Dessert",
+            name: "Pancakes Maple Syrup Butter",
+            price: 30,
+            qty: 0,
+            img: "images/dessert/QC-8-PancakesMapleSyrupButter.png"
+        }, {
+            id: 24,
+            cate: "Dessert",
+            name: "Banana Cake with Malee OrangeJ uice",
+            price: 30,
+            qty: 0,
+            img: "images/dessert/XJ-16-BananaCakewithMaleeOrangeJuice.jpg"
+        }, {
+            id: 25,
+            cate: "Dessert",
+            name: "Yamanishi Mochi",
+            price: 30,
+            qty: 0,
+            img: "images/dessert/XJ-15-YamanishiMochi.png"
+        }, {
+            id: 26,
+            cate: "combo",
+            name: "Macand Cheese Ribena",
+            price: 30,
+            qty: 0,
+            img: "images/combo/AK-5-KidsMealMacandCheeseRibena.png"
+        }, {
+            id: 27,
+            cate: "Combo",
+            name: "Roti Canai With ChickenCurry",
+            price: 30,
+            qty: 0,
+            img: "images/combo/AK-4-RotiCanaiWithChickenCurryTehTarik.png"
+        }, {
+            id: 28,
+            cate: "Combo",
+            name: "American Breakfast Set",
+            price: 30,
+            qty: 0,
+            img: "images/combo/XJ-13-AmericanBreakfastSet.jpg"
+        }, {
+            id: 29,
+            cate: "Combo",
+            name: "Mee Goreng Mamak TehTarik",
+            price: 30,
+            qty: 0,
+            img: "images/combo/AK-3-MeeGorengMamakTehTarik.png"
+        }, {
+            id: 30,
+            cate: "Combo",
+            name: "Chicken Rice Soup Set",
+            price: 30,
+            qty: 0,
+            img: "images/combo/XJ-12-ChickenRiceSoupSet.jpg"
         }];
+
         $scope.promotionID = $routeParams.promotionID;
         $scope.promotions = [];
         $scope.isEdit = $routeParams.promotionID ? true : false;
@@ -201,5 +372,18 @@ angular.module('inflightHubApp')
             } else {
                 return false;
             }
+        };
+
+
+        
+        $scope.food = $filter("filter")($scope.product, { cate: "Food" });
+        $scope.drink = $filter("filter")($scope.product, { cate: "Drink" });
+        $scope.fast = $filter("filter")($scope.product, { cate: "Fast" });
+        $scope.dessert = $filter("filter")($scope.product, { cate: "Dessert" });
+        $scope.combo = $filter("filter")($scope.product, { cate: "Combo" });
+
+        $scope.productType = "Food";
+        $scope.changeType = function(type) {
+            $scope.productType = type;
         };
     });

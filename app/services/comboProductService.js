@@ -16,29 +16,33 @@ angular.module('inflightHubApp').service('comboProductservice', function() {
             comboName: "Set 1",
             comboMoney: 250,
             comboProd: [{
-                id: 4,
-                name: "Sandwich",
-                price: 90,
+                id: 10,
+                cate: "Drink",
+                name: "Water",
+                price: 20,
                 qty: 1,
-                img: "images/sandwich.jpg"
-            }, {
-                id: 3,
-                name: "Salad",
-                price: 100,
-                qty: 1,
-                img: "images/salad.jpg"
+                img: "images/drink/1-Water.jpg"
             }, {
                 id: 7,
-                name: "Soup",
+                cate: "Food",
+                name: "Ginger Fried Rice Vegetarian Chicken",
                 price: 78,
                 qty: 1,
-                img: "images/soup.jpg"
+                img: "images/food/AK-12-GingerFriedRicewithVegetarianChickenV.png"
             }, {
-                id: 8,
-                name: "Steak",
-                price: 340,
+                id: 4,
+                cate: "Food",
+                name: "Nasi Dagang with Chicken Curry",
+                price: 90,
                 qty: 1,
-                img: "images/steak.jpg"
+                img: "images/food/AK-7-NasiDagangwithChickenCurry.png"
+            }, {
+                id: 14,
+                cate: "Drink",
+                name: "Red Fanta",
+                price: 30,
+                qty: 1,
+                img: "images/drink/5-RedFanta.jpg"
             }]
         }]
 
