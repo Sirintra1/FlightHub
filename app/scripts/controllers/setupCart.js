@@ -64,6 +64,52 @@ angular.module('inflightHubApp')
             img: "images/steak.jpg"
         }];
 
+
+
+        $scope.drink = [{
+            id: 1,
+            name: "Water",
+            price: 130,
+            qty: 0,
+            img: "images/drink/1-Water.jpg"
+        }, {
+            id: 2,
+            name: "Pepsi",
+            price: 50,
+            qty: 0,
+            img: "images/drink/2-Pepsi.jpg"
+        }, {
+            id: 3,
+            name: "Cocacola",
+            price: 50,
+            qty: 0,
+            img: "images/drink/3-Cocacola.jpg"
+        }, {
+            id: 4,
+            name: "Green Fanta",
+            price: 30,
+            qty: 0,
+            img: "images/drink/4-GreenFanta.jpg"
+        }, {
+            id: 5,
+            name: "Red Fanta",
+            price: 30,
+            qty: 0,
+            img: "images/drink/5-RedFanta.jpg"
+        }, {
+            id: 6,
+            name: "Orange Fanta",
+            price: 30,
+            qty: 0,
+            img: "images/drink/6-OrangeFanta.jpg"
+        }, {
+            id: 7,
+            name: "Sprite",
+            price: 30,
+            qty: 0,
+            img: "images/drink/7-sprite.jpg"
+        }];
+
         $scope.cartID = $routeParams.cardID;
 
         $scope.carts = [];
@@ -218,5 +264,8 @@ angular.module('inflightHubApp')
                 return false;
             }
         };
-
+        $scope.productType = "Food";
+        $scope.changeType = function(type) {
+            $scope.productType = type;
+        };
     });

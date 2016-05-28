@@ -15,7 +15,6 @@
     </div>
 </div>
 </div>
-
 <div class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
@@ -28,17 +27,17 @@
         </div>
         <div class="navbar-collapse collapse" style="margin-left: -158px;">
             <ul class="nav navbar-nav" id="myNavbar">
-                <li class="active"><a href="#">Food</a>
-                </li>
-                <li><a ng-href="#/section1">Drink</a>
-                </li>
-                <li><a ng-href="#/setupCartProduct">Snack</a>
-                </li>
-                <li><a ng-href="#/setupCartProduct">Dessert</a>
-                </li>
-                <li><a ng-href="#/setupCartProduct">Beauty</a>
-                </li>
-                <li class="dropdown">
+                    <li><a class="btn btn-link" ng-click="changeType('Food')">Food</a>
+                    </li>
+                    <li><a class="btn btn-link" ng-click="changeType('Drink')">Drink</a>
+                    </li>
+                    <li><a class="btn btn-link" ng-click="changeType('Snack')">Snack</a>
+                    </li>
+                    <li><a class="btn btn-link" ng-click="changeType('Dessert')">Dessert</a>
+                    </li>
+                    <li><a class="btn btn-link" ng-click="changeType('Beauty')">Beauty</a>
+                    </li>
+                <!-- <li class="dropdown">
                     <a ng-href="#/setupCartProduct" class="dropdown-toggle" data-toggle="dropdown">Gift <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Doll</a>
@@ -54,13 +53,13 @@
                         <li><a href="#">One more separated link</a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
         </div>
         <!--/.nav-collapse -->
     </div>
 </div>
-<div class="panel panel-default" style="margin-top: -20px;">
+<div class="panel panel-default" style="margin-top: -20px;" ng-show="productType=='Food'">
     <div class="panel-body">
         <div class="col-md-4 setBorder" ng-repeat="itm in product | filter:searchText">
             <div class="row">
@@ -96,8 +95,57 @@
         </div>
     </div>
 </div>
+
+<div class="panel panel-default" style="margin-top: -20px;" ng-show="productType=='Drink'">
+    <div class="panel-body">
+        <div class="col-md-4 setBorder" ng-repeat="itm in drink | filter:searchText">
+            <div class="row">
+                <div class="row">
+                    <div class="col-md-10 text-center">
+                        <label>{{itm.name}}</label>
+                    </div>
+                </div>
+                <div class="row" align="middle">
+                    <div class="col-md-10">
+                        <!-- <img class="noti" src="{{itm.noti}}"> -->
+                        <img class="productSet" src="{{itm.img}}">
+                        <span class="badge red_badge">{{itm.qty}}</span>
+                    </div>
+                    <div class="col-md-2" align="left">
+                        <div class="row" style="margin-top:30px;">
+                            <button class="btn btn-default" ng-click="clickAdd(itm)">
+                                <i class="fa fa-plus" style="color:#088A08;"></i></button>
+                        </div>
+                        <div class="row">
+                            <button button class="btn btn-default" ng-click="clickRemove(itm)"><i class="fa fa-minus" style="color:red;"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 text-center">
+                        <label>{{itm.price}}</label>
+                        <label> THB.</label>
+                        <label> / {{itm.quality}} Qty.</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default" style="margin-top: -20px;" ng-show="productType=='Snack'">
+   <br><br><br> This is Snack product. <br><br><br>
+</div>
+
+<div class="panel panel-default" style="margin-top: -20px;" ng-show="productType=='Dessert'">
+    <br><br><br> This is Dessert product. <br><br><br>
+</div>
+
+<div class="panel panel-default" style="margin-top: -20px;" ng-show="productType=='Beauty'">
+    <br><br><br> This is Beauty product. <br><br><br>
+</div>
+
 <div class="breadcrumb">
     <span> Cancel</span>
     <span style="float: right;">Done </span>
 </div>
-
