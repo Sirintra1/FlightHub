@@ -173,21 +173,21 @@ angular.module('inflightHubApp')
             id: 23,
             cate: "Dessert",
             name: "Pancakes Maple Syrup Butter",
-            price: 30,
+            price: 100,
             qty: 0,
             img: "images/dessert/QC-8-PancakesMapleSyrupButter.png"
         }, {
             id: 24,
             cate: "Dessert",
             name: "Banana Cake with Malee",
-            price: 30,
+            price: 120,
             qty: 0,
             img: "images/dessert/XJ-16-BananaCakewithMaleeOrangeJuice.jpg"
         }, {
             id: 25,
             cate: "Dessert",
             name: "Yamanishi Mochi",
-            price: 30,
+            price: 90,
             qty: 0,
             img: "images/dessert/XJ-15-YamanishiMochi.png"
         }, {
