@@ -172,56 +172,56 @@ angular.module('inflightHubApp')
             id: 23,
             cate: "Dessert",
             name: "Pancakes Maple Syrup Butter",
-            price: 30,
+            price: 100,
             qty: 0,
             img: "images/dessert/QC-8-PancakesMapleSyrupButter.png"
         }, {
             id: 24,
             cate: "Dessert",
             name: "Banana Cake with Malee",
-            price: 30,
+            price: 120,
             qty: 0,
             img: "images/dessert/XJ-16-BananaCakewithMaleeOrangeJuice.jpg"
         }, {
             id: 25,
             cate: "Dessert",
             name: "Yamanishi Mochi",
-            price: 30,
+            price: 90,
             qty: 0,
             img: "images/dessert/XJ-15-YamanishiMochi.png"
         }, {
             id: 26,
             cate: "combo",
             name: "Macand Cheese Ribena",
-            price: 30,
+            price: 310,
             qty: 0,
             img: "images/combo/AK-5-KidsMealMacandCheeseRibena.png"
         }, {
             id: 27,
             cate: "Combo",
             name: "Roti Canai With ChickenCurry",
-            price: 30,
+            price: 290,
             qty: 0,
             img: "images/combo/AK-4-RotiCanaiWithChickenCurryTehTarik.png"
         }, {
             id: 28,
             cate: "Combo",
             name: "American Breakfast Set",
-            price: 30,
+            price: 300,
             qty: 0,
             img: "images/combo/XJ-13-AmericanBreakfastSet.jpg"
         }, {
             id: 29,
             cate: "Combo",
             name: "Mee Goreng Mamak TehTarik",
-            price: 30,
+            price: 270,
             qty: 0,
             img: "images/combo/AK-3-MeeGorengMamakTehTarik.png"
         }, {
             id: 30,
             cate: "Combo",
             name: "Chicken Rice Soup Set",
-            price: 30,
+            price: 250,
             qty: 0,
             img: "images/combo/XJ-12-ChickenRiceSoupSet.jpg"
         }];
