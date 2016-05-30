@@ -154,28 +154,28 @@
 <div class="breadcrumb">
     <label> Offer Buy</label>
 </div>
-<div class="panel panel-default" style="margin-top:-20px;"ng-repeat="floor in newPromotion.floorFree">
+<div class="panel panel-default" style="margin-top:-20px;"ng-repeat="floor in newPromotion.floorOffer">
     <div class="row" >
         <div class="col-md-5">
             &nbsp;&nbsp;&nbsp;
             <i class="fa fa-minus-circle" ng-click="removeItem($index)" style="color:red;"></i> &nbsp;&nbsp;&nbsp;
             <i class="fa fa-cutlery"></i>
-            <a ng-href="#/promotionProduct/{{newPromotion.id}}/{{floor.floorFreeId}}" ng-click="setTemp(); setAddType('addFreeProduct');">
-                <span ng-repeat="mg in floor.proFree"> 
+           <a ng-href="#/promotionProduct/{{newPromotion.id}}/{{floor.floorOfferId}}" ng-click="setTemp(); setAddType('addOfferProduct');">
+                <span ng-repeat="mg in floor.proOffer"> 
                 <span class="panel-title text-center" style="margin-left:10px;margin-right:10px;">{{mg.name}}</span></span>
                 <i class="fa fa-chevron-right"></i>
             </a>
         </div>
-        <div class="col-md-4" style="border-style: solid;border-color:#ddd;border-width: 0px 0px 0px 1px;"><span ng-repeat="mg in floor.proFree"> 
+        <div class="col-md-4" style="border-style: solid;border-color:#ddd;border-width: 0px 0px 0px 1px;"><span ng-repeat="mg in floor.proOffer"> 
         <input type="number" ng-model="mg.qty"> Qty. </span>
         </div>
-        <div class="col-md-3" style="border-style: solid;border-color:#ddd;border-width: 0px 0px 0px 1px;"><span ng-repeat="mg in floor.proFree"> 
+        <div class="col-md-3" style="border-style: solid;border-color:#ddd;border-width: 0px 0px 0px 1px;"><span ng-repeat="mg in floor.proOffer"> 
         <input type="number" ng-model="mg.price"> Price </span>
         </div>
     </div>
 </div>
 <div class="panel panel-default" style="margin-top: -20px;">
-    <div class="row" ng-click="addFloor2()">
+    <div class="row" ng-click="addFloor3()">
         <div class="col-md-10">
             &nbsp;&nbsp;&nbsp;
             <i class="fa fa-plus-circle" style="color:#088A08;"></i> &nbsp;&nbsp;

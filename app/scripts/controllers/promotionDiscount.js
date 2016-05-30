@@ -296,7 +296,15 @@ angular.module('inflightHubApp')
         $scope.addFloor2 = function() {
             $scope.newPromotion.floorFree.push({
                 floorFreeId: ($scope.newPromotion.floorFree.length + 1),
-                proProd: []
+                proFree: []
+            });
+            console.log($scope.newPromotion);
+        };
+
+        $scope.addFloor3 = function() {
+            $scope.newPromotion.floorOffer.push({
+                floorOfferId: ($scope.newPromotion.floorOffer.length + 1),
+                proOffer: []
             });
             console.log($scope.newPromotion);
         };
@@ -365,6 +373,16 @@ angular.module('inflightHubApp')
                     if ($routeParams.floorId == i + 1) {
                         $scope.newPromotion.floorFree[i].proFree = addItems;
                         $scope.isAddFreeProduct = false;
+                        break;
+                    }
+                }
+            }
+
+            if ($scope.getAddTypeVal == "addOfferProduct") {
+                for (var i = 0; i < $scope.newPromotion.floorOffer.length; i++) {
+                    if ($routeParams.floorId == i + 1) {
+                        $scope.newPromotion.floorOffer[i].proOffer = addItems;
+                        $scope.isAddOfferProduct = false;
                         break;
                     }
                 }

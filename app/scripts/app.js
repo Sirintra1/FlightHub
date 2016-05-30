@@ -40,7 +40,12 @@ angular
                 controller: 'AboutCtrl',
                 controllerAs: 'about'
             })
+        .when('/home', {
+            templateUrl: 'views/home.html',
+            controller: 'setupCartCtrl',
+            controllerAs: 'setupCart'
 
+        })
         .when('/setupCart', {
             templateUrl: 'views/setupCart.html',
             controller: 'setupCartCtrl',
@@ -212,6 +217,12 @@ angular
             })
         .when('/uploadCart', {
                 templateUrl: 'views/uploadCart.html',
+                controller: 'uploadCartCtrl',
+                controllerAs: 'uploadCart'
+
+            })
+        .when('/calculate', {
+                templateUrl: 'views/calculate.html',
                 controller: 'uploadCartCtrl',
                 controllerAs: 'uploadCart'
 

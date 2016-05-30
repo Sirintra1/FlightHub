@@ -164,6 +164,9 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav ul-bar">
+                <li>
+                        <a ng-href="#/home"><i class="fa fa-fw fa-home"></i> Home</a>
+                    </li>
                     <li>
                         <a ng-href="#/setupCart"><i class="fa fa-fw fa-shopping-cart"></i> Setup Cart</a>
                     </li>
@@ -182,6 +185,9 @@
                     <li>
                         <a ng-href="#/blackList"><i class="fa fa-fw fa-credit-card"></i> Black List</a>
                     </li>
+                    <li>
+                        <a ng-href="#/calculate"><i class="fa fa-fw fa-calculator"></i> Calculate</a>
+                    </li> 
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-file-text"></i> View Reports <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
@@ -243,6 +249,7 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/morrisjs/morris.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -251,6 +258,9 @@
     <!-- Bootstrap Core JavaScript -->
     <!-- <script src="js/bootstrap.min.js"></script> -->
     <!-- Morris Charts JavaScript -->
+
+    
+ 
     <script src="js/plugins/morris/raphael.min.js"></script>
     <script src="js/plugins/morris/morris.min.js"></script>
     <script src="js/plugins/morris/morris-data.js"></script>
