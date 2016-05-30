@@ -20,6 +20,7 @@ angular.module('inflightHubApp').service('comboProductservice', function() {
                 cate: "Drink",
                 name: "Water",
                 price: 20,
+                stock:99,
                 qty: 1,
                 img: "images/drink/1-Water.jpg"
             }, {
@@ -27,6 +28,7 @@ angular.module('inflightHubApp').service('comboProductservice', function() {
                 cate: "Food",
                 name: "Ginger Fried Rice Vegetarian Chicken",
                 price: 78,
+                stock:99,
                 qty: 1,
                 img: "images/food/AK-12-GingerFriedRicewithVegetarianChickenV.png"
             }, {
@@ -34,6 +36,7 @@ angular.module('inflightHubApp').service('comboProductservice', function() {
                 cate: "Food",
                 name: "Nasi Dagang with Chicken Curry",
                 price: 90,
+                stock:99,
                 qty: 1,
                 img: "images/food/AK-7-NasiDagangwithChickenCurry.png"
             }, {
@@ -41,6 +44,7 @@ angular.module('inflightHubApp').service('comboProductservice', function() {
                 cate: "Drink",
                 name: "Red Fanta",
                 price: 30,
+                stock:99,
                 qty: 1,
                 img: "images/drink/5-RedFanta.jpg"
             }]

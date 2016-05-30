@@ -24,6 +24,7 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
                 cate: "Drink",
                 name: "Water",
                 price: 20,
+                stock:99,
                 qty: 1,
                 img: "images/drink/1-Water.jpg"
             }]
@@ -34,6 +35,7 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
                 cate: "Food",
                 name: "KoloMee",
                 price: 130,
+                stock:99,
                 qty: 0,
                 img: "images/food/AK-1-KoloMee.png"
             }]
@@ -45,6 +47,7 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
                 cate: "Drink",
                 name: "Sprite",
                 price: 30,
+                stock:99,
                 qty: 0,
                 img: "images/drink/7-sprite.jpg"
             }]
@@ -55,6 +58,7 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
                 cate: "Dessert",
                 name: "Yamanishi Mochi",
                 price: 30,
+                stock:99,
                 qty: 0,
                 img: "images/dessert/XJ-15-YamanishiMochi.png"
             }]

@@ -27,6 +27,7 @@ angular.module('inflightHubApp').service('setupCartService', function() {
                 cate:"Drink",
                 name: "Water",
                 price: 20,
+                stock:99,
                 qty: 1,
                 img: "images/drink/1-Water.jpg"
             }]
@@ -38,6 +39,7 @@ angular.module('inflightHubApp').service('setupCartService', function() {
                 cate:"Drink",
                 name: "Sprite",
                 price: 30,
+                stock:99,
                 qty: 1,
                 img: "images/drink/7-sprite.jpg"
             }]
