@@ -131,42 +131,42 @@ angular.module('inflightHubApp')
             id: 17,
             cate: "Fast",
             name: "Chicken Satay Wrap",
-            price: 30,
+            price: 95,
             qty: 0,
             img: "images/fast/AK-9-ChickenSatayWrap.png"
         }, {
             id: 18,
             cate: "Fast",
             name: "Chicken Tikka Sandwich",
-            price: 30,
+            price: 65,
             qty: 0,
             img: "images/fast/I5-13-ChickenTikkaSandwichwithMintMayo.jpg"
         }, {
             id: 19,
             cate: "Fast",
             name: "Assorted Sandwiches",
-            price: 30,
+            price: 135,
             qty: 0,
             img: "images/fast/QC-12-AssortedSandwiches.png"
         }, {
             id: 20,
             cate: "Fast",
             name: "CornBell Peppers Sandwich",
-            price: 30,
+            price: 65,
             qty: 0,
             img: "images/fast/I5-14-CornBellPeppersSandwichwithPestoMayoInMarbleBread.jpg"
         }, {
             id: 21,
             cate: "Fast",
             name: "Frankster Chicken",
-            price: 30,
+            price: 65,
             qty: 0,
             img: "images/fast/QC-10-FranksterChicken.png"
         }, {
             id: 22,
             cate: "Fast",
             name: "Deli Chicken Focaccia Sandwich",
-            price: 30,
+            price: 125,
             qty: 0,
             img: "images/fast/XJ-7-DeliChickenFocacciaBreadSandwich.jpg"
         }, {
