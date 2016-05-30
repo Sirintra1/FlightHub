@@ -267,6 +267,7 @@ angular.module('inflightHubApp')
 
         $scope.newFn = function() {
             $scope.newPromotion = promotionDiscountService.getTemp();
+            $scope.newPromotion.optionsRadiosInline = 'ByBill';
         };
 
         $scope.setTemp = function() {

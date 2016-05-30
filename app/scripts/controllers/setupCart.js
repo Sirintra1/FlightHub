@@ -28,7 +28,7 @@ angular.module('inflightHubApp')
             cate: "Food",
             name: "Shepherds Pie",
             price: 230,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/food/AK-2-ShepherdsPie.png"
         }, {
@@ -407,9 +407,16 @@ angular.module('inflightHubApp')
                 return false;
             }
         };
+
+       
         $scope.clickAdd = function(item) {
             item.qty += 1;
-            item.stock -= 1;
+            if(item.stock != 0){
+                item.stock -= 1;
+            }else{
+                $scope.disableStock = true;
+            }
+            
         };
         $scope.clickRemove = function(item) {
             if (item.qty > 0) {

@@ -67,7 +67,7 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
     var varTemp = {
         id: guid(),
         promotionName: "",
-        proBy: "",
+        proBy: "ByBill",
         percent: 0,
         bath: 0,
         offerBuy: "",

@@ -15,7 +15,7 @@
     </div>
 </div>
 </div>
-<div class="navbar navbar-default" ng-init="getProduct()">
+<div class="navbar navbar-default">
     
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pro">
@@ -59,11 +59,14 @@
                     </div>
                     <div class="col-md-3" >
                         <div class="row" style="margin-top:30px;">
-                            <button class="btn btn-default" ng-click="clickAdd(itm)">
+                            <button class="btn btn-default" ng-disabled="itm.stock < 1" ng-click="clickAdd(itm)">
                                 <i class="fa fa-plus" style="color:#088A08;"></i></button>
                         </div>
                         <div class="row">
-                            <button button class="btn btn-default" ng-click="clickRemove(itm)"><i class="fa fa-minus" style="color:red;"></i></button>
+                        
+                            <button button class="btn btn-default"ng-click="clickRemove(itm)"><i class="fa fa-minus" style="color:red;"></i></button>
+                        
+                        
                         </div>
                         <div class="row">
                             
@@ -75,7 +78,7 @@
                         <label>{{itm.price}}</label>
                         <label> THB.</label>
                         <label> / {{itm.quality}} Qty.</label>
-                        <button button class="btn btn-default" style="color: white; background-color: #009900; float: right;margin-top: -10px;">{{itm.stock}}</button>
+                        <button   button class="btn btn-default" style="color: white; background-color: #009900; float: right;margin-top: -10px;">{{itm.stock}}</button>
                     </div>
                    
                 </div>
