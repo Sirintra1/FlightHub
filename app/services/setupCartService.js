@@ -19,6 +19,7 @@ angular.module('inflightHubApp').service('setupCartService', function() {
                 cate:"Food",
                 name: "KoloMee",
                 price: 130,
+                stock:99,
                 qty: 1,
                 img: "images/food/AK-1-KoloMee.png"
             }, {
