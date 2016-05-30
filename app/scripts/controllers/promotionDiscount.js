@@ -194,35 +194,35 @@ angular.module('inflightHubApp')
             id: 26,
             cate: "combo",
             name: "Macand Cheese Ribena",
-            price: 30,
+            price: 310,
             qty: 0,
             img: "images/combo/AK-5-KidsMealMacandCheeseRibena.png"
         }, {
             id: 27,
             cate: "Combo",
             name: "Roti Canai With ChickenCurry",
-            price: 30,
+            price: 290,
             qty: 0,
             img: "images/combo/AK-4-RotiCanaiWithChickenCurryTehTarik.png"
         }, {
             id: 28,
             cate: "Combo",
             name: "American Breakfast Set",
-            price: 30,
+            price: 300,
             qty: 0,
             img: "images/combo/XJ-13-AmericanBreakfastSet.jpg"
         }, {
             id: 29,
             cate: "Combo",
             name: "Mee Goreng Mamak TehTarik",
-            price: 30,
+            price: 270,
             qty: 0,
             img: "images/combo/AK-3-MeeGorengMamakTehTarik.png"
         }, {
             id: 30,
             cate: "Combo",
             name: "Chicken Rice Soup Set",
-            price: 30,
+            price: 250,
             qty: 0,
             img: "images/combo/XJ-12-ChickenRiceSoupSet.jpg"
         }];
