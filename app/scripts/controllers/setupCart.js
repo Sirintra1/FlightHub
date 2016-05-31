@@ -288,7 +288,7 @@ angular.module('inflightHubApp')
             $scope.carts.push($scope.newCart);
             $scope.newFn();
             setupCartService.clearTemp();
-            uploadCartService.setCarts($scope.carts);
+           // uploadCartService.setCarts($scope.carts);
         };
         $scope.deleteCart = function(id) {
             setupCartService.deleteCart(id);
