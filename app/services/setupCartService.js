@@ -19,7 +19,7 @@ angular.module('inflightHubApp').service('setupCartService', function() {
                 cate:"Food",
                 name: "KoloMee",
                 price: 130,
-                stock:99,
+                stock:9,
                 qty: 1,
                 img: "images/food/AK-1-KoloMee.png"
             }, {
@@ -27,7 +27,7 @@ angular.module('inflightHubApp').service('setupCartService', function() {
                 cate:"Drink",
                 name: "Water",
                 price: 20,
-                stock:99,
+                stock:69,
                 qty: 1,
                 img: "images/drink/1-Water.jpg"
             }]
@@ -39,7 +39,7 @@ angular.module('inflightHubApp').service('setupCartService', function() {
                 cate:"Drink",
                 name: "Sprite",
                 price: 30,
-                stock:99,
+                stock:41,
                 qty: 1,
                 img: "images/drink/7-sprite.jpg"
             }]

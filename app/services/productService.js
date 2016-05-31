@@ -14,7 +14,7 @@ angular.module('inflightHubApp').service('productService', function() {
             cate: "Food",
             name: "KoloMee",
             price: 130,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/food/AK-1-KoloMee.png"
         }, {
@@ -22,7 +22,7 @@ angular.module('inflightHubApp').service('productService', function() {
             cate: "Food",
             name: "Shepherds Pie",
             price: 230,
-            stock:100,
+            stock:63,
             qty: 0,
             img: "images/food/AK-2-ShepherdsPie.png"
         }, {
@@ -30,7 +30,7 @@ angular.module('inflightHubApp').service('productService', function() {
             cate: "Food",
             name: "Pak Nassers Nasi Lemak",
             price: 100,
-            stock:100,
+            stock:54,
             qty: 0,
             img: "images/food/AK-6-PakNassersNasiLemak.png"
         }, {

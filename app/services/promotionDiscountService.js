@@ -24,7 +24,7 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
                 cate: "Drink",
                 name: "Water",
                 price: 20,
-                stock: 99,
+                stock: 37,
                 qty: 1,
                 img: "images/drink/1-Water.jpg"
             }]
@@ -35,8 +35,8 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
                 cate: "Food",
                 name: "KoloMee",
                 price: 130,
-                stock: 99,
-                qty: 0,
+                stock: 9,
+                qty: 1,
                 img: "images/food/AK-1-KoloMee.png"
             }]
         }],
@@ -47,8 +47,8 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
                 cate: "Drink",
                 name: "Sprite",
                 price: 30,
-                stock: 99,
-                qty: 0,
+                stock: 67,
+                qty: 1,
                 img: "images/drink/7-sprite.jpg"
             }]
         }, {
@@ -58,8 +58,8 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
                 cate: "Dessert",
                 name: "Yamanishi Mochi",
                 price: 30,
-                stock: 99,
-                qty: 0,
+                stock: 36,
+                qty: 1,
                 img: "images/dessert/XJ-15-YamanishiMochi.png"
             }]
         }],
@@ -70,8 +70,8 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
                 cate: "Drink",
                 name: "Sprite",
                 price: 30,
-                stock: 99,
-                qty: 0,
+                stock: 67,
+                qty: 1,
                 img: "images/drink/7-sprite.jpg"
             }]
         }, {
@@ -81,8 +81,8 @@ angular.module('inflightHubApp').service('promotionDiscountService', function() 
                 cate: "Dessert",
                 name: "Yamanishi Mochi",
                 price: 30,
-                stock: 99,
-                qty: 0,
+                stock: 36,
+                qty: 1,
                 img: "images/dessert/XJ-15-YamanishiMochi.png"
             }]
         }]
