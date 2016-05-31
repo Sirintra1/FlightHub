@@ -8,18 +8,18 @@
  * Controller of the inflightHubApp
  */
 angular.module('inflightHubApp')
-    .controller('promotionDiscountCtrl', function($scope, productService,promotionDiscountService, $filter, $routeParams) {
+    .controller('promotionDiscountCtrl', function($scope, productService, promotionDiscountService, $filter, $routeParams) {
         this.awesomeThings = [
             'HTML5 Boilerplate',
             'AngularJS',
             'Karma'
         ];
-          $scope.productPro = [{
+        $scope.productPro = [{
             id: 1,
             cate: "Food",
             name: "KoloMee",
             price: 130,
-            stock:10,
+            stock: 10,
             qty: 0,
             img: "images/food/AK-1-KoloMee.png"
         }, {
@@ -27,7 +27,7 @@ angular.module('inflightHubApp')
             cate: "Food",
             name: "Shepherds Pie",
             price: 230,
-            stock:10,
+            stock: 63,
             qty: 0,
             img: "images/food/AK-2-ShepherdsPie.png"
         }, {
@@ -35,7 +35,7 @@ angular.module('inflightHubApp')
             cate: "Food",
             name: "Pak Nassers Nasi Lemak",
             price: 100,
-            stock:10,
+            stock: 54,
             qty: 0,
             img: "images/food/AK-6-PakNassersNasiLemak.png"
         }, {
@@ -43,7 +43,7 @@ angular.module('inflightHubApp')
             cate: "Food",
             name: "Nasi Dagang with Chicken Curry",
             price: 90,
-            stock:10,
+            stock: 23,
             qty: 0,
             img: "images/food/AK-7-NasiDagangwithChickenCurry.png"
         }, {
@@ -51,7 +51,7 @@ angular.module('inflightHubApp')
             cate: "Food",
             name: "Tomato Rice with Ayam Percik",
             price: 146,
-            stock:10,
+            stock: 64,
             qty: 0,
             img: "images/food/AK-8-TomatoRicewithAyamPercik.png"
         }, {
@@ -59,7 +59,7 @@ angular.module('inflightHubApp')
             cate: "Food",
             name: "Roast Chicken with Cream Sauce",
             price: 99,
-            stock:10,
+            stock: 55,
             qty: 0,
             img: "images/food/AK-11-RoastChickenwithCreamSauce.png"
         }, {
@@ -67,7 +67,7 @@ angular.module('inflightHubApp')
             cate: "Food",
             name: "Ginger Fried Rice",
             price: 78,
-            stock:10,
+            stock: 91,
             qty: 0,
             img: "images/food/AK-12-GingerFriedRicewithVegetarianChickenV.png"
         }, {
@@ -75,7 +75,7 @@ angular.module('inflightHubApp')
             cate: "Food",
             name: "Vegetable Briyani",
             price: 340,
-            stock:10,
+            stock: 62,
             qty: 0,
             img: "images/food/AK-13-VegetableBriyaniV.png"
         }, {
@@ -83,7 +83,7 @@ angular.module('inflightHubApp')
             cate: "Food",
             name: "Chicken Rice",
             price: 120,
-            stock:10,
+            stock: 75,
             qty: 0,
             img: "images/food/AK-14-ChickenRice.png"
         }, {
@@ -91,7 +91,7 @@ angular.module('inflightHubApp')
             cate: "Drink",
             name: "Water",
             price: 20,
-            stock:10,
+            stock: 38,
             qty: 0,
             img: "images/drink/1-Water.jpg"
         }, {
@@ -99,7 +99,7 @@ angular.module('inflightHubApp')
             cate: "Drink",
             name: "Pepsi",
             price: 50,
-            stock:10,
+            stock: 14,
             qty: 0,
             img: "images/drink/2-Pepsi.jpg"
         }, {
@@ -107,7 +107,7 @@ angular.module('inflightHubApp')
             cate: "Drink",
             name: "Cocacola",
             price: 50,
-            stock:10,
+            stock: 66,
             qty: 0,
             img: "images/drink/3-Cocacola.jpg"
         }, {
@@ -115,7 +115,7 @@ angular.module('inflightHubApp')
             cate: "Drink",
             name: "Green Fanta",
             price: 30,
-            stock:10,
+            stock: 75,
             qty: 0,
             img: "images/drink/4-GreenFanta.jpg"
         }, {
@@ -123,7 +123,7 @@ angular.module('inflightHubApp')
             cate: "Drink",
             name: "Red Fanta",
             price: 30,
-            stock:10,
+            stock: 33,
             qty: 0,
             img: "images/drink/5-RedFanta.jpg"
         }, {
@@ -131,7 +131,7 @@ angular.module('inflightHubApp')
             cate: "Drink",
             name: "Orange Fanta",
             price: 30,
-            stock:10,
+            stock: 52,
             qty: 0,
             img: "images/drink/6-OrangeFanta.jpg"
         }, {
@@ -139,7 +139,7 @@ angular.module('inflightHubApp')
             cate: "Drink",
             name: "Sprite",
             price: 30,
-            stock:10,
+            stock: 68,
             qty: 0,
             img: "images/drink/7-sprite.jpg"
         }, {
@@ -147,7 +147,7 @@ angular.module('inflightHubApp')
             cate: "Fast",
             name: "Chicken Satay Wrap",
             price: 95,
-            stock:10,
+            stock: 79,
             qty: 0,
             img: "images/fast/AK-9-ChickenSatayWrap.png"
         }, {
@@ -155,7 +155,7 @@ angular.module('inflightHubApp')
             cate: "Fast",
             name: "Chicken Tikka Sandwich",
             price: 65,
-            stock:10,
+            stock: 80,
             qty: 0,
             img: "images/fast/I5-13-ChickenTikkaSandwichwithMintMayo.jpg"
         }, {
@@ -163,7 +163,7 @@ angular.module('inflightHubApp')
             cate: "Fast",
             name: "Assorted Sandwiches",
             price: 135,
-            stock:10,
+            stock: 53,
             qty: 0,
             img: "images/fast/QC-12-AssortedSandwiches.png"
         }, {
@@ -171,7 +171,7 @@ angular.module('inflightHubApp')
             cate: "Fast",
             name: "CornBell Peppers Sandwich",
             price: 65,
-            stock:10,
+            stock: 16,
             qty: 0,
             img: "images/fast/I5-14-CornBellPeppersSandwichwithPestoMayoInMarbleBread.jpg"
         }, {
@@ -179,7 +179,7 @@ angular.module('inflightHubApp')
             cate: "Fast",
             name: "Frankster Chicken",
             price: 65,
-            stock:10,
+            stock: 11,
             qty: 0,
             img: "images/fast/QC-10-FranksterChicken.png"
         }, {
@@ -187,7 +187,7 @@ angular.module('inflightHubApp')
             cate: "Fast",
             name: "Deli Chicken Focaccia Sandwich",
             price: 125,
-            stock:10,
+            stock: 77,
             qty: 0,
             img: "images/fast/XJ-7-DeliChickenFocacciaBreadSandwich.jpg"
         }, {
@@ -195,7 +195,7 @@ angular.module('inflightHubApp')
             cate: "Dessert",
             name: "Pancakes Maple Syrup Butter",
             price: 100,
-            stock:10,
+            stock: 82,
             qty: 0,
             img: "images/dessert/QC-8-PancakesMapleSyrupButter.png"
         }, {
@@ -203,7 +203,7 @@ angular.module('inflightHubApp')
             cate: "Dessert",
             name: "Banana Cake with Malee",
             price: 120,
-            stock:10,
+            stock: 24,
             qty: 0,
             img: "images/dessert/XJ-16-BananaCakewithMaleeOrangeJuice.jpg"
         }, {
@@ -211,7 +211,7 @@ angular.module('inflightHubApp')
             cate: "Dessert",
             name: "Yamanishi Mochi",
             price: 90,
-            stock:10,
+            stock: 37,
             qty: 0,
             img: "images/dessert/XJ-15-YamanishiMochi.png"
         }, {
@@ -219,7 +219,7 @@ angular.module('inflightHubApp')
             cate: "combo",
             name: "Macand Cheese Ribena",
             price: 310,
-            stock:10,
+            stock: 87,
             qty: 0,
             img: "images/combo/AK-5-KidsMealMacandCheeseRibena.png"
         }, {
@@ -227,7 +227,7 @@ angular.module('inflightHubApp')
             cate: "Combo",
             name: "Roti Canai With ChickenCurry",
             price: 290,
-            stock:10,
+            stock: 20,
             qty: 0,
             img: "images/combo/AK-4-RotiCanaiWithChickenCurryTehTarik.png"
         }, {
@@ -235,7 +235,7 @@ angular.module('inflightHubApp')
             cate: "Combo",
             name: "American Breakfast Set",
             price: 300,
-            stock:10,
+            stock: 19,
             qty: 0,
             img: "images/combo/XJ-13-AmericanBreakfastSet.jpg"
         }, {
@@ -243,7 +243,7 @@ angular.module('inflightHubApp')
             cate: "Combo",
             name: "Mee Goreng Mamak TehTarik",
             price: 270,
-            stock:10,
+            stock: 86,
             qty: 0,
             img: "images/combo/AK-3-MeeGorengMamakTehTarik.png"
         }, {
@@ -251,11 +251,11 @@ angular.module('inflightHubApp')
             cate: "Combo",
             name: "Chicken Rice Soup Set",
             price: 250,
-            stock:10,
+            stock: 63,
             qty: 0,
             img: "images/combo/XJ-12-ChickenRiceSoupSet.jpg"
         }];
-       // $scope.productPro = productService.getProduct();
+        // $scope.productPro = productService.getProduct();
 
         $scope.promotionID = $routeParams.promotionID;
         $scope.promotions = [];
@@ -282,8 +282,8 @@ angular.module('inflightHubApp')
         };
 
         $scope.clearData = function() {
-             promotionDiscountService.clearTemp();
-        }; 
+            promotionDiscountService.clearTemp();
+        };
 
         $scope.addFloor = function() {
             $scope.newPromotion.floorProduct.push({
@@ -309,7 +309,7 @@ angular.module('inflightHubApp')
             console.log($scope.newPromotion);
         };
 
-         $scope.deletePromotion = function(id){
+        $scope.deletePromotion = function(id) {
             promotionDiscountService.deletePromotion(id);
         };
 
@@ -321,16 +321,16 @@ angular.module('inflightHubApp')
             },
 
 
-        $scope.setVal = function() {
-            // alert(''); 
-            // var result = $filter("filter")($scope.carts, { id: $routeParams.cardID }); 
-            var result = promotionDiscountService.getPromotion($scope.promotions, $routeParams.promotionID);
-            console.log(result);
-            if (result) {
-                $scope.newPromotion = result;
-            }
+            $scope.setVal = function() {
+                // alert(''); 
+                // var result = $filter("filter")($scope.carts, { id: $routeParams.cardID }); 
+                var result = promotionDiscountService.getPromotion($scope.promotions, $routeParams.promotionID);
+                console.log(result);
+                if (result) {
+                    $scope.newPromotion = result;
+                }
 
-        };
+            };
 
         $scope.editFn = function() {
             promotionDiscountService.clearTemp();
@@ -405,11 +405,11 @@ angular.module('inflightHubApp')
                 return false;
             }
         };
-       $scope.clickAdd = function(item) {
+        $scope.clickAdd = function(item) {
             for (var i = 0; i < $scope.productPro.length; i++) {
                 if ($scope.productPro[i].name == item.name) {
                     item.qty += 1;
-                     item.stock -= 1;
+                    item.stock -= 1;
                 } else {
                     $scope.productPro[i].qty = 0;
                 }
@@ -418,7 +418,7 @@ angular.module('inflightHubApp')
         $scope.clickRemove = function(item) {
             if (item.qty > 0) {
                 item.qty -= 1;
-                 item.stock += 1;
+                item.stock += 1;
                 return true;
             } else {
                 return false;
@@ -426,7 +426,7 @@ angular.module('inflightHubApp')
         };
 
 
-        
+
         $scope.food = $filter("filter")($scope.productPro, { cate: "Food" });
         $scope.drink = $filter("filter")($scope.productPro, { cate: "Drink" });
         $scope.fast = $filter("filter")($scope.productPro, { cate: "Fast" });
