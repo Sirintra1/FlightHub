@@ -20,7 +20,7 @@ angular.module('inflightHubApp')
             cate: "Food",
             name: "KoloMee",
             price: 130,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/food/AK-1-KoloMee.png"
         }, {
@@ -36,7 +36,7 @@ angular.module('inflightHubApp')
             cate: "Food",
             name: "Pak Nassers Nasi Lemak",
             price: 100,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/food/AK-6-PakNassersNasiLemak.png"
         }, {
@@ -44,7 +44,7 @@ angular.module('inflightHubApp')
             cate: "Food",
             name: "Nasi Dagang with Chicken Curry",
             price: 90,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/food/AK-7-NasiDagangwithChickenCurry.png"
         }, {
@@ -52,7 +52,7 @@ angular.module('inflightHubApp')
             cate: "Food",
             name: "Tomato Rice with Ayam Percik",
             price: 146,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/food/AK-8-TomatoRicewithAyamPercik.png"
         }, {
@@ -60,7 +60,7 @@ angular.module('inflightHubApp')
             cate: "Food",
             name: "Roast Chicken with Cream Sauce",
             price: 99,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/food/AK-11-RoastChickenwithCreamSauce.png"
         }, {
@@ -68,7 +68,7 @@ angular.module('inflightHubApp')
             cate: "Food",
             name: "Ginger Fried Rice",
             price: 78,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/food/AK-12-GingerFriedRicewithVegetarianChickenV.png"
         }, {
@@ -76,7 +76,7 @@ angular.module('inflightHubApp')
             cate: "Food",
             name: "Vegetable Briyani",
             price: 340,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/food/AK-13-VegetableBriyaniV.png"
         }, {
@@ -84,7 +84,7 @@ angular.module('inflightHubApp')
             cate: "Food",
             name: "Chicken Rice",
             price: 120,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/food/AK-14-ChickenRice.png"
         }, {
@@ -92,7 +92,7 @@ angular.module('inflightHubApp')
             cate: "Drink",
             name: "Water",
             price: 20,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/drink/1-Water.jpg"
         }, {
@@ -100,7 +100,7 @@ angular.module('inflightHubApp')
             cate: "Drink",
             name: "Pepsi",
             price: 50,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/drink/2-Pepsi.jpg"
         }, {
@@ -108,7 +108,7 @@ angular.module('inflightHubApp')
             cate: "Drink",
             name: "Cocacola",
             price: 50,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/drink/3-Cocacola.jpg"
         }, {
@@ -116,7 +116,7 @@ angular.module('inflightHubApp')
             cate: "Drink",
             name: "Green Fanta",
             price: 30,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/drink/4-GreenFanta.jpg"
         }, {
@@ -124,7 +124,7 @@ angular.module('inflightHubApp')
             cate: "Drink",
             name: "Red Fanta",
             price: 30,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/drink/5-RedFanta.jpg"
         }, {
@@ -132,7 +132,7 @@ angular.module('inflightHubApp')
             cate: "Drink",
             name: "Orange Fanta",
             price: 30,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/drink/6-OrangeFanta.jpg"
         }, {
@@ -140,7 +140,7 @@ angular.module('inflightHubApp')
             cate: "Drink",
             name: "Sprite",
             price: 30,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/drink/7-sprite.jpg"
         }, {
@@ -148,7 +148,7 @@ angular.module('inflightHubApp')
             cate: "Fast",
             name: "Chicken Satay Wrap",
             price: 95,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/fast/AK-9-ChickenSatayWrap.png"
         }, {
@@ -156,7 +156,7 @@ angular.module('inflightHubApp')
             cate: "Fast",
             name: "Chicken Tikka Sandwich",
             price: 65,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/fast/I5-13-ChickenTikkaSandwichwithMintMayo.jpg"
         }, {
@@ -164,7 +164,7 @@ angular.module('inflightHubApp')
             cate: "Fast",
             name: "Assorted Sandwiches",
             price: 135,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/fast/QC-12-AssortedSandwiches.png"
         }, {
@@ -172,7 +172,7 @@ angular.module('inflightHubApp')
             cate: "Fast",
             name: "CornBell Peppers Sandwich",
             price: 65,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/fast/I5-14-CornBellPeppersSandwichwithPestoMayoInMarbleBread.jpg"
         }, {
@@ -180,7 +180,7 @@ angular.module('inflightHubApp')
             cate: "Fast",
             name: "Frankster Chicken",
             price: 65,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/fast/QC-10-FranksterChicken.png"
         }, {
@@ -188,7 +188,7 @@ angular.module('inflightHubApp')
             cate: "Fast",
             name: "Deli Chicken Focaccia Sandwich",
             price: 125,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/fast/XJ-7-DeliChickenFocacciaBreadSandwich.jpg"
         }, {
@@ -196,7 +196,7 @@ angular.module('inflightHubApp')
             cate: "Dessert",
             name: "Pancakes Maple Syrup Butter",
             price: 100,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/dessert/QC-8-PancakesMapleSyrupButter.png"
         }, {
@@ -204,7 +204,7 @@ angular.module('inflightHubApp')
             cate: "Dessert",
             name: "Banana Cake with Malee",
             price: 120,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/dessert/XJ-16-BananaCakewithMaleeOrangeJuice.jpg"
         }, {
@@ -212,7 +212,7 @@ angular.module('inflightHubApp')
             cate: "Dessert",
             name: "Yamanishi Mochi",
             price: 90,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/dessert/XJ-15-YamanishiMochi.png"
         }, {
@@ -220,7 +220,7 @@ angular.module('inflightHubApp')
             cate: "combo",
             name: "Macand Cheese Ribena",
             price: 310,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/combo/AK-5-KidsMealMacandCheeseRibena.png"
         }, {
@@ -228,7 +228,7 @@ angular.module('inflightHubApp')
             cate: "Combo",
             name: "Roti Canai With ChickenCurry",
             price: 290,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/combo/AK-4-RotiCanaiWithChickenCurryTehTarik.png"
         }, {
@@ -236,7 +236,7 @@ angular.module('inflightHubApp')
             cate: "Combo",
             name: "American Breakfast Set",
             price: 300,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/combo/XJ-13-AmericanBreakfastSet.jpg"
         }, {
@@ -244,7 +244,7 @@ angular.module('inflightHubApp')
             cate: "Combo",
             name: "Mee Goreng Mamak TehTarik",
             price: 270,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/combo/AK-3-MeeGorengMamakTehTarik.png"
         }, {
@@ -252,7 +252,7 @@ angular.module('inflightHubApp')
             cate: "Combo",
             name: "Chicken Rice Soup Set",
             price: 250,
-            stock:100,
+            stock:10,
             qty: 0,
             img: "images/combo/XJ-12-ChickenRiceSoupSet.jpg"
         }];
